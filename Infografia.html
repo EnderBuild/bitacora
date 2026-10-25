@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bitacora del curso WA1055.602. Diego Eduardo Rodriguez Macias, A01572394.">
+<title>Bitácora</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+/* Columna única de lectura. Índice de entradas arriba, entrada completa abajo.
+   Neutros con sesgo frío hacia el acento; un solo acento verde-pizarra. */
+:root{
+  --paper:#fbfbfa;
+  --surface:#ffffff;
+  --rule:#e2e3e0;
+  --rule-soft:#eeefec;
+  --ink:#16181b;
+  --ink-2:#464a50;
+  --ink-3:#787d85;
+  --accent:#2d6a62;
+  --accent-soft:#eaf1ef;
+  --mark:#b4551f;
+  --mark-soft:#f8ede6;
+
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Public Sans",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121316;
+    --surface:#1a1c20;
+    --rule:#2e3136;
+    --rule-soft:#23262a;
+    --ink:#eceef0;
+    --ink-2:#b2b7be;
+    --ink-3:#848a93;
+    --accent:#6fb8ac;
+    --accent-soft:#16231f;
+    --mark:#d9834f;
+    --mark-soft:#241a14;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121316;
+  --surface:#1a1c20;
+  --rule:#2e3136;
+  --rule-soft:#23262a;
+  --ink:#eceef0;
+  --ink-2:#b2b7be;
+  --ink-3:#848a93;
+  --accent:#6fb8ac;
+  --accent-soft:#16231f;
+  --mark:#d9834f;
+  --mark-soft:#241a14;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:1rem;
+  line-height:1.65;
+  margin:0;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+
+.wrap{
+  max-width:44rem;
+  margin:0 auto;
+  padding-block:clamp(2rem,6vw,3.5rem) clamp(3rem,8vw,5rem);
+  display:flex;
+  flex-direction:column;
+  gap:clamp(2.25rem,5vw,3rem);
+}
+
+/* ── cabecera ─────────────────────────────── */
+.masthead{
+  border-bottom:2px solid var(--ink);
+  padding-bottom:1.1rem;
+}
+.masthead h1{
+  font-family:var(--display);
+  font-weight:500;
+  font-size:clamp(2.1rem,6.5vw,3rem);
+  line-height:1.05;
+  letter-spacing:-.015em;
+  margin:0 0 .5rem;
+}
+.who{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem 1.1rem;
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+}
+.lede{
+  color:var(--ink-2);
+  margin:1rem 0 0;
+  font-size:1.03rem;
+  max-width:36rem;
+}
+
+/* ── índice ───────────────────────────────── */
+.index h2,
+.entry > h2{
+  font-family:var(--mono);
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin:0 0 1rem;
+}
+.toc{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+}
+.toc li{
+  display:grid;
+  grid-template-columns:3.4rem 1fr auto;
+  gap:0 1rem;
+  align-items:baseline;
+  padding:.8rem 0;
+  border-bottom:1px solid var(--rule-soft);
+}
+.toc li:first-child{border-top:1px solid var(--rule-soft)}
+.toc .n{
+  font-family:var(--mono);
+  font-size:.82rem;
+  color:var(--accent);
+}
+.toc .t{min-width:0}
+.toc .t a{
+  color:var(--ink);
+  text-decoration:none;
+  font-weight:600;
+  border-bottom:1px solid var(--rule);
+}
+.toc .t a:hover,.toc .t a:focus-visible{border-bottom-color:var(--accent);color:var(--accent)}
+.toc .t span{display:block;color:var(--ink-3);font-size:.9rem;font-weight:400}
+.toc .d{
+  font-family:var(--mono);
+  font-size:.75rem;
+  color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+@media (max-width:30rem){
+  .toc li{grid-template-columns:2.6rem 1fr;row-gap:.3rem}
+  .toc .d{grid-column:2;}
+}
+
+/* ── entrada ──────────────────────────────── */
+.entry{scroll-margin-top:1rem}
+.entry-head{margin-bottom:1.6rem}
+.kicker{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 .55rem;
+}
+.entry-head h3{
+  font-family:var(--display);
+  font-weight:500;
+  font-size:clamp(1.75rem,5vw,2.4rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  text-wrap:balance;
+  margin:0 0 .5rem;
+}
+.standfirst{
+  font-family:var(--display);
+  font-size:1.14rem;
+  font-style:italic;
+  color:var(--ink-2);
+  margin:0 0 .9rem;
+  max-width:34rem;
+}
+.byline{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding-top:.8rem;
+  border-top:1px solid var(--rule);
+}
+
+.entry p{margin:0 0 1.05rem;color:var(--ink-2)}
+.entry p strong{color:var(--ink);font-weight:600}
+.entry h4{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:1.35rem;
+  letter-spacing:-.01em;
+  color:var(--ink);
+  margin:2.1rem 0 .7rem;
+}
+.entry h5{
+  font-size:.95rem;
+  font-weight:700;
+  color:var(--ink);
+  margin:1.4rem 0 .4rem;
+}
+
+figure{margin:1.8rem 0;}
+figure img{display:block;width:100%;max-width:100%;border:1px solid var(--rule);border-radius:3px}
+figure svg{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
+figcaption{
+  font-family:var(--mono);
+  font-size:.74rem;
+  line-height:1.5;
+  color:var(--ink-3);
+  margin-top:.6rem;
+}
+
+.pull{
+  background:var(--accent-soft);
+  border-left:3px solid var(--accent);
+  padding:1rem 1.2rem;
+  margin:1.5rem 0;
+  border-radius:0 3px 3px 0;
+}
+.pull p{margin:0;color:var(--ink-2)}
+.pull p strong{color:var(--ink)}
+
+.caveat{
+  background:var(--mark-soft);
+  border-left:3px solid var(--mark);
+  padding:1rem 1.2rem;
+  margin:1.5rem 0;
+  border-radius:0 3px 3px 0;
+}
+.caveat p{margin:0;color:var(--ink-2)}
+.caveat p strong{color:var(--ink)}
+
+.tablewrap{overflow-x:auto;margin:1.5rem 0}
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:30rem;
+  font-size:.93rem;
+}
+caption{
+  caption-side:bottom;
+  text-align:left;
+  font-family:var(--mono);
+  font-size:.72rem;
+  line-height:1.5;
+  color:var(--ink-3);
+  padding-top:.7rem;
+}
+th,td{
+  text-align:left;
+  vertical-align:top;
+  padding:.7rem .9rem .7rem 0;
+  border-bottom:1px solid var(--rule-soft);
+}
+thead th{
+  font-family:var(--mono);
+  font-size:.7rem;
+  font-weight:500;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  border-bottom:1px solid var(--rule);
+}
+tbody th{font-weight:600;color:var(--ink);width:10rem}
+td{color:var(--ink-2)}
+
+.stat{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:.3rem .9rem;
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  padding:1.1rem 1.3rem;
+  margin:1.5rem 0;
+}
+.stat .big{
+  font-family:var(--display);
+  font-size:2.6rem;
+  line-height:1;
+  color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.stat .lab{color:var(--ink-2);font-size:.95rem;flex:1 1 14rem;min-width:0}
+.stat .lab b{color:var(--ink)}
+
+.refs{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+.refs ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.7rem}
+.refs li{font-size:.88rem;line-height:1.55;color:var(--ink-2)}
+.refs a{color:var(--accent);word-break:break-word}
+
+footer{
+  border-top:1px solid var(--rule);
+  padding-top:1.2rem;
+  font-family:var(--mono);
+  font-size:.72rem;
+  line-height:1.7;
+  color:var(--ink-3);
+  letter-spacing:.03em;
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1>Bitácora</h1>
+    <div class="who">
+      <span>Diego Eduardo Rodríguez Macías</span>
+      <span>A01572394</span>
+      <span>WA1055.602</span>
+    </div>
+    <p class="lede">Registro de las aportaciones del curso. Cada entrada se publica con su fecha y conserva lo que entregué, sin editar después.</p>
+  </header>
+
+  <nav class="index">
+    <h2>Entradas</h2>
+    <ol class="toc">
+      <li>
+        <span class="n">05</span>
+        <span class="t">
+          <a href="#a5">Fricción o bloqueo</a>
+          <span>Reseña de dos aplicaciones de autocontrol</span>
+        </span>
+        <span class="d">15 oct 2026</span>
+      </li>
+      <li>
+        <span class="n">04</span>
+        <span class="t">
+          <a href="#a4">Entrenar o construir</a>
+          <span>Herramientas para la atención, la concentración y la memoria</span>
+        </span>
+        <span class="d">15 oct 2026</span>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <span class="t">
+          <a href="#a3">Lo que se siente fácil</a>
+          <span>Esquema de sugerencias para aprender mejor</span>
+        </span>
+        <span class="d">24 oct 2026</span>
+      </li>
+    </ol>
+  </nav>
+
+  <article class="entry" id="a5">
+    <div class="entry-head">
+      <p class="kicker">Aportación 5 · Reseña</p>
+      <h3>Fricción o bloqueo</h3>
+      <p class="standfirst">one sec y Cold Turkey resuelven el mismo problema desde supuestos opuestos sobre qué tanto puedes confiar en ti mismo.</p>
+      <p class="byline">15 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>Toda aplicación de autocontrol contesta una pregunta antes de hacer cualquier otra cosa: <strong>¿el problema es que actúas sin pensar, o que piensas y te convences?</strong> Si es lo primero, basta con interrumpir el gesto automático. Si es lo segundo, ninguna pausa va a alcanzar, porque la vas a atravesar con un argumento.</p>
+
+    <p>Busqué dos aplicaciones que representaran cada respuesta. No son dos categorías excluyentes ni dos tipos de persona: son dos mecanismos distintos, y cuál conviene depende de cuál de los dos problemas tengas.</p>
+
+    <figure>
+      <img src="infografia-autocontrol.png" alt="Infografía comparativa de one sec y Cold Turkey: mecanismo, evidencia, costos y veredicto de cada una.">
+      <figcaption>Figura 1. Comparación de ambas aplicaciones. Elaboración propia a partir de la documentación oficial de cada producto y del artículo de Grüning et al. (2023).</figcaption>
+    </figure>
+
+    <h4>one sec: interrumpir el gesto</h4>
+
+    <p>Cuando abres una aplicación que tú elegiste marcar, one sec intercepta la apertura y te hace respirar unos segundos antes de dejarte pasar. Al terminar, pregunta si todavía quieres entrar. <strong>Nunca bloquea</strong>: siempre puedes continuar.</p>
+
+    <p>Lo interesante es el supuesto detrás. No pelea contra el deseo ni te quita la opción: interrumpe el automatismo y devuelve la decisión a la parte deliberativa. Parte de que muchas aperturas de aplicación no son decisiones sino reflejos, y que si te devuelven un segundo, decides distinto.</p>
+
+    <p>Está disponible en iOS, iPadOS, Android y como extensión de navegador en escritorio. Tiene versión gratuita con funciones limitadas.</p>
+
+    <h4>Cold Turkey: decidir el límite antes</h4>
+
+    <p>Bloquea sitios y programas por horario o por bloques de trabajo. En su modo más estricto bloquea la computadora entera hasta que termine el periodo que fijaste.</p>
+
+    <p>Lo que lo define es que está <strong>diseñado para ser difícil de desactivar</strong>, y eso no es un defecto de usabilidad: es la tesis del producto. Funciona como un dispositivo de compromiso — tu yo de ahora le quita opciones a tu yo de dentro de una hora, porque asume que ese no va a ser confiable. Es el mismo principio que estudian Bryan, Karlan y Nelson (2010) en economía del comportamiento: atarse las manos por adelantado supera a la fuerza de voluntad en el momento.</p>
+
+    <p>Solo funciona en Windows y macOS. No cubre el celular, que para muchos es justamente donde está el problema.</p>
+
+    <h4>La diferencia que importa</h4>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Enfoque comparado</th><th scope="col">one sec · pausa</th><th scope="col">Cold Turkey · bloqueo</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Qué supone de ti</th><td>Que decidirías bien si te dieran un segundo</td><td>Que vas a encontrar cómo convencerte</td></tr>
+          <tr><th scope="row">Decisión y autonomía</th><td>Durante la pausa puedes reconsiderar y elegir continuar o salir</td><td>Las restricciones se acuerdan antes; el candado limita los cambios</td></tr>
+          <tr><th scope="row">Qué te cuesta</th><td>Nada: conservas la decisión en todo momento</td><td>Autonomía, a cambio de una garantía</td></tr>
+          <tr><th scope="row">Cómo falla</th><td>Te acostumbras y la pausa deja de registrarse</td><td>Lo desinstalas, o te cierra el acceso que sí necesitabas</td></tr>
+          <tr><th scope="row">Dónde vive</th><td>Celular y navegador de escritorio</td><td>Windows y macOS; no cubre el celular</td></tr>
+        </tbody>
+      </table>
+      <caption>Tabla 1. Se comparan modos concretos de cada herramienta, no dos categorías excluyentes ni rasgos de personalidad.</caption>
+    </div>
+
+    <h4>Qué sabemos y qué no</h4>
+
+    <p>one sec promociona una reducción del 57 % y esa cifra sí está documentada, pero importa mucho qué mide exactamente.</p>
+
+    <div class="stat">
+      <span class="big">−57 %</span>
+      <span class="lab"><b>aperturas reales de las aplicaciones seleccionadas</b>, no tiempo total de pantalla. Son dos métricas distintas y la diferencia no es menor (Grüning et al., 2023).</span>
+    </div>
+
+    <p>El estudio de campo del que sale ese número fue exploratorio: participantes autoseleccionados, sin grupo de control. Empezaron 719 personas y el análisis principal se hizo con las 280 que completaron el seguimiento, lo cual es una pérdida considerable. Y conviene saberlo: <strong>uno de los autores es el creador de la aplicación.</strong></p>
+
+    <p>El mismo trabajo incluye un experimento aleatorizado aparte, con unos 500 participantes, que separó los componentes de la intervención. Ahí el efecto mayor vino de ofrecer explícitamente la opción de desistir; el retraso también ayudó, pero el mensaje de reflexión por sí solo no fue efectivo. Eso es más informativo que la cifra grande, porque dice qué parte del mecanismo hace el trabajo.</p>
+
+    <div class="caveat">
+      <p><strong>Cold Turkey no tiene estudios propios.</strong> Lo que existe es el marco conceptual de los dispositivos de compromiso, que está bien estudiado, pero eso valida el principio y no esta implementación en particular. La documentación del producto describe funciones; no aporta un ensayo de eficacia.</p>
+    </div>
+
+    <h4>Veredicto</h4>
+
+    <div class="pull">
+      <p><strong>Empieza por la fricción.</strong> Es reversible, no te quita nada y te da información útil: si la pausa basta, tu problema era automatismo. Si la atraviesas sin pensarlo, tu problema es otro y ahí sí vale escalar al bloqueo. Equivocarse hacia arriba cuesta más que hacia abajo.</p>
+    </div>
+
+    <p>Empieza con una configuración breve y revisable, observa qué te ayuda y ajusta el modo a tu contexto. Ninguna de las dos elimina la necesidad de hábitos, de descanso ni de tener un propósito para el tiempo que recuperas. Esta valoración es mi opinión a partir de lo que encontré, no una recomendación clínica.</p>
+
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li>Bryan, G., Karlan, D., &amp; Nelson, S. (2010). Commitment devices. <em>Annual Review of Economics, 2</em>, 671–698. <a href="https://doi.org/10.1146/annurev.economics.102308.124324">https://doi.org/10.1146/annurev.economics.102308.124324</a></li>
+        <li>Cold Turkey Software. (s. f.). <em>Features</em>. Recuperado el 15 de octubre de 2026, de <a href="https://getcoldturkey.com/features/">https://getcoldturkey.com/features/</a></li>
+        <li>Grüning, D. J., Riedel, F., &amp; Lorenz-Spreen, P. (2023). Directing smartphone use through the self-nudge app one sec. <em>Proceedings of the National Academy of Sciences, 120</em>(8). <a href="https://doi.org/10.1073/pnas.2213114120">https://doi.org/10.1073/pnas.2213114120</a></li>
+        <li>one sec. (s. f.). <em>Cut your screen time in half</em>. Recuperado el 15 de octubre de 2026, de <a href="https://one-sec.app/">https://one-sec.app/</a></li>
+        <li>one sec. (s. f.). <em>Research</em>. Recuperado el 15 de octubre de 2026, de <a href="https://one-sec.app/research/">https://one-sec.app/research/</a></li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="entry" id="a4">
+    <div class="entry-head">
+      <p class="kicker">Aportación 4 · Toolkit</p>
+      <h3>Caja de herramientas del cerebro</h3>
+      <p class="standfirst">Ejercicios, apps, páginas, juegos y proyectos para sostener la atención y cuidar la memoria a largo plazo.</p>
+      <p class="byline">15 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>Armé esta caja de herramientas con cinco compartimentos: ejercicios para hacer a diario, aplicaciones, páginas para medir y practicar, juegos, y uno que casi nunca aparece en listas de este tipo pero que creo que es el más importante.</p>
+
+    <figure>
+      <img src="toolkit-atencion.png" alt="Infografía en forma de caja de herramientas con cinco compartimentos: ejercicios diarios, apps, páginas web, juegos, proyectos, y un panel de datos sobre sueño, ejercicio, repaso espaciado y multitarea.">
+      <figcaption>Figura 1. Toolkit de atención, concentración y memoria. Elaboración propia.</figcaption>
+    </figure>
+
+    <h4>Por qué agregué el compartimento de proyectos</h4>
+
+    <p>Mientras buscaba me topé con algo que cambió lo que tenía sentido recomendar: <strong>el efecto de los juegos de entrenamiento cerebral no se transfiere.</strong> Mejoras en el juego que practicas y esa mejora casi no aparece en otras tareas. Simons et al. (2016) revisaron la literatura completa de programas comerciales y encontraron evidencia escasa de beneficios fuera de lo entrenado; el Dual N-Back, el caso más famoso, tuvo resultados iniciales prometedores y después fallos de replicación.</p>
+
+    <p>Eso no los vuelve inútiles. Un juego de estrategia por turnos exige atención sostenida en lugar de fragmentarla, que es bastante mejor que el desplazamiento infinito en redes. Pero no te vuelve mejor en otra cosa, y conviene saberlo antes de invertirle horas creyendo que sí.</p>
+
+    <div class="pull">
+      <p>Lo que sí construye capacidad es aprender algo difícil de verdad. La prueba que separa una cosa de la otra: <strong>¿la actividad deja algo que exista fuera de ella?</strong> Un archivo, una técnica, un problema que ahora sabes resolver. Si la respuesta es no, es entretenimiento, y está bien que lo sea mientras no lo confundas con entrenamiento.</p>
+    </div>
+
+    <p>Por eso el quinto compartimento es el taller. Aprender Blender o un motor de videojuegos obliga a sostener varios sistemas a la vez y a corregir con retroalimentación inmediata, y lo que construyes sigue ahí cuando cierras el programa. Los libros de cálculo aplicado funcionan mejor que los de teoría pura porque obligan a resolver, y ahí la inteligencia artificial tiene un uso legítimo si le pides <strong>ejercicios</strong> y los trabajas tú, en lugar de pedirle respuestas.</p>
+
+    <p>El panel de datos recoge lo que más efecto tiene y menos se parece a una herramienta: dormir, moverse, espaciar el repaso y hacer una cosa a la vez. Nada de eso se descarga, y sospecho que por eso existe el mercado de aplicaciones que prometen lo mismo.</p>
+
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li>Erickson, K. I., Voss, M. W., Prakash, R. S., Basak, C., Szabo, A., Chaddock, L., … Kramer, A. F. (2011). Exercise training increases size of hippocampus and improves memory. <em>Proceedings of the National Academy of Sciences, 108</em>(7), 3017–3022. <a href="https://doi.org/10.1073/pnas.1015950108">https://doi.org/10.1073/pnas.1015950108</a></li>
+        <li>Simons, D. J., Boot, W. R., Charness, N., Gathercole, S. E., Chabris, C. F., Hambrick, D. Z., &amp; Stine-Morrow, E. A. L. (2016). Do "brain-training" programs work? <em>Psychological Science in the Public Interest, 17</em>(3), 103–186. <a href="https://doi.org/10.1177/1529100616661983">https://doi.org/10.1177/1529100616661983</a></li>
+      </ol>
+    </div>
+  </article>
+
+  <article class="entry" id="a3">
+    <div class="entry-head">
+      <p class="kicker">Aportación 3 · Esquema</p>
+      <h3>Lo que se siente fácil</h3>
+      <p class="standfirst">Las dos técnicas de estudio que más usa todo el mundo son las dos que menos funcionan, y hay una razón para que se sientan bien.</p>
+      <p class="byline">24 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>Cuando busqué sugerencias para aprender mejor esperaba una lista de consejos sueltos. Lo que encontré fue mejor: una revisión que <strong>evaluó diez técnicas de estudio con la evidencia disponible y las ordenó por utilidad</strong>. Dunlosky y sus colegas (2013) las clasificaron en tres niveles, y el resultado tiene una incomodidad que vale la pena mirar de frente.</p>
+
+    <p>Subrayar y releer, que es lo que hace casi todo el mundo, quedaron en el nivel más bajo.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 520" role="img" aria-labelledby="t3 d3" xmlns="http://www.w3.org/2000/svg">
+        <title id="t3">Esquema de sugerencias para aprender mejor, ordenadas por nivel de evidencia</title>
+        <desc id="d3">Tres bloques. Utilidad alta: práctica de recuperación y práctica distribuida. Utilidad moderada: práctica intercalada, autoexplicación e interrogación elaborativa. Utilidad baja: releer, subrayar y resumir. Cada técnica con su explicación y un ejemplo concreto.</desc>
+
+        <rect x="0" y="0" width="760" height="520" fill="#ffffff"/>
+
+        <!-- Alta -->
+        <rect x="24" y="24" width="712" height="150" rx="4" fill="#eaf1ef" stroke="#2d6a62" stroke-width="1.5"/>
+        <text x="40" y="48" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#2d6a62">UTILIDAD ALTA</text>
+
+        <text x="40" y="76" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Práctica de recuperación</text>
+        <text x="40" y="96" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Sacar la información de la memoria en vez de volver a leerla.</text>
+        <text x="40" y="114" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: cierra el cuaderno, escribe lo que recuerdes del tema y luego compara.</text>
+
+        <text x="40" y="140" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Práctica distribuida</text>
+        <text x="40" y="160" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Repartir el estudio en el tiempo en lugar de concentrarlo.</text>
+        <text x="420" y="160" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: cuatro sesiones de 30 min en la semana.</text>
+
+        <!-- Moderada -->
+        <rect x="24" y="190" width="712" height="186" rx="4" fill="#f6f6f4" stroke="#9a9a9a" stroke-width="1.5"/>
+        <text x="40" y="214" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#5c6166">UTILIDAD MODERADA</text>
+
+        <text x="40" y="242" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Práctica intercalada</text>
+        <text x="40" y="262" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Mezclar tipos de problema en vez de agrupar los iguales.</text>
+        <text x="40" y="280" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: en cálculo, alternar derivadas, integrales y optimización.</text>
+
+        <text x="40" y="308" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Autoexplicación</text>
+        <text x="40" y="328" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Decir en voz alta por qué cada paso es el que sigue.</text>
+        <text x="40" y="346" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: al resolver, justificar cada línea antes de escribirla.</text>
+
+        <text x="40" y="368" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Interrogación elaborativa</text>
+        <text x="260" y="368" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: preguntarse "¿por qué es verdad esto?" en cada dato.</text>
+
+        <!-- Baja -->
+        <rect x="24" y="392" width="712" height="104" rx="4" fill="#f8ede6" stroke="#b4551f" stroke-width="1.5"/>
+        <text x="40" y="416" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#b4551f">UTILIDAD BAJA · Y LAS MÁS USADAS</text>
+
+        <text x="40" y="444" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Releer · Subrayar · Resumir</text>
+        <text x="40" y="464" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Dan sensación de dominio porque el texto se vuelve familiar,</text>
+        <text x="40" y="482" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">pero reconocer no es lo mismo que recuperar.</text>
+      </svg>
+      <figcaption>Figura 1. Sugerencias para aprender mejor, ordenadas por nivel de evidencia. Elaboración propia a partir de Dunlosky et al. (2013).</figcaption>
+    </figure>
+
+    <h4>Por qué lo que no funciona se siente tan bien</h4>
+
+    <p>Esta es la parte que me pareció más útil de entender. Cuando relees un capítulo por tercera vez, el texto te resulta cada vez más familiar, y el cerebro interpreta esa fluidez como señal de que ya lo sabes. Pero <strong>reconocer no es lo mismo que recuperar</strong>. En el examen nadie te muestra el texto: te pide que lo saques de la memoria, que es exactamente la operación que no practicaste.</p>
+
+    <div class="pull">
+      <p>De ahí sale la regla que resume todo el esquema: <strong>si estudiar se siente cómodo, probablemente no estás estudiando.</strong> Las técnicas que funcionan se sienten más difíciles mientras las haces, y esa dificultad es justamente el trabajo.</p>
+    </div>
+
+    <h4>Lo que cambié yo</h4>
+
+    <p>Dejé de releer apuntes y empecé a escribir el tema con mis propias palabras, cerrando antes el material. Lo noté con un trabajo sobre la organización interna de una memoria RAM: después de redactarlo pude explicar de dónde salía cada dato del encapsulado sin volver a consultarlo, cosa que no me pasaba cuando solo leía.</p>
+
+    <p>Es práctica de recuperación disfrazada de tarea, y funciona por la misma razón.</p>
+
+    <h4>Cómo empezar sin rehacer todo</h4>
+
+    <p>Las dos de utilidad alta no piden material nuevo ni más horas, solo cambiar el orden de lo que ya haces. En lugar de leer el tema otra vez, cierra el cuaderno y escribe lo que recuerdes; lo que falte es exactamente lo que hay que repasar. Y en lugar de dejar el estudio para la víspera, parte el mismo tiempo total en sesiones separadas.</p>
+
+    <p>Las de utilidad moderada valen la pena cuando ya tienes esas dos. Y las de utilidad baja no hay que abandonarlas del todo: subrayar sirve para marcar qué releer después, siempre que no se confunda con haber estudiado.</p>
+
+    <div class="caveat">
+      <p><strong>Una precisión sobre la clasificación.</strong> "Utilidad baja" no significa que no sirvan nunca, sino que la evidencia de que mejoren el aprendizaje en distintas materias, tipos de estudiante y formatos de examen es débil. Dunlosky et al. evaluaron cada técnica en esas cuatro dimensiones, no solo en si funciona alguna vez.</p>
+    </div>
+
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li>Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., &amp; Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. <em>Psychological Science in the Public Interest, 14</em>(1), 4–58. <a href="https://doi.org/10.1177/1529100612453266">https://doi.org/10.1177/1529100612453266</a></li>
+      </ol>
+    </div>
+  </article>
+
+  <footer>
+    Bitácora del curso WA1055.602 · Tecnológico de Monterrey<br>
+    Diego Eduardo Rodríguez Macías · A01572394
+  </footer>
+
+</div>
+
+</body>
+</html>
