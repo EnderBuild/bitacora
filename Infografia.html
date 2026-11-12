@@ -23,9 +23,8 @@
   --ink-3:#787d85;
   --accent:#2d6a62;
   --accent-soft:#eaf1ef;
-  --mark:#925080;
-  --mark-soft:#f7edf7;
-  --link:#0645ad;
+  --mark:#b4551f;
+  --mark-soft:#f8ede6;
 
   --display:"Newsreader",Georgia,"Times New Roman",serif;
   --body:"Public Sans",system-ui,-apple-system,sans-serif;
@@ -42,9 +41,8 @@
     --ink-3:#848a93;
     --accent:#6fb8ac;
     --accent-soft:#16231f;
-    --mark:#e3a8d1;
-    --mark-soft:#2b1d2b;
-    --link:#8ab4f8;
+    --mark:#d9834f;
+    --mark-soft:#241a14;
     color-scheme: dark;
   }
 }
@@ -58,9 +56,8 @@
   --ink-3:#848a93;
   --accent:#6fb8ac;
   --accent-soft:#16231f;
-  --mark:#e3a8d1;
-  --mark-soft:#2b1d2b;
-  --link:#8ab4f8;
+  --mark:#d9834f;
+  --mark-soft:#241a14;
   color-scheme: dark;
 }
 
@@ -171,24 +168,7 @@ body{
 
 /* ── entrada ──────────────────────────────── */
 .entry{scroll-margin-top:1rem}
-.entry#a3{--accent:#c01f3f;--accent-soft:#fbeff2}
-.entry#a4{--accent:#4a4e8c;--accent-soft:#f2f3f7}
-.entry#a5{--accent:#b22a8c;--accent-soft:#faf0f7}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]) .entry#a3{--accent:#e05570;--accent-soft:#311f26}
-  :root:not([data-theme="light"]) .entry#a4{--accent:#7c82d6;--accent-soft:#232534}
-  :root:not([data-theme="light"]) .entry#a5{--accent:#d665b0;--accent-soft:#30212f}
-}
-:root[data-theme="dark"] .entry#a3{--accent:#e05570;--accent-soft:#311f26}
-:root[data-theme="dark"] .entry#a4{--accent:#7c82d6;--accent-soft:#232534}
-:root[data-theme="dark"] .entry#a5{--accent:#d665b0;--accent-soft:#30212f}
-.entry-head{
-  margin-bottom:2rem;
-  padding:clamp(1.1rem,3vw,1.7rem);
-  border-left:4px solid var(--accent);
-  border-radius:0 10px 10px 0;
-  background:var(--accent-soft);
-}
+.entry-head{margin-bottom:1.6rem}
 .kicker{
   font-family:var(--mono);
   font-size:.72rem;
@@ -226,8 +206,6 @@ body{
 
 .entry p{margin:0 0 1.05rem;color:var(--ink-2)}
 .entry p strong{color:var(--ink);font-weight:600}
-.entry-head .kicker{color:var(--ink);font-weight:700}
-.entry-head .byline{margin-bottom:0}
 .entry h4{
   font-family:var(--display);
   font-weight:600;
@@ -243,26 +221,16 @@ body{
   margin:1.4rem 0 .4rem;
 }
 
-figure{
-  margin:2.2rem 0;
-  padding:clamp(.75rem,2.5vw,1.15rem);
-  border:1px solid var(--rule);
-  border-top:3px solid var(--accent);
-  border-radius:6px;
-  background:var(--accent-soft);
-}
-figure img{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--rule);border-radius:3px}
+figure{margin:1.8rem 0;}
+figure img{display:block;width:100%;max-width:100%;border:1px solid var(--rule);border-radius:3px}
 figure svg{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
 figcaption{
   font-family:var(--mono);
   font-size:.74rem;
   line-height:1.5;
-  color:var(--ink-2);
-  margin-top:.8rem;
+  color:var(--ink-3);
+  margin-top:.6rem;
 }
-.entry-visual{padding:0;border:0;background:transparent}
-.entry-visual img{border:0;border-radius:10px}
-.entry-visual figcaption{font-size:.68rem}
 
 .pull{
   background:var(--accent-soft);
@@ -342,7 +310,7 @@ td{color:var(--ink-2)}
 .refs{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
 .refs ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.7rem}
 .refs li{font-size:.88rem;line-height:1.55;color:var(--ink-2)}
-.refs a{color:var(--link);text-decoration:underline;word-break:break-word}
+.refs a{color:var(--accent);word-break:break-word}
 
 footer{
   border-top:1px solid var(--rule);
@@ -406,11 +374,6 @@ footer{
       <p class="standfirst">one sec y Cold Turkey resuelven el mismo problema desde supuestos opuestos sobre qué tanto puedes confiar en ti mismo.</p>
       <p class="byline">15 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
-
-    <figure class="entry-visual">
-      <img src="ilustraciones/autocontrol.svg" width="640" height="220" loading="lazy" decoding="async" alt="Un teléfono con el símbolo de pausa y un candado.">
-      <figcaption>Ilustración temática original.</figcaption>
-    </figure>
 
     <p>Toda aplicación de autocontrol contesta una pregunta antes de hacer cualquier otra cosa: <strong>¿el problema es que actúas sin pensar, o que piensas y te convences?</strong> Si es lo primero, basta con interrumpir el gesto automático. Si es lo segundo, ninguna pausa va a alcanzar, porque la vas a atravesar con un argumento.</p>
 
@@ -500,11 +463,6 @@ footer{
       <p class="byline">15 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
 
-    <figure class="entry-visual">
-      <img src="ilustraciones/herramientas.svg" width="640" height="220" loading="lazy" decoding="async" alt="Una caja de herramientas representa los recursos para la atención y la memoria.">
-      <figcaption>Ilustración temática original.</figcaption>
-    </figure>
-
     <p>Armé esta caja de herramientas con cinco compartimentos: ejercicios para hacer a diario, aplicaciones, páginas para medir y practicar, juegos, y uno que casi nunca aparece en listas de este tipo pero que creo que es el más importante.</p>
 
     <figure>
@@ -542,11 +500,6 @@ footer{
       <p class="standfirst">Las dos técnicas de estudio que más usa todo el mundo son las dos que menos funcionan, y hay una razón para que se sientan bien.</p>
       <p class="byline">24 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
-
-    <figure class="entry-visual">
-      <img src="ilustraciones/aprendizaje.svg" width="640" height="220" loading="lazy" decoding="async" alt="Un libro abierto y una marca de verificación representan las técnicas de estudio.">
-      <figcaption>Ilustración temática original.</figcaption>
-    </figure>
 
     <p>Cuando busqué sugerencias para aprender mejor esperaba una lista de consejos sueltos. Lo que encontré fue mejor: una revisión que <strong>evaluó diez técnicas de estudio con la evidencia disponible y las ordenó por utilidad</strong>. Dunlosky y sus colegas (2013) las clasificaron en tres niveles, y el resultado tiene una incomodidad que vale la pena mirar de frente.</p>
 
@@ -587,8 +540,8 @@ footer{
         <text x="260" y="368" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: preguntarse "¿por qué es verdad esto?" en cada dato.</text>
 
         <!-- Baja -->
-        <rect x="24" y="392" width="712" height="104" rx="4" fill="#f7edf7" stroke="#925080" stroke-width="1.5"/>
-        <text x="40" y="416" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#925080">UTILIDAD BAJA · Y LAS MÁS USADAS</text>
+        <rect x="24" y="392" width="712" height="104" rx="4" fill="#f8ede6" stroke="#b4551f" stroke-width="1.5"/>
+        <text x="40" y="416" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#b4551f">UTILIDAD BAJA · Y LAS MÁS USADAS</text>
 
         <text x="40" y="444" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Releer · Subrayar · Resumir</text>
         <text x="40" y="464" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Dan sensación de dominio porque el texto se vuelve familiar,</text>
@@ -631,8 +584,7 @@ footer{
 
   <footer>
     Bitácora del curso WA1055.602 · Tecnológico de Monterrey<br>
-    Diego Eduardo Rodríguez Macías · A01572394<br>
-    Las ilustraciones temáticas son originales; las referencias del contenido aparecen en cada entrada.
+    Diego Eduardo Rodríguez Macías · A01572394
   </footer>
 
 </div>
