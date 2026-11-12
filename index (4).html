@@ -20,8 +20,9 @@
   --ink-3:#787d85;
   --accent:#2d6a62;
   --accent-soft:#eaf1ef;
-  --mark:#b4551f;
-  --mark-soft:#f8ede6;
+  --mark:#925080;
+  --mark-soft:#f7edf7;
+  --link:#0645ad;
 
   --display:"Newsreader",Georgia,"Times New Roman",serif;
   --body:"Public Sans",system-ui,-apple-system,sans-serif;
@@ -38,8 +39,9 @@
     --ink-3:#848a93;
     --accent:#6fb8ac;
     --accent-soft:#16231f;
-    --mark:#d9834f;
-    --mark-soft:#241a14;
+    --mark:#e3a8d1;
+    --mark-soft:#2b1d2b;
+    --link:#8ab4f8;
     color-scheme: dark;
   }
 }
@@ -53,8 +55,9 @@
   --ink-3:#848a93;
   --accent:#6fb8ac;
   --accent-soft:#16231f;
-  --mark:#d9834f;
-  --mark-soft:#241a14;
+  --mark:#e3a8d1;
+  --mark-soft:#2b1d2b;
+  --link:#8ab4f8;
   color-scheme: dark;
 }
 
@@ -142,7 +145,7 @@ body{
 /* ── índice ───────────────────────────────── */
 /* el número del índice toma el acento de su entrada */
 .toc li:has(a[href="#a1"]) .n{color:#0f6fb0}
-.toc li:has(a[href="#a2"]) .n{color:#cc5f00}
+.toc li:has(a[href="#a2"]) .n{color:#087b83}
 .toc li:has(a[href="#a3"]) .n{color:#c01f3f}
 .toc li:has(a[href="#a4"]) .n{color:#4a4e8c}
 .toc li:has(a[href="#a5"]) .n{color:#b22a8c}
@@ -150,7 +153,7 @@ body{
 .toc li:has(a[href="#a7"]) .n{color:#7544c9}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){}
   :root:not([data-theme="light"]) .toc li:has(a[href="#a1"]) .n{color:#3f95d6}
-  :root:not([data-theme="light"]) .toc li:has(a[href="#a2"]) .n{color:#d4731f}
+  :root:not([data-theme="light"]) .toc li:has(a[href="#a2"]) .n{color:#6bcbd0}
   :root:not([data-theme="light"]) .toc li:has(a[href="#a3"]) .n{color:#e05570}
   :root:not([data-theme="light"]) .toc li:has(a[href="#a4"]) .n{color:#7c82d6}
   :root:not([data-theme="light"]) .toc li:has(a[href="#a5"]) .n{color:#d665b0}
@@ -158,7 +161,7 @@ body{
   :root:not([data-theme="light"]) .toc li:has(a[href="#a7"]) .n{color:#9d78e0}
 }
 :root[data-theme="dark"] .toc li:has(a[href="#a1"]) .n{color:#3f95d6}
-:root[data-theme="dark"] .toc li:has(a[href="#a2"]) .n{color:#d4731f}
+:root[data-theme="dark"] .toc li:has(a[href="#a2"]) .n{color:#6bcbd0}
 :root[data-theme="dark"] .toc li:has(a[href="#a3"]) .n{color:#e05570}
 :root[data-theme="dark"] .toc li:has(a[href="#a4"]) .n{color:#7c82d6}
 :root[data-theme="dark"] .toc li:has(a[href="#a5"]) .n{color:#d665b0}
@@ -195,7 +198,7 @@ body{
   /* Acento propio por aportación: identidad por entrada.
      --mark se deja global a propósito: el bloque .caveat significa lo mismo en todo el blog. */
   .entry#a1{--accent:#0f6fb0;--accent-soft:#eef5f9}  /* azul */
-  .entry#a2{--accent:#cc5f00;--accent-soft:#fbf4ed}  /* naranja */
+  .entry#a2{--accent:#087b83;--accent-soft:#eaf6f6}  /* turquesa */
   .entry#a3{--accent:#c01f3f;--accent-soft:#fbeff2}  /* carmesí */
   .entry#a4{--accent:#4a4e8c;--accent-soft:#f2f3f7}  /* índigo */
   .entry#a5{--accent:#b22a8c;--accent-soft:#faf0f7}  /* magenta */
@@ -204,7 +207,7 @@ body{
 
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]) .entry#a1{--accent:#3f95d6;--accent-soft:#1b2834}
-    :root:not([data-theme="light"]) .entry#a2{--accent:#d4731f;--accent-soft:#30231b}
+    :root:not([data-theme="light"]) .entry#a2{--accent:#6bcbd0;--accent-soft:#192d30}
     :root:not([data-theme="light"]) .entry#a3{--accent:#e05570;--accent-soft:#311f26}
     :root:not([data-theme="light"]) .entry#a4{--accent:#7c82d6;--accent-soft:#232534}
     :root:not([data-theme="light"]) .entry#a5{--accent:#d665b0;--accent-soft:#30212f}
@@ -212,7 +215,7 @@ body{
     :root:not([data-theme="light"]) .entry#a7{--accent:#9d78e0;--accent-soft:#282436}
   }
   :root[data-theme="dark"] .entry#a1{--accent:#3f95d6;--accent-soft:#1b2834}
-  :root[data-theme="dark"] .entry#a2{--accent:#d4731f;--accent-soft:#30231b}
+  :root[data-theme="dark"] .entry#a2{--accent:#6bcbd0;--accent-soft:#192d30}
   :root[data-theme="dark"] .entry#a3{--accent:#e05570;--accent-soft:#311f26}
   :root[data-theme="dark"] .entry#a4{--accent:#7c82d6;--accent-soft:#232534}
   :root[data-theme="dark"] .entry#a5{--accent:#d665b0;--accent-soft:#30212f}
@@ -247,7 +250,13 @@ body{
 
 /* ── entrada ──────────────────────────────── */
 .entry{scroll-margin-top:1rem}
-.entry-head{margin-bottom:1.6rem}
+.entry-head{
+  margin-bottom:2rem;
+  padding:clamp(1.1rem,3vw,1.7rem);
+  border-left:4px solid var(--accent);
+  border-radius:0 10px 10px 0;
+  background:var(--accent-soft);
+}
 .kicker{
   display:flex;
   align-items:center;
@@ -289,13 +298,15 @@ body{
 
 .entry p{margin:0 0 1.05rem;color:var(--ink-2)}
 .entry p strong{color:var(--ink);font-weight:600}
+.entry-head .kicker{color:var(--ink);font-weight:700}
+.entry-head .byline{margin-bottom:0}
 .entry h4{
   font-family:var(--display);
   font-weight:600;
   font-size:1.35rem;
   letter-spacing:-.01em;
   color:var(--ink);
-  margin:2.1rem 0 .7rem;
+  margin:2.4rem 0 .85rem;
 }
 .entry h5{
   font-size:.95rem;
@@ -307,16 +318,26 @@ body{
 .entry li{margin-bottom:.4rem}
 .entry li strong{color:var(--ink)}
 
-figure{margin:1.8rem 0;}
-figure img{display:block;width:100%;max-width:100%;border:1px solid var(--rule);border-radius:3px}
+figure{
+  margin:2.2rem 0;
+  padding:clamp(.75rem,2.5vw,1.15rem);
+  border:1px solid var(--rule);
+  border-top:3px solid var(--accent);
+  border-radius:6px;
+  background:var(--accent-soft);
+}
+figure img{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--rule);border-radius:3px}
 figure svg{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
 figcaption{
   font-family:var(--mono);
   font-size:.74rem;
   line-height:1.5;
-  color:var(--ink-3);
-  margin-top:.6rem;
+  color:var(--ink-2);
+  margin-top:.8rem;
 }
+.entry-visual{padding:0;border:0;background:transparent}
+.entry-visual img{border:0;border-radius:10px}
+.entry-visual figcaption{font-size:.68rem}
 
 .pull{
   background:var(--accent-soft);
@@ -411,7 +432,7 @@ td{color:var(--ink-2)}
 .refs{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
 .refs ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.7rem}
 .refs li{font-size:.88rem;line-height:1.55;color:var(--ink-2)}
-.refs a{color:var(--accent);word-break:break-word}
+.refs a{color:var(--link);text-decoration:underline;word-break:break-word}
 
 /* ── hueco por llenar (quitar al pegar tu contenido) ── */
 .slot{
@@ -445,7 +466,7 @@ footer{
     <p class="deck">Siete entradas sobre qué sostiene a un estudiante mientras cursa la carrera, y qué de eso sigue sirviendo después de ella.</p>
     <div class="spectrum" aria-hidden="true">
       <span style="background:#0f6fb0"></span>
-      <span style="background:#cc5f00"></span>
+      <span style="background:#087b83"></span>
       <span style="background:#c01f3f"></span>
       <span style="background:#4a4e8c"></span>
       <span style="background:#b22a8c"></span>
@@ -534,6 +555,11 @@ footer{
       <p class="byline">7 de noviembre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
 
+    <figure class="entry-visual">
+      <img src="ilustraciones/medir.svg" width="640" height="220" loading="lazy" decoding="async" alt="Una gráfica de mediciones y una lupa.">
+      <figcaption>Ilustración temática original.</figcaption>
+    </figure>
+
     <p>Esta entrada guarda el material completo del videopodcast. El video tenía límite de duración, así que varias piezas se quedaron fuera de la grabación; aquí están todas, con las fuentes y las figuras que las sostienen.</p>
 
     <h4>La ignorancia como primer pilar</h4>
@@ -569,7 +595,7 @@ footer{
         <line x1="190" y1="160" x2="94.7" y2="105" stroke="#e2e3e0" stroke-width="1"/>
 
         <!-- promedio 50 -->
-        <polygon points="190,105 237.6,132.5 237.6,187.5 190,215 142.4,187.5 142.4,132.5" fill="none" stroke="#b4551f" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <polygon points="190,105 237.6,132.5 237.6,187.5 190,215 142.4,187.5 142.4,132.5" fill="none" stroke="#925080" stroke-width="1.5" stroke-dasharray="4 3"/>
 
         <!-- perfil real -->
         <polygon points="190,63.2 230.0,136.9 223.3,179.3 190,220.5 161.4,176.5 144.3,133.6"
@@ -592,7 +618,7 @@ footer{
         <!-- leyenda -->
         <line x1="24" y1="308" x2="48" y2="308" stroke="#2d6a62" stroke-width="2"/>
         <text x="54" y="312" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Perfil por dimensión</text>
-        <line x1="200" y1="308" x2="224" y2="308" stroke="#b4551f" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <line x1="200" y1="308" x2="224" y2="308" stroke="#925080" stroke-width="1.5" stroke-dasharray="4 3"/>
         <text x="230" y="312" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Promedio general: 50</text>
       </svg>
       <figcaption><strong>Por qué el promedio no describe a nadie.</strong> El promedio general diría 50 y no describiría ninguno de los seis ejes. Valores ilustrativos. Elaboración propia.</figcaption>
@@ -768,19 +794,19 @@ footer{
               fill="none" stroke="#2d6a62" stroke-width="2.5" stroke-linejoin="round"/>
         <!-- curva tráfico: colapsa tras 0.4 -->
         <path d="M60,240 L130,170 L200,128 L270,178 L340,218 L410,236"
-              fill="none" stroke="#b4551f" stroke-width="2.5" stroke-dasharray="6 4" stroke-linejoin="round"/>
+              fill="none" stroke="#925080" stroke-width="2.5" stroke-dasharray="6 4" stroke-linejoin="round"/>
 
         <!-- marcador 0.4 -->
-        <line x1="200" y1="128" x2="200" y2="240" stroke="#b4551f" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+        <line x1="200" y1="128" x2="200" y2="240" stroke="#925080" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
         <!-- marcador 0.8 -->
         <line x1="340" y1="84" x2="340" y2="138" stroke="#2d6a62" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
         <line x1="340" y1="166" x2="340" y2="240" stroke="#2d6a62" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
 
         <!-- etiquetas directas -->
         <text x="286" y="74" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#2d6a62">Hormigas</text>
-        <text x="404" y="150" text-anchor="end" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#b4551f">Coches y peatones</text>
+        <text x="404" y="150" text-anchor="end" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#925080">Coches y peatones</text>
 
-        <text x="196" y="36" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="#b4551f">colapsa en 0.4</text>
+        <text x="196" y="36" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="#925080">colapsa en 0.4</text>
         <text x="344" y="36" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2d6a62">plano hasta 0.8</text>
       </svg>
       <figcaption><strong>Donde el humano colapsa y la hormiga no.</strong> El flujo de las hormigas se mantiene donde el tránsito humano se derrumba. Forma basada en Poissonnier et al. (2019), <em>eLife</em> 8:e48945. Elaboración propia.</figcaption>
@@ -891,6 +917,11 @@ footer{
       <p class="standfirst">El modo de falla más común no es estar mal en todo, sino invertir donde ya eras bueno y leer esa competencia como salud general.</p>
       <p class="byline">19 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
+
+    <figure class="entry-visual">
+      <img src="ilustraciones/autocuidado.svg" width="640" height="220" loading="lazy" decoding="async" alt="Una planta y un corazón representan el autocuidado.">
+      <figcaption>Ilustración temática original.</figcaption>
+    </figure>
 
     <p>El autocuidado personal es el conjunto de acciones deliberadas que una persona realiza por sí misma, de forma sostenida y dentro de su rutina, para mantener, recuperar y desarrollar su bienestar en varias dimensiones de su vida.</p>
 
@@ -1007,8 +1038,8 @@ footer{
 
         <text x="664" y="222" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="700" fill="#2d6a62">ya competente</text>
 
-        <line x1="652" y1="56" x2="652" y2="336" stroke="#b4551f" stroke-width="1.5" stroke-dasharray="4 4"/>
-        <text x="652" y="48" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#b4551f">se lee como salud general</text>
+        <line x1="652" y1="56" x2="652" y2="336" stroke="#925080" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="652" y="48" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#925080">se lee como salud general</text>
 
         <line x1="340" y1="56" x2="340" y2="336" stroke="#5c6166" stroke-width="1.5" stroke-dasharray="4 4"/>
         <text x="340" y="48" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#5c6166">nivel real del conjunto</text>
@@ -1067,6 +1098,11 @@ footer{
       <p class="standfirst">one sec y Cold Turkey resuelven el mismo problema desde supuestos opuestos sobre qué tanto puedes confiar en ti mismo.</p>
       <p class="byline">15 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
+
+    <figure class="entry-visual">
+      <img src="ilustraciones/autocontrol.svg" width="640" height="220" loading="lazy" decoding="async" alt="Un teléfono con el símbolo de pausa y un candado.">
+      <figcaption>Ilustración temática original.</figcaption>
+    </figure>
 
     <p>Toda aplicación de autocontrol contesta una pregunta antes de hacer cualquier otra cosa: <strong>¿el problema es que actúas sin pensar, o que piensas y te convences?</strong> Si es lo primero, basta con interrumpir el gesto automático. Si es lo segundo, ninguna pausa va a alcanzar, porque la vas a atravesar con un argumento.</p>
 
@@ -1158,6 +1194,11 @@ footer{
       <p class="standfirst">Ejercicios, apps, páginas, juegos y proyectos para sostener la atención y cuidar la memoria a largo plazo.</p>
       <p class="byline">15 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
+
+    <figure class="entry-visual">
+      <img src="ilustraciones/herramientas.svg" width="640" height="220" loading="lazy" decoding="async" alt="Una caja de herramientas representa los recursos para la atención y la memoria.">
+      <figcaption>Ilustración temática original.</figcaption>
+    </figure>
 
     <p>Armé esta caja de herramientas con cinco compartimentos: ejercicios para hacer a diario, aplicaciones, páginas para medir y practicar, juegos, y uno que casi nunca aparece en listas de este tipo pero que creo que es el más importante.</p>
 
@@ -1264,6 +1305,11 @@ footer{
       <p class="byline">24 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
 
+    <figure class="entry-visual">
+      <img src="ilustraciones/aprendizaje.svg" width="640" height="220" loading="lazy" decoding="async" alt="Un libro abierto y una marca de verificación representan las técnicas de estudio.">
+      <figcaption>Ilustración temática original.</figcaption>
+    </figure>
+
     <p>Cuando busqué sugerencias para aprender mejor esperaba una lista de consejos sueltos. Lo que encontré fue mejor: una revisión que <strong>evaluó diez técnicas de estudio con la evidencia disponible y las ordenó por utilidad</strong>. Dunlosky y sus colegas (2013) las clasificaron en tres niveles, y el resultado tiene una incomodidad que vale la pena mirar de frente.</p>
 
     <p>Subrayar y releer, que es lo que hace casi todo el mundo, quedaron en el nivel más bajo.</p>
@@ -1303,8 +1349,8 @@ footer{
         <text x="260" y="368" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: preguntarse "¿por qué es verdad esto?" en cada dato.</text>
 
         <!-- Baja -->
-        <rect x="24" y="392" width="712" height="104" rx="4" fill="#f8ede6" stroke="#b4551f" stroke-width="1.5"/>
-        <text x="40" y="416" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#b4551f">UTILIDAD BAJA · Y LAS MÁS USADAS</text>
+        <rect x="24" y="392" width="712" height="104" rx="4" fill="#f7edf7" stroke="#925080" stroke-width="1.5"/>
+        <text x="40" y="416" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#925080">UTILIDAD BAJA · Y LAS MÁS USADAS</text>
 
         <text x="40" y="444" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Releer · Subrayar · Resumir</text>
         <text x="40" y="464" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Dan sensación de dominio porque el texto se vuelve familiar,</text>
@@ -1356,6 +1402,11 @@ footer{
       <p class="byline">2 de septiembre de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
 
+    <figure class="entry-visual">
+      <img src="ilustraciones/habitos.svg" width="640" height="220" loading="lazy" decoding="async" alt="Un libro, un reloj y un control de videojuegos representan hábitos de lectura, atención y creatividad.">
+      <figcaption>Ilustración temática original.</figcaption>
+    </figure>
+
     <p>Buscando hábitos de personas exitosas aparece siempre la misma lista de rutinas matutinas, pero al revisar de dónde salen esos hábitos aparece algo más interesante: <strong>casi ninguno es una preferencia personal.</strong> Todos son la respuesta a un problema concreto que esa persona tuvo, y por eso los sostiene.</p>
 
     <p>Reuní diez hábitos de cinco personas de campos distintos, con lo que cada una tuvo que vencer para adoptarlos.</p>
@@ -1376,40 +1427,40 @@ footer{
           <!-- Gates 1 -->
           <text x="44" y="86" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">GATES · 1</text>
           <text x="44" y="104" font-size="13" font-weight="700" fill="#16181b">Las semanas de reflexión</text>
-          <text x="44" y="122" font-size="11.5" fill="#b4551f">Venció: la idea de que un director debe</text>
-          <text x="44" y="137" font-size="11.5" fill="#b4551f">estar siempre disponible</text>
+          <text x="44" y="122" font-size="11.5" fill="#925080">Venció: la idea de que un director debe</text>
+          <text x="44" y="137" font-size="11.5" fill="#925080">estar siempre disponible</text>
           <!-- Gates 2 -->
           <text x="396" y="86" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">GATES · 2</text>
           <text x="396" y="104" font-size="13" font-weight="700" fill="#16181b">Leer anotando y terminar</text>
-          <text x="396" y="122" font-size="11.5" fill="#b4551f">Venció: el impulso de saltar al siguiente</text>
-          <text x="396" y="137" font-size="11.5" fill="#b4551f">libro apenas el actual se pone difícil</text>
+          <text x="396" y="122" font-size="11.5" fill="#925080">Venció: el impulso de saltar al siguiente</text>
+          <text x="396" y="137" font-size="11.5" fill="#925080">libro apenas el actual se pone difícil</text>
 
           <!-- Nadella 3 -->
           <text x="44" y="172" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">NADELLA · 3</text>
           <text x="44" y="190" font-size="13" font-weight="700" fill="#16181b">Aprenderlo todo, no saberlo todo</text>
-          <text x="44" y="208" font-size="11.5" fill="#b4551f">Venció: una cultura interna donde admitir</text>
-          <text x="44" y="223" font-size="11.5" fill="#b4551f">ignorancia se leía como debilidad</text>
+          <text x="44" y="208" font-size="11.5" fill="#925080">Venció: una cultura interna donde admitir</text>
+          <text x="44" y="223" font-size="11.5" fill="#925080">ignorancia se leía como debilidad</text>
           <!-- Nadella 4 -->
           <text x="396" y="172" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">NADELLA · 4</text>
           <text x="396" y="190" font-size="13" font-weight="700" fill="#16181b">Agradecer antes de cualquier pantalla</text>
-          <text x="396" y="208" font-size="11.5" fill="#b4551f">Venció: empezar el día reaccionando a la</text>
-          <text x="396" y="223" font-size="11.5" fill="#b4551f">bandeja de entrada</text>
+          <text x="396" y="208" font-size="11.5" fill="#925080">Venció: empezar el día reaccionando a la</text>
+          <text x="396" y="223" font-size="11.5" fill="#925080">bandeja de entrada</text>
 
           <!-- Winfrey 5 -->
           <text x="44" y="258" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">WINFREY · 5</text>
           <text x="44" y="276" font-size="13" font-weight="700" fill="#16181b">Meditar dos veces al día</text>
-          <text x="44" y="294" font-size="11.5" fill="#b4551f">Venció: creer que detenerse veinte</text>
-          <text x="44" y="309" font-size="11.5" fill="#b4551f">minutos es tiempo perdido</text>
+          <text x="44" y="294" font-size="11.5" fill="#925080">Venció: creer que detenerse veinte</text>
+          <text x="44" y="309" font-size="11.5" fill="#925080">minutos es tiempo perdido</text>
           <!-- Winfrey 6 -->
           <text x="396" y="258" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">WINFREY · 6</text>
           <text x="396" y="276" font-size="13" font-weight="700" fill="#16181b">Leer de forma transversal</text>
-          <text x="396" y="294" font-size="11.5" fill="#b4551f">Venció: un entorno de pobreza severa sin</text>
-          <text x="396" y="309" font-size="11.5" fill="#b4551f">acceso a ese material</text>
+          <text x="396" y="294" font-size="11.5" fill="#925080">Venció: un entorno de pobreza severa sin</text>
+          <text x="396" y="309" font-size="11.5" fill="#925080">acceso a ese material</text>
         </g>
 
         <!-- GRUPO 2: PROCESO -->
-        <rect x="24" y="348" width="712" height="226" rx="4" fill="#f8ede6" stroke="#b4551f" stroke-width="1.5"/>
-        <text x="44" y="374" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#b4551f">PROCESO</text>
+        <rect x="24" y="348" width="712" height="226" rx="4" fill="#f7edf7" stroke="#925080" stroke-width="1.5"/>
+        <text x="44" y="374" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#925080">PROCESO</text>
         <text x="136" y="374" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">qué hacer con el trabajo propio cuando no está funcionando</text>
 
         <g font-family="Public Sans, sans-serif">
@@ -1522,6 +1573,11 @@ footer{
       <p class="byline">19 de agosto de 2026 · Diego Eduardo Rodríguez Macías</p>
     </div>
 
+    <figure class="entry-visual">
+      <img src="ilustraciones/tiempo.svg" width="640" height="220" loading="lazy" decoding="async" alt="Un control de videojuegos y un reloj ilustran la administración del tiempo como una misión.">
+      <figcaption>Ilustración temática original.</figcaption>
+    </figure>
+
     <p>La administración del tiempo no consiste en llenar cada minuto de actividad, sino en decidir con criterio qué misión merece tu energía. En la vida académica, esto determina si una carga pesada de materias se sostiene con calma o termina quemando toda tu barra de vida.</p>
 
     <p>La evidencia científica confirma que los descansos programados, a diferencia de dejar que el cansancio te sorprenda, reducen la fatiga y mejoran la concentración de forma consistente (Biwer et al., 2023). Sin embargo, la proporción exacta de trabajo y descanso no tiene una fórmula mágica universal: varía según el tipo de tarea y la persona, por lo que vale la pena conocer distintas técnicas y elegir la que mejor se adapte a cada momento.</p>
@@ -1571,8 +1627,8 @@ footer{
         <text x="54" y="356" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Compras o pagos pendientes</text>
 
         <!-- No urgente + No importante -->
-        <rect x="388" y="218" width="320" height="164" rx="4" fill="#f8ede6" stroke="#b4551f" stroke-width="1.5"/>
-        <text x="406" y="244" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#b4551f">Distracción · Minimizar</text>
+        <rect x="388" y="218" width="320" height="164" rx="4" fill="#f7edf7" stroke="#925080" stroke-width="1.5"/>
+        <text x="406" y="244" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#925080">Distracción · Minimizar</text>
         <text x="406" y="278" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Redes sociales sin propósito claro</text>
         <text x="406" y="304" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Investigación sin fin inmediato</text>
         <text x="406" y="330" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Distracciones durante bloques de estudio</text>
@@ -1608,14 +1664,14 @@ footer{
         <!-- Pomodoro: 25 trabajo + 5 descanso -->
         <text x="40" y="94" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#16181b">Pomodoro</text>
         <rect x="40" y="104" width="150" height="26" rx="3" fill="#2d6a62"/>
-        <rect x="192" y="104" width="28" height="26" rx="3" fill="#b4551f"/>
+        <rect x="192" y="104" width="28" height="26" rx="3" fill="#925080"/>
         <text x="115" y="122" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">25 trabajo</text>
-        <text x="232" y="122" font-family="Public Sans, sans-serif" font-size="11.5" fill="#b4551f">5 descanso</text>
+        <text x="232" y="122" font-family="Public Sans, sans-serif" font-size="11.5" fill="#925080">5 descanso</text>
 
         <!-- Ciclos ultradianos: 90 trabajo + 20 descanso -->
         <text x="40" y="166" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#16181b">Ciclos ultradianos</text>
         <rect x="40" y="176" width="540" height="26" rx="3" fill="#2d6a62"/>
-        <rect x="582" y="176" width="118" height="26" rx="3" fill="#b4551f"/>
+        <rect x="582" y="176" width="118" height="26" rx="3" fill="#925080"/>
         <text x="310" y="194" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">90 trabajo</text>
         <text x="641" y="194" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">20 descanso</text>
 
@@ -1623,11 +1679,11 @@ footer{
         <text x="40" y="238" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#16181b">Time blocking</text>
         <g>
           <rect x="40" y="246" width="96" height="14" rx="2" fill="#2d6a62"/>
-          <rect x="140" y="246" width="34" height="14" rx="2" fill="#b4551f"/>
+          <rect x="140" y="246" width="34" height="14" rx="2" fill="#925080"/>
           <rect x="178" y="246" width="130" height="14" rx="2" fill="#2d6a62"/>
-          <rect x="312" y="246" width="48" height="14" rx="2" fill="#b4551f"/>
+          <rect x="312" y="246" width="48" height="14" rx="2" fill="#925080"/>
           <rect x="364" y="246" width="78" height="14" rx="2" fill="#2d6a62"/>
-          <rect x="446" y="246" width="60" height="14" rx="2" fill="#b4551f"/>
+          <rect x="446" y="246" width="60" height="14" rx="2" fill="#925080"/>
           <rect x="510" y="246" width="190" height="14" rx="2" fill="#2d6a62"/>
         </g>
 
@@ -1683,15 +1739,15 @@ footer{
 
         <rect x="60" y="80" width="290" height="230" fill="none" stroke="#dcdcd8" stroke-width="1"/>
         <rect x="420" y="80" width="290" height="230" fill="none" stroke="#dcdcd8" stroke-width="1"/>
-        <circle cx="204.5" cy="218.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="283.2" cy="163.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="275.2" cy="155.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="172.2" cy="185.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.8" cy="184.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="171.2" cy="195.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.3" cy="215.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="199.1" cy="204.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="246.8" cy="216.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="92.8" cy="187.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="295.5" cy="189.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.8" cy="171.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="242.9" cy="254.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="194.4" cy="157.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="180.0" cy="233.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="230.0" cy="228.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="251.4" cy="202.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.5" cy="223.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="193.4" cy="184.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="243.2" cy="220.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="150.8" cy="249.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="112.5" cy="241.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.9" cy="136.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="162.7" cy="198.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="88.4" cy="257.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="154.1" cy="200.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="174.7" cy="269.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="131.6" cy="121.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="113.8" cy="272.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="204.7" cy="175.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="255.8" cy="168.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="188.6" cy="263.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.3" cy="186.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.3" cy="150.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="245.1" cy="173.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.7" cy="186.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.8" cy="152.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="264.4" cy="185.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.2" cy="182.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="154.2" cy="206.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="223.1" cy="167.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.2" cy="238.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.7" cy="156.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="126.2" cy="225.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="163.2" cy="249.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="152.7" cy="184.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="99.5" cy="128.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="210.0" cy="153.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="233.8" cy="218.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.6" cy="168.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="284.8" cy="211.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="251.3" cy="199.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="239.7" cy="190.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="226.3" cy="299.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="259.2" cy="184.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="123.4" cy="249.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.9" cy="226.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.3" cy="261.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="97.5" cy="273.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="223.1" cy="238.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="187.6" cy="161.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="248.9" cy="118.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="176.4" cy="200.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="201.4" cy="148.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="222.8" cy="207.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="150.4" cy="287.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.0" cy="187.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.2" cy="177.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="231.7" cy="214.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="171.5" cy="185.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.0" cy="166.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.4" cy="233.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="191.9" cy="264.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="240.0" cy="204.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="277.3" cy="201.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="308.8" cy="205.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="109.0" cy="159.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="254.9" cy="115.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="230.1" cy="214.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.9" cy="166.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="142.7" cy="159.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="277.1" cy="159.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="127.5" cy="155.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.1" cy="212.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="279.8" cy="158.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="107.5" cy="112.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.5" cy="162.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="124.7" cy="230.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.0" cy="168.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="292.4" cy="134.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="322.6" cy="172.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="96.9" cy="230.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="168.3" cy="130.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="244.3" cy="250.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="296.3" cy="167.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="227.5" cy="196.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.2" cy="254.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="220.1" cy="141.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="201.5" cy="181.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.4" cy="250.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.9" cy="173.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.5" cy="215.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="220.8" cy="281.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="197.0" cy="228.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="189.3" cy="186.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="126.2" cy="174.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="173.6" cy="191.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="274.1" cy="190.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="191.2" cy="176.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="117.0" cy="212.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.7" cy="138.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.0" cy="188.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="327.7" cy="175.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="206.2" cy="172.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="175.1" cy="246.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="116.5" cy="235.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.1" cy="122.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="350.0" cy="171.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.7" cy="213.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="164.0" cy="184.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="237.9" cy="216.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.2" cy="188.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="186.4" cy="228.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="181.7" cy="186.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="213.9" cy="267.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.5" cy="132.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="203.8" cy="220.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="257.0" cy="264.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="177.5" cy="209.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="221.9" cy="212.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="75.5" cy="199.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="116.4" cy="254.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="249.7" cy="175.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="167.4" cy="80.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.9" cy="252.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.7" cy="179.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.0" cy="205.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="250.7" cy="185.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="262.9" cy="274.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="195.8" cy="249.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="161.0" cy="179.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="159.0" cy="202.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="173.5" cy="125.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="135.4" cy="233.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="170.0" cy="191.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="197.0" cy="80.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.4" cy="230.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="182.4" cy="239.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="88.2" cy="206.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="198.2" cy="199.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="215.9" cy="158.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="266.9" cy="186.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.8" cy="228.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="164.3" cy="190.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="159.5" cy="81.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="321.9" cy="131.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="247.4" cy="310.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="311.2" cy="195.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="328.9" cy="227.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.9" cy="172.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.4" cy="203.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="229.7" cy="108.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="235.7" cy="152.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.7" cy="154.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="214.5" cy="188.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="212.8" cy="198.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="113.2" cy="188.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="192.7" cy="139.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.1" cy="176.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="210.0" cy="212.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><line x1="60.0" y1="208.8" x2="350.0" y2="181.2" stroke="#b4551f" stroke-width="2.2"/>
-        <circle cx="637.8" cy="122.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="576.1" cy="197.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="560.7" cy="199.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="520.0" cy="200.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="532.8" cy="211.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="528.8" cy="185.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="420.0" cy="310.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="623.1" cy="116.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.4" cy="203.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="552.9" cy="205.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="624.7" cy="210.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.1" cy="161.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="586.3" cy="140.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="424.0" cy="228.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="551.8" cy="172.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="595.4" cy="231.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="656.9" cy="174.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="670.0" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="646.4" cy="184.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="498.9" cy="189.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="439.8" cy="250.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.6" cy="178.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="566.7" cy="176.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="620.0" cy="198.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="557.9" cy="227.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="577.6" cy="217.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="479.6" cy="219.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.6" cy="169.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="539.7" cy="187.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.1" cy="147.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="591.3" cy="226.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="558.4" cy="216.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="583.2" cy="179.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="564.3" cy="239.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="608.4" cy="190.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="593.7" cy="145.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="533.9" cy="172.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.6" cy="174.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="664.5" cy="142.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.3" cy="203.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.7" cy="129.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="587.5" cy="195.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="532.9" cy="198.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.4" cy="170.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="572.0" cy="202.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="579.7" cy="207.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="600.1" cy="176.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="492.9" cy="209.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.2" cy="194.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.7" cy="191.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="656.4" cy="129.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="430.5" cy="310.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.1" cy="210.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="534.3" cy="203.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="589.7" cy="212.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="537.0" cy="253.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.9" cy="224.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="654.3" cy="179.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.3" cy="189.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="589.8" cy="215.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="586.4" cy="175.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.3" cy="158.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="596.1" cy="183.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="553.2" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="518.8" cy="207.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.9" cy="232.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="552.1" cy="208.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="608.1" cy="205.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.7" cy="169.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="534.9" cy="247.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="648.1" cy="107.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.5" cy="146.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="637.5" cy="225.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="599.7" cy="149.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="558.8" cy="144.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="541.2" cy="232.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="549.2" cy="168.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="619.1" cy="227.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="571.5" cy="182.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="480.6" cy="292.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.9" cy="178.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="484.4" cy="294.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="574.6" cy="277.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="496.5" cy="214.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="493.0" cy="152.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="571.9" cy="210.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="560.6" cy="168.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="470.3" cy="237.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="607.8" cy="183.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="688.4" cy="111.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="480.6" cy="180.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="668.9" cy="183.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="525.9" cy="194.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="536.9" cy="196.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.9" cy="246.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="482.7" cy="180.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="639.2" cy="90.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="593.2" cy="211.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.3" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="549.3" cy="199.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="478.6" cy="242.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="545.3" cy="153.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="618.5" cy="159.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="467.3" cy="231.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="540.2" cy="155.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="573.5" cy="146.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="624.9" cy="133.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="642.0" cy="202.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="539.0" cy="259.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.9" cy="177.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.8" cy="212.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="544.4" cy="199.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="547.4" cy="238.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="626.7" cy="169.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="661.4" cy="188.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="580.3" cy="131.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.1" cy="233.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.7" cy="181.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="457.5" cy="254.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="564.1" cy="153.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="504.6" cy="271.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="701.3" cy="126.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.2" cy="180.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="573.2" cy="171.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.0" cy="183.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="421.7" cy="281.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="605.7" cy="165.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="658.0" cy="159.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="523.5" cy="198.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="604.1" cy="177.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.3" cy="195.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="476.8" cy="238.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="618.5" cy="154.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="642.3" cy="80.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="578.1" cy="203.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="561.5" cy="185.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="610.0" cy="121.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="477.2" cy="307.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="570.4" cy="249.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="625.2" cy="203.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="494.3" cy="233.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.7" cy="83.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="541.3" cy="192.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="446.5" cy="212.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.1" cy="204.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="509.7" cy="304.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="583.3" cy="262.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="498.3" cy="192.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="625.0" cy="157.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="523.0" cy="258.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.4" cy="145.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.2" cy="262.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="546.7" cy="164.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="633.1" cy="110.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="577.4" cy="213.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="542.6" cy="242.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="493.7" cy="201.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="631.2" cy="197.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.9" cy="143.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="546.5" cy="243.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="579.0" cy="159.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="506.4" cy="220.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="507.2" cy="237.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="518.0" cy="247.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.3" cy="175.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="582.0" cy="249.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.6" cy="224.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="607.2" cy="186.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="609.8" cy="148.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="575.0" cy="231.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><line x1="420.0" y1="264.0" x2="710.0" y2="126.0" stroke="#b4551f" stroke-width="2.2"/>
+        <circle cx="204.5" cy="218.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="283.2" cy="163.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="275.2" cy="155.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="172.2" cy="185.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.8" cy="184.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="171.2" cy="195.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.3" cy="215.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="199.1" cy="204.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="246.8" cy="216.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="92.8" cy="187.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="295.5" cy="189.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.8" cy="171.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="242.9" cy="254.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="194.4" cy="157.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="180.0" cy="233.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="230.0" cy="228.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="251.4" cy="202.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.5" cy="223.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="193.4" cy="184.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="243.2" cy="220.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="150.8" cy="249.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="112.5" cy="241.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.9" cy="136.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="162.7" cy="198.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="88.4" cy="257.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="154.1" cy="200.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="174.7" cy="269.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="131.6" cy="121.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="113.8" cy="272.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="204.7" cy="175.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="255.8" cy="168.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="188.6" cy="263.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.3" cy="186.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.3" cy="150.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="245.1" cy="173.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.7" cy="186.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.8" cy="152.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="264.4" cy="185.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.2" cy="182.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="154.2" cy="206.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="223.1" cy="167.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.2" cy="238.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.7" cy="156.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="126.2" cy="225.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="163.2" cy="249.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="152.7" cy="184.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="99.5" cy="128.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="210.0" cy="153.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="233.8" cy="218.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.6" cy="168.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="284.8" cy="211.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="251.3" cy="199.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="239.7" cy="190.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="226.3" cy="299.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="259.2" cy="184.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="123.4" cy="249.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.9" cy="226.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.3" cy="261.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="97.5" cy="273.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="223.1" cy="238.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="187.6" cy="161.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="248.9" cy="118.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="176.4" cy="200.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="201.4" cy="148.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="222.8" cy="207.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="150.4" cy="287.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.0" cy="187.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.2" cy="177.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="231.7" cy="214.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="171.5" cy="185.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.0" cy="166.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.4" cy="233.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="191.9" cy="264.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="240.0" cy="204.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="277.3" cy="201.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="308.8" cy="205.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="109.0" cy="159.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="254.9" cy="115.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="230.1" cy="214.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.9" cy="166.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="142.7" cy="159.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="277.1" cy="159.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="127.5" cy="155.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.1" cy="212.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="279.8" cy="158.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="107.5" cy="112.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.5" cy="162.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="124.7" cy="230.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.0" cy="168.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="292.4" cy="134.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="322.6" cy="172.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="96.9" cy="230.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="168.3" cy="130.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="244.3" cy="250.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="296.3" cy="167.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="227.5" cy="196.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.2" cy="254.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="220.1" cy="141.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="201.5" cy="181.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.4" cy="250.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.9" cy="173.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.5" cy="215.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="220.8" cy="281.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="197.0" cy="228.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="189.3" cy="186.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="126.2" cy="174.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="173.6" cy="191.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="274.1" cy="190.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="191.2" cy="176.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="117.0" cy="212.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.7" cy="138.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.0" cy="188.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="327.7" cy="175.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="206.2" cy="172.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="175.1" cy="246.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="116.5" cy="235.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.1" cy="122.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="350.0" cy="171.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.7" cy="213.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="164.0" cy="184.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="237.9" cy="216.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.2" cy="188.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="186.4" cy="228.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="181.7" cy="186.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="213.9" cy="267.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.5" cy="132.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="203.8" cy="220.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="257.0" cy="264.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="177.5" cy="209.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="221.9" cy="212.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="75.5" cy="199.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="116.4" cy="254.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="249.7" cy="175.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="167.4" cy="80.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.9" cy="252.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.7" cy="179.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.0" cy="205.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="250.7" cy="185.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="262.9" cy="274.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="195.8" cy="249.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="161.0" cy="179.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="159.0" cy="202.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="173.5" cy="125.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="135.4" cy="233.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="170.0" cy="191.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="197.0" cy="80.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.4" cy="230.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="182.4" cy="239.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="88.2" cy="206.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="198.2" cy="199.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="215.9" cy="158.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="266.9" cy="186.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.8" cy="228.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="164.3" cy="190.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="159.5" cy="81.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="321.9" cy="131.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="247.4" cy="310.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="311.2" cy="195.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="328.9" cy="227.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.9" cy="172.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.4" cy="203.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="229.7" cy="108.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="235.7" cy="152.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.7" cy="154.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="214.5" cy="188.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="212.8" cy="198.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="113.2" cy="188.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="192.7" cy="139.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.1" cy="176.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="210.0" cy="212.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><line x1="60.0" y1="208.8" x2="350.0" y2="181.2" stroke="#925080" stroke-width="2.2"/>
+        <circle cx="637.8" cy="122.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="576.1" cy="197.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="560.7" cy="199.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="520.0" cy="200.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="532.8" cy="211.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="528.8" cy="185.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="420.0" cy="310.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="623.1" cy="116.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.4" cy="203.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="552.9" cy="205.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="624.7" cy="210.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.1" cy="161.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="586.3" cy="140.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="424.0" cy="228.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="551.8" cy="172.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="595.4" cy="231.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="656.9" cy="174.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="670.0" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="646.4" cy="184.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="498.9" cy="189.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="439.8" cy="250.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.6" cy="178.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="566.7" cy="176.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="620.0" cy="198.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="557.9" cy="227.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="577.6" cy="217.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="479.6" cy="219.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.6" cy="169.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="539.7" cy="187.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.1" cy="147.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="591.3" cy="226.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="558.4" cy="216.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="583.2" cy="179.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="564.3" cy="239.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="608.4" cy="190.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="593.7" cy="145.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="533.9" cy="172.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.6" cy="174.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="664.5" cy="142.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.3" cy="203.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.7" cy="129.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="587.5" cy="195.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="532.9" cy="198.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.4" cy="170.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="572.0" cy="202.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="579.7" cy="207.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="600.1" cy="176.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="492.9" cy="209.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.2" cy="194.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.7" cy="191.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="656.4" cy="129.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="430.5" cy="310.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.1" cy="210.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="534.3" cy="203.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="589.7" cy="212.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="537.0" cy="253.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.9" cy="224.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="654.3" cy="179.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.3" cy="189.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="589.8" cy="215.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="586.4" cy="175.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.3" cy="158.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="596.1" cy="183.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="553.2" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="518.8" cy="207.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.9" cy="232.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="552.1" cy="208.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="608.1" cy="205.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.7" cy="169.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="534.9" cy="247.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="648.1" cy="107.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.5" cy="146.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="637.5" cy="225.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="599.7" cy="149.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="558.8" cy="144.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="541.2" cy="232.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="549.2" cy="168.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="619.1" cy="227.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="571.5" cy="182.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="480.6" cy="292.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.9" cy="178.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="484.4" cy="294.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="574.6" cy="277.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="496.5" cy="214.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="493.0" cy="152.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="571.9" cy="210.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="560.6" cy="168.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="470.3" cy="237.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="607.8" cy="183.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="688.4" cy="111.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="480.6" cy="180.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="668.9" cy="183.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="525.9" cy="194.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="536.9" cy="196.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.9" cy="246.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="482.7" cy="180.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="639.2" cy="90.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="593.2" cy="211.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.3" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="549.3" cy="199.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="478.6" cy="242.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="545.3" cy="153.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="618.5" cy="159.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="467.3" cy="231.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="540.2" cy="155.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="573.5" cy="146.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="624.9" cy="133.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="642.0" cy="202.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="539.0" cy="259.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.9" cy="177.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.8" cy="212.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="544.4" cy="199.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="547.4" cy="238.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="626.7" cy="169.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="661.4" cy="188.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="580.3" cy="131.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.1" cy="233.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.7" cy="181.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="457.5" cy="254.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="564.1" cy="153.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="504.6" cy="271.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="701.3" cy="126.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.2" cy="180.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="573.2" cy="171.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.0" cy="183.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="421.7" cy="281.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="605.7" cy="165.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="658.0" cy="159.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="523.5" cy="198.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="604.1" cy="177.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.3" cy="195.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="476.8" cy="238.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="618.5" cy="154.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="642.3" cy="80.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="578.1" cy="203.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="561.5" cy="185.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="610.0" cy="121.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="477.2" cy="307.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="570.4" cy="249.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="625.2" cy="203.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="494.3" cy="233.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.7" cy="83.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="541.3" cy="192.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="446.5" cy="212.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.1" cy="204.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="509.7" cy="304.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="583.3" cy="262.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="498.3" cy="192.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="625.0" cy="157.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="523.0" cy="258.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.4" cy="145.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.2" cy="262.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="546.7" cy="164.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="633.1" cy="110.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="577.4" cy="213.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="542.6" cy="242.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="493.7" cy="201.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="631.2" cy="197.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.9" cy="143.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="546.5" cy="243.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="579.0" cy="159.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="506.4" cy="220.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="507.2" cy="237.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="518.0" cy="247.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.3" cy="175.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="582.0" cy="249.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.6" cy="224.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="607.2" cy="186.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="609.8" cy="148.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="575.0" cy="231.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><line x1="420.0" y1="264.0" x2="710.0" y2="126.0" stroke="#925080" stroke-width="2.2"/>
 
         <text x="205" y="332" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50">Horas de estudio</text>
         <text x="565" y="332" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50">Horas de estudio</text>
         <text x="44" y="195" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50" transform="rotate(-90 44 195)">Rendimiento</text>
 
         <text x="60" y="366" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b"><tspan font-weight="700">49 estudios, 77 muestras, N = 19,219.</tspan> r = 0.12, IC 95% de 0.08 a 0.16. En el grupo de 18 a 21 años, r = 0.09.</text>
-        <text x="60" y="388" font-family="Public Sans, sans-serif" font-size="12.5" fill="#b4551f" font-weight="700">El tiempo de estudio explica alrededor del 1.4% del rendimiento. Menos del 1% entre los 18 y los 21.</text>
+        <text x="60" y="388" font-family="Public Sans, sans-serif" font-size="12.5" fill="#925080" font-weight="700">El tiempo de estudio explica alrededor del 1.4% del rendimiento. Menos del 1% entre los 18 y los 21.</text>
       </svg>
       <figcaption><strong>Así se ve una correlación de 0.12.</strong> Las dos nubes tienen el mismo número de puntos y están simuladas para ilustrar la magnitud; no son los datos del metaanálisis. Elaboración propia a partir del metaanálisis de tiempo de estudio y rendimiento académico (IAFOR, 2015).</figcaption>
     </figure>
@@ -1741,7 +1797,8 @@ footer{
 
   <footer>
     Bitácora del curso WA1055.602 · Tecnológico de Monterrey<br>
-    Diego Eduardo Rodríguez Macías · A01572394
+    Diego Eduardo Rodríguez Macías · A01572394<br>
+    Las ilustraciones temáticas son originales; las fuentes del contenido aparecen en cada entrada.
   </footer>
 
 </div>
