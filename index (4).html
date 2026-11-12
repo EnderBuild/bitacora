@@ -1,0 +1,1750 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hábitos de carrera: siete entradas sobre qué sostiene a un estudiante durante la carrera y qué de eso sigue sirviendo después. Diego Eduardo Rodríguez Macías, A01572394, WA1055.602.">
+<title>Hábitos de carrera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --paper:#fbfbfa;
+  --surface:#ffffff;
+  --rule:#e2e3e0;
+  --rule-soft:#eeefec;
+  --ink:#16181b;
+  --ink-2:#464a50;
+  --ink-3:#787d85;
+  --accent:#2d6a62;
+  --accent-soft:#eaf1ef;
+  --mark:#b4551f;
+  --mark-soft:#f8ede6;
+
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --body:"Public Sans",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#121316;
+    --surface:#1a1c20;
+    --rule:#2e3136;
+    --rule-soft:#23262a;
+    --ink:#eceef0;
+    --ink-2:#b2b7be;
+    --ink-3:#848a93;
+    --accent:#6fb8ac;
+    --accent-soft:#16231f;
+    --mark:#d9834f;
+    --mark-soft:#241a14;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#121316;
+  --surface:#1a1c20;
+  --rule:#2e3136;
+  --rule-soft:#23262a;
+  --ink:#eceef0;
+  --ink-2:#b2b7be;
+  --ink-3:#848a93;
+  --accent:#6fb8ac;
+  --accent-soft:#16231f;
+  --mark:#d9834f;
+  --mark-soft:#241a14;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:1rem;
+  line-height:1.65;
+  margin:0;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+
+.wrap{
+  max-width:44rem;
+  margin:0 auto;
+  padding-block:clamp(2rem,6vw,3.5rem) clamp(3rem,8vw,5rem);
+  display:flex;
+  flex-direction:column;
+  gap:clamp(2.25rem,5vw,3rem);
+}
+
+/* ── cabecera ─────────────────────────────── */
+/* ── portada ──────────────────────────────── */
+.masthead{
+  border-bottom:2px solid var(--ink);
+  padding-bottom:1.4rem;
+}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.7rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin:0 0 .9rem;
+}
+.masthead h1{
+  font-family:var(--display);
+  font-weight:500;
+  font-size:clamp(2.4rem,8vw,3.7rem);
+  line-height:1.02;
+  letter-spacing:-.022em;
+  margin:0 0 .7rem;
+}
+.deck{
+  font-family:var(--display);
+  font-style:italic;
+  font-size:clamp(1.05rem,2.6vw,1.28rem);
+  line-height:1.42;
+  color:var(--ink-2);
+  max-width:34rem;
+  margin:0 0 1.3rem;
+}
+.spectrum{
+  display:flex;
+  gap:3px;
+  margin:0 0 1.2rem;
+  max-width:26rem;
+}
+.spectrum span{
+  height:5px;
+  flex:1;
+  border-radius:2px;
+}
+.who{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem 1.1rem;
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+}
+.lede{
+  color:var(--ink-2);
+  margin:1rem 0 0;
+  font-size:1.03rem;
+  max-width:36rem;
+}
+
+/* ── índice ───────────────────────────────── */
+/* el número del índice toma el acento de su entrada */
+.toc li:has(a[href="#a1"]) .n{color:#0f6fb0}
+.toc li:has(a[href="#a2"]) .n{color:#cc5f00}
+.toc li:has(a[href="#a3"]) .n{color:#c01f3f}
+.toc li:has(a[href="#a4"]) .n{color:#4a4e8c}
+.toc li:has(a[href="#a5"]) .n{color:#b22a8c}
+.toc li:has(a[href="#a6"]) .n{color:#0d7d5c}
+.toc li:has(a[href="#a7"]) .n{color:#7544c9}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){}
+  :root:not([data-theme="light"]) .toc li:has(a[href="#a1"]) .n{color:#3f95d6}
+  :root:not([data-theme="light"]) .toc li:has(a[href="#a2"]) .n{color:#d4731f}
+  :root:not([data-theme="light"]) .toc li:has(a[href="#a3"]) .n{color:#e05570}
+  :root:not([data-theme="light"]) .toc li:has(a[href="#a4"]) .n{color:#7c82d6}
+  :root:not([data-theme="light"]) .toc li:has(a[href="#a5"]) .n{color:#d665b0}
+  :root:not([data-theme="light"]) .toc li:has(a[href="#a6"]) .n{color:#2fa882}
+  :root:not([data-theme="light"]) .toc li:has(a[href="#a7"]) .n{color:#9d78e0}
+}
+:root[data-theme="dark"] .toc li:has(a[href="#a1"]) .n{color:#3f95d6}
+:root[data-theme="dark"] .toc li:has(a[href="#a2"]) .n{color:#d4731f}
+:root[data-theme="dark"] .toc li:has(a[href="#a3"]) .n{color:#e05570}
+:root[data-theme="dark"] .toc li:has(a[href="#a4"]) .n{color:#7c82d6}
+:root[data-theme="dark"] .toc li:has(a[href="#a5"]) .n{color:#d665b0}
+:root[data-theme="dark"] .toc li:has(a[href="#a6"]) .n{color:#2fa882}
+:root[data-theme="dark"] .toc li:has(a[href="#a7"]) .n{color:#9d78e0}
+
+.index h2,
+.entry > h2{
+  font-family:var(--mono);
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin:0 0 1rem;
+}
+.toc{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+}
+.toc li{
+  display:grid;
+  grid-template-columns:3.4rem 1fr auto;
+  gap:0 1rem;
+  align-items:baseline;
+  padding:.8rem 0;
+  border-bottom:1px solid var(--rule-soft);
+}
+.toc li:first-child{border-top:1px solid var(--rule-soft)}
+
+  /* Acento propio por aportación: identidad por entrada.
+     --mark se deja global a propósito: el bloque .caveat significa lo mismo en todo el blog. */
+  .entry#a1{--accent:#0f6fb0;--accent-soft:#eef5f9}  /* azul */
+  .entry#a2{--accent:#cc5f00;--accent-soft:#fbf4ed}  /* naranja */
+  .entry#a3{--accent:#c01f3f;--accent-soft:#fbeff2}  /* carmesí */
+  .entry#a4{--accent:#4a4e8c;--accent-soft:#f2f3f7}  /* índigo */
+  .entry#a5{--accent:#b22a8c;--accent-soft:#faf0f7}  /* magenta */
+  .entry#a6{--accent:#0d7d5c;--accent-soft:#eef6f4}  /* verde */
+  .entry#a7{--accent:#7544c9;--accent-soft:#f5f2fb}  /* violeta */
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .entry#a1{--accent:#3f95d6;--accent-soft:#1b2834}
+    :root:not([data-theme="light"]) .entry#a2{--accent:#d4731f;--accent-soft:#30231b}
+    :root:not([data-theme="light"]) .entry#a3{--accent:#e05570;--accent-soft:#311f26}
+    :root:not([data-theme="light"]) .entry#a4{--accent:#7c82d6;--accent-soft:#232534}
+    :root:not([data-theme="light"]) .entry#a5{--accent:#d665b0;--accent-soft:#30212f}
+    :root:not([data-theme="light"]) .entry#a6{--accent:#2fa882;--accent-soft:#192a29}
+    :root:not([data-theme="light"]) .entry#a7{--accent:#9d78e0;--accent-soft:#282436}
+  }
+  :root[data-theme="dark"] .entry#a1{--accent:#3f95d6;--accent-soft:#1b2834}
+  :root[data-theme="dark"] .entry#a2{--accent:#d4731f;--accent-soft:#30231b}
+  :root[data-theme="dark"] .entry#a3{--accent:#e05570;--accent-soft:#311f26}
+  :root[data-theme="dark"] .entry#a4{--accent:#7c82d6;--accent-soft:#232534}
+  :root[data-theme="dark"] .entry#a5{--accent:#d665b0;--accent-soft:#30212f}
+  :root[data-theme="dark"] .entry#a6{--accent:#2fa882;--accent-soft:#192a29}
+  :root[data-theme="dark"] .entry#a7{--accent:#9d78e0;--accent-soft:#282436}
+
+.toc .n{
+  font-family:var(--mono);
+  font-size:.82rem;
+  color:var(--accent);
+}
+.toc .t{min-width:0}
+.toc .t a{
+  color:var(--ink);
+  text-decoration:none;
+  font-weight:600;
+  border-bottom:1px solid var(--rule);
+}
+.toc .t a:hover,.toc .t a:focus-visible{border-bottom-color:var(--accent);color:var(--accent)}
+.toc .t span{display:block;color:var(--ink-3);font-size:.9rem;font-weight:400}
+.toc .d{
+  font-family:var(--mono);
+  font-size:.75rem;
+  color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+@media (max-width:30rem){
+  .toc li{grid-template-columns:2.6rem 1fr;row-gap:.3rem}
+  .toc .d{grid-column:2;}
+}
+
+/* ── entrada ──────────────────────────────── */
+.entry{scroll-margin-top:1rem}
+.entry-head{margin-bottom:1.6rem}
+.kicker{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 .55rem;
+}
+.kicker svg{width:1.1rem;height:1.1rem;flex:none}
+.entry-head h3{
+  font-family:var(--display);
+  font-weight:500;
+  font-size:clamp(1.75rem,5vw,2.4rem);
+  line-height:1.1;
+  letter-spacing:-.015em;
+  text-wrap:balance;
+  margin:0 0 .5rem;
+}
+.standfirst{
+  font-family:var(--display);
+  font-size:1.14rem;
+  font-style:italic;
+  color:var(--ink-2);
+  margin:0 0 .9rem;
+  max-width:34rem;
+}
+.byline{
+  font-family:var(--mono);
+  font-size:.72rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding-top:.8rem;
+  border-top:1px solid var(--rule);
+}
+
+.entry p{margin:0 0 1.05rem;color:var(--ink-2)}
+.entry p strong{color:var(--ink);font-weight:600}
+.entry h4{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:1.35rem;
+  letter-spacing:-.01em;
+  color:var(--ink);
+  margin:2.1rem 0 .7rem;
+}
+.entry h5{
+  font-size:.95rem;
+  font-weight:700;
+  color:var(--ink);
+  margin:1.4rem 0 .4rem;
+}
+.entry ul,.entry ol{margin:0 0 1.05rem;padding-left:1.25rem;color:var(--ink-2)}
+.entry li{margin-bottom:.4rem}
+.entry li strong{color:var(--ink)}
+
+figure{margin:1.8rem 0;}
+figure img{display:block;width:100%;max-width:100%;border:1px solid var(--rule);border-radius:3px}
+figure svg{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:3px;background:var(--surface)}
+figcaption{
+  font-family:var(--mono);
+  font-size:.74rem;
+  line-height:1.5;
+  color:var(--ink-3);
+  margin-top:.6rem;
+}
+
+.pull{
+  background:var(--accent-soft);
+  border-left:3px solid var(--accent);
+  padding:1rem 1.2rem;
+  margin:1.5rem 0;
+  border-radius:0 3px 3px 0;
+}
+.pull p{margin:0;color:var(--ink-2)}
+.pull p strong{color:var(--ink)}
+
+.caveat{
+  background:var(--mark-soft);
+  border-left:3px solid var(--mark);
+  padding:1rem 1.2rem;
+  margin:1.5rem 0;
+  border-radius:0 3px 3px 0;
+}
+.caveat p{margin:0 0 .6rem;color:var(--ink-2)}
+.caveat p:last-child{margin-bottom:0}
+.caveat p strong{color:var(--ink)}
+
+.formula{
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  padding:1rem 1.2rem;
+  margin:1.4rem 0;
+  font-family:var(--mono);
+  font-size:.88rem;
+  line-height:2;
+  color:var(--ink);
+  overflow-x:auto;
+}
+.formula span{color:var(--ink-3)}
+
+.tablewrap{overflow-x:auto;margin:1.5rem 0}
+table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:30rem;
+  font-size:.93rem;
+}
+caption{
+  caption-side:bottom;
+  text-align:left;
+  font-family:var(--mono);
+  font-size:.72rem;
+  line-height:1.5;
+  color:var(--ink-3);
+  padding-top:.7rem;
+}
+th,td{
+  text-align:left;
+  vertical-align:top;
+  padding:.7rem .9rem .7rem 0;
+  border-bottom:1px solid var(--rule-soft);
+}
+thead th{
+  font-family:var(--mono);
+  font-size:.7rem;
+  font-weight:500;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  border-bottom:1px solid var(--rule);
+}
+tbody th{font-weight:600;color:var(--ink);width:10rem}
+td{color:var(--ink-2)}
+
+.stat{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:.3rem .9rem;
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:3px;
+  padding:1.1rem 1.3rem;
+  margin:1.5rem 0;
+}
+.stat .big{
+  font-family:var(--display);
+  font-size:2.6rem;
+  line-height:1;
+  color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.stat .lab{color:var(--ink-2);font-size:.95rem;flex:1 1 14rem;min-width:0}
+.stat .lab b{color:var(--ink)}
+
+.refs{margin-top:2.2rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+.refs ol{margin:0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.7rem}
+.refs li{font-size:.88rem;line-height:1.55;color:var(--ink-2)}
+.refs a{color:var(--accent);word-break:break-word}
+
+/* ── hueco por llenar (quitar al pegar tu contenido) ── */
+.slot{
+  border:2px dashed var(--mark);
+  background:var(--mark-soft);
+  border-radius:4px;
+  padding:1.3rem 1.4rem;
+}
+.slot h4{margin-top:0}
+.slot p{color:var(--ink-2)}
+.slot code{font-family:var(--mono);font-size:.85rem;background:var(--surface);padding:.1rem .35rem;border-radius:2px;border:1px solid var(--rule)}
+
+footer{
+  border-top:1px solid var(--rule);
+  padding-top:1.2rem;
+  font-family:var(--mono);
+  font-size:.72rem;
+  line-height:1.7;
+  color:var(--ink-3);
+  letter-spacing:.03em;
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Bitácora del curso &middot; WA1055.602</p>
+    <h1>Hábitos de carrera</h1>
+    <p class="deck">Siete entradas sobre qué sostiene a un estudiante mientras cursa la carrera, y qué de eso sigue sirviendo después de ella.</p>
+    <div class="spectrum" aria-hidden="true">
+      <span style="background:#0f6fb0"></span>
+      <span style="background:#cc5f00"></span>
+      <span style="background:#c01f3f"></span>
+      <span style="background:#4a4e8c"></span>
+      <span style="background:#b22a8c"></span>
+      <span style="background:#0d7d5c"></span>
+      <span style="background:#7544c9"></span>
+    </div>
+    <div class="who">
+      <span>Diego Eduardo Rodríguez Macías</span>
+      <span>A01572394</span>
+      <span>7 entradas</span>
+      <span>ago &ndash; nov 2026</span>
+    </div>
+    <p class="lede">Cada entrada responde a la misma pregunta de fondo: qué hace que un estudiante en riesgo académico se quede o se vaya, y qué de eso se puede cambiar.</p>
+  </header>
+
+  <nav class="index">
+    <h2>Entradas</h2>
+    <ol class="toc">
+      <li>
+        <span class="n">07</span>
+        <span class="t">
+          <a href="#a7">Medir le gana a planear</a>
+          <span>Videopodcast · estrategias que sobreviven a tus condiciones</span>
+        </span>
+        <span class="d">07 nov 2026</span>
+      </li>
+      <li>
+        <span class="n">06</span>
+        <span class="t">
+          <a href="#a6">Regar la planta que ya está verde</a>
+          <span>Estrategias de autocuidado por dimensiones</span>
+        </span>
+        <span class="d">19 oct 2026</span>
+      </li>
+      <li>
+        <span class="n">05</span>
+        <span class="t">
+          <a href="#a5">Fricción o bloqueo</a>
+          <span>Reseña de dos aplicaciones de autocontrol</span>
+        </span>
+        <span class="d">15 oct 2026</span>
+      </li>
+      <li>
+        <span class="n">04</span>
+        <span class="t">
+          <a href="#a4">Entrenar o construir</a>
+          <span>Herramientas para la atención, la concentración y la memoria</span>
+        </span>
+        <span class="d">15 oct 2026</span>
+      </li>
+      <li>
+        <span class="n">03</span>
+        <span class="t">
+          <a href="#a3">Lo que se siente fácil</a>
+          <span>Esquema de sugerencias para aprender mejor</span>
+        </span>
+        <span class="d">24 oct 2026</span>
+      </li>
+      <li>
+        <span class="n">02</span>
+        <span class="t">
+          <a href="#a2">Diez hábitos</a>
+          <span>Hábitos de personas altamente exitosas</span>
+        </span>
+        <span class="d">02 sep 2026</span>
+      </li>
+      <li>
+        <span class="n">01</span>
+        <span class="t">
+          <a href="#a1">Administración del tiempo</a>
+          <span>Infografía</span>
+        </span>
+        <span class="d">19 ago 2026</span>
+      </li>
+    </ol>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════
+       APORTACIÓN 7 · VIDEOPODCAST
+       ════════════════════════════════════════════════════════ -->
+  <article class="entry" id="a7">
+    <div class="entry-head">
+      <p class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2.7" width="6" height="11.5" rx="3"/><path d="M5.4 11.4a6.6 6.6 0 0 0 13.2 0"/><path d="M12 18v3.3"/></svg><span>Aportación 7 · Videopodcast</span></p>
+      <h3>Medir le gana a planear</h3>
+      <p class="standfirst">Las estrategias que funcionan no son las que elegiste bien: son las que sobrevivieron a tus condiciones.</p>
+      <p class="byline">7 de noviembre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>Esta entrada guarda el material completo del videopodcast. El video tenía límite de duración, así que varias piezas se quedaron fuera de la grabación; aquí están todas, con las fuentes y las figuras que las sostienen.</p>
+
+    <h4>La ignorancia como primer pilar</h4>
+
+    <p>La ignorancia es el primer pilar a tomar en cuenta a la hora de desarrollar un pensamiento crítico y a llenar el espacio donde determinarás las estrategias de estudio y retención de temas. Es el punto uno que propicia a la mala toma de decisiones, sea el que sea tu esquema. Y lo peligroso viene acompañado de la sorpresa que te echas para atrás que suelen tener las personas por más listas que se crean.</p>
+
+    <p>Empecé el semestre con una actitud muy centrada en todo lo que creí que me serviría, y ya tenía bastantes conceptos avanzados, como optimización de estructuras algorítmicas. Aunque eso sirvió de un cacahuate, y aun así las materias en las que más aprendí fueron electromagnetismo, electricidad, biología computacional y cálculo multivariable: justo en las que me fue peor y reprobé. <strong>Tenía todas las piezas y ningún plano.</strong></p>
+
+    <p>Esto deja claro que aprender más es relativo. Aprender más tiene que ser sólido; si no, es simplemente un aprender más ignorante y mal cimentado. El semestre pasado seguí el pretexto de que estudiando bien a tus horas podrás sacar varias materias bien, cuando eso solo me presionaba de forma destructiva: medir la jornada por horas invertidas en lugar de por avance real.</p>
+
+    <h4>Por qué no se nota: la compensación</h4>
+
+    <p>El modo de falla más común no es estar mal en todo, sino <strong>compensar</strong>: la persona invierte en la dimensión donde ya es competente, obtiene resultados visibles ahí y en consecuencia interpreta esa competencia como salud general. De ahí que separar las dimensiones sirva precisamente para que esa sustitución se note. Es regar la planta que ya está verde.</p>
+
+    <figure>
+      <svg viewBox="0 0 440 330" role="img" aria-labelledby="t7a d7a" xmlns="http://www.w3.org/2000/svg">
+        <title id="t7a">Perfil por dimensiones con una sola dimensión alta</title>
+        <desc id="d7a">Gráfica de radar de seis ejes. Un eje, el académico, está en 88. Los otros cinco están entre 30 y 55. El promedio general sería 50, que no describe a ninguno de los dos casos.</desc>
+        <rect x="0" y="0" width="440" height="330" fill="#ffffff"/>
+
+        <!-- rejilla -->
+        <polygon points="190,50 285.3,105 285.3,215 190,270 94.7,215 94.7,105" fill="none" stroke="#e2e3e0" stroke-width="1"/>
+        <polygon points="190,77.5 261.4,118.75 261.4,201.25 190,242.5 118.6,201.25 118.6,118.75" fill="none" stroke="#eeefec" stroke-width="1"/>
+        <polygon points="190,105 237.6,132.5 237.6,187.5 190,215 142.4,187.5 142.4,132.5" fill="none" stroke="#eeefec" stroke-width="1"/>
+        <polygon points="190,132.5 213.8,146.25 213.8,173.75 190,187.5 166.2,173.75 166.2,146.25" fill="none" stroke="#eeefec" stroke-width="1"/>
+
+        <!-- ejes -->
+        <line x1="190" y1="160" x2="190" y2="50" stroke="#e2e3e0" stroke-width="1"/>
+        <line x1="190" y1="160" x2="285.3" y2="105" stroke="#e2e3e0" stroke-width="1"/>
+        <line x1="190" y1="160" x2="285.3" y2="215" stroke="#e2e3e0" stroke-width="1"/>
+        <line x1="190" y1="160" x2="190" y2="270" stroke="#e2e3e0" stroke-width="1"/>
+        <line x1="190" y1="160" x2="94.7" y2="215" stroke="#e2e3e0" stroke-width="1"/>
+        <line x1="190" y1="160" x2="94.7" y2="105" stroke="#e2e3e0" stroke-width="1"/>
+
+        <!-- promedio 50 -->
+        <polygon points="190,105 237.6,132.5 237.6,187.5 190,215 142.4,187.5 142.4,132.5" fill="none" stroke="#b4551f" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+        <!-- perfil real -->
+        <polygon points="190,63.2 230.0,136.9 223.3,179.3 190,220.5 161.4,176.5 144.3,133.6"
+                 fill="#2d6a62" fill-opacity="0.16" stroke="#2d6a62" stroke-width="2"/>
+        <circle cx="190" cy="63.2" r="4" fill="#2d6a62"/>
+        <circle cx="230.0" cy="136.9" r="3" fill="#2d6a62"/>
+        <circle cx="223.3" cy="179.3" r="3" fill="#2d6a62"/>
+        <circle cx="190" cy="220.5" r="3" fill="#2d6a62"/>
+        <circle cx="161.4" cy="176.5" r="3" fill="#2d6a62"/>
+        <circle cx="144.3" cy="133.6" r="3" fill="#2d6a62"/>
+
+        <!-- etiquetas -->
+        <text x="190" y="38" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#16181b">Académico 88</text>
+        <text x="296" y="100" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Sueño 42</text>
+        <text x="296" y="222" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Físico 35</text>
+        <text x="190" y="288" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Emocional 55</text>
+        <text x="84" y="222" text-anchor="end" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Social 30</text>
+        <text x="84" y="100" text-anchor="end" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Ambiental 48</text>
+
+        <!-- leyenda -->
+        <line x1="24" y1="308" x2="48" y2="308" stroke="#2d6a62" stroke-width="2"/>
+        <text x="54" y="312" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Perfil por dimensión</text>
+        <line x1="200" y1="308" x2="224" y2="308" stroke="#b4551f" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="230" y="312" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Promedio general: 50</text>
+      </svg>
+      <figcaption><strong>Por qué el promedio no describe a nadie.</strong> El promedio general diría 50 y no describiría ninguno de los seis ejes. Valores ilustrativos. Elaboración propia.</figcaption>
+    </figure>
+
+    <h4>El instrumento: cómo se mide por dimensiones</h4>
+
+    <p>El modelo viene de un instrumento que diseñamos en Semana Tec para medir hábitos por dimensiones. Cada dimensión se califica por separado y el peso se aplica dentro de la dimensión, no sobre el total:</p>
+
+    <div class="formula">
+      peso_dimensión &nbsp;=&nbsp; preguntas_contestadas &nbsp;÷&nbsp; preguntas_aplicables<br>
+      promedio_dimensión &nbsp;=&nbsp; Σ(puntaje × peso) &nbsp;÷&nbsp; Σ(peso)
+    </div>
+
+    <p>De ahí salen cinco reglas, y las cinco son decisiones de diseño con consecuencia:</p>
+
+    <ol>
+      <li><strong>Escala de cero a cien por dimensión, sin puntaje total.</strong> Un número único invita a compararse y esconde lo accionable.</li>
+      <li><strong>El peso se aplica por dimensión y no global.</strong> Las preguntas aplicables no son las totales, y dividir sobre el total castigaría a quien tenía menos.</li>
+      <li><strong>Si dos dimensiones covarían alto, una sola intervención impacta ambas.</strong> Eso es eficiencia de inversión, no causalidad.</li>
+      <li><strong>La matriz de acoplamiento es asimétrica</strong>, y la regla práctica pide unas diez observaciones por parámetro, así que una sola medición no estima nada.</li>
+      <li><strong>Se evalúa mejora y no nivel</strong>, porque quien vive cerca y camina no hizo ningún esfuerzo, y quien cambió de auto solo a compartido sí.</li>
+    </ol>
+
+    <figure>
+      <svg viewBox="0 0 440 300" role="img" aria-labelledby="t7b d7b" xmlns="http://www.w3.org/2000/svg">
+        <title id="t7b">Matriz de correlación entre seis dimensiones</title>
+        <desc id="d7b">Mapa de calor triangular de seis por seis. Con seis dimensiones hay quince correlaciones únicas, porque la matriz es simétrica y la diagonal siempre vale uno. El tono más oscuro indica correlación más alta.</desc>
+        <rect x="0" y="0" width="440" height="300" fill="#ffffff"/>
+
+        <!-- celdas: fila i (1..5), columna j (0..i-1); valores ilustrativos -->
+        <!-- fila 1: Sueño -->
+        <rect x="120" y="60" width="38" height="30" fill="var(--accent)" fill-opacity="0.75"/>
+        <!-- fila 2: Emocional -->
+        <rect x="120" y="92" width="38" height="30" fill="var(--accent)" fill-opacity="0.40"/>
+        <rect x="160" y="92" width="38" height="30" fill="var(--accent)" fill-opacity="0.85"/>
+        <!-- fila 3: Físico -->
+        <rect x="120" y="124" width="38" height="30" fill="var(--accent)" fill-opacity="0.22"/>
+        <rect x="160" y="124" width="38" height="30" fill="var(--accent)" fill-opacity="0.55"/>
+        <rect x="200" y="124" width="38" height="30" fill="var(--accent)" fill-opacity="0.48"/>
+        <!-- fila 4: Social -->
+        <rect x="120" y="156" width="38" height="30" fill="var(--accent)" fill-opacity="0.15"/>
+        <rect x="160" y="156" width="38" height="30" fill="var(--accent)" fill-opacity="0.30"/>
+        <rect x="200" y="156" width="38" height="30" fill="var(--accent)" fill-opacity="0.62"/>
+        <rect x="240" y="156" width="38" height="30" fill="var(--accent)" fill-opacity="0.35"/>
+        <!-- fila 5: Ambiental -->
+        <rect x="120" y="188" width="38" height="30" fill="var(--accent)" fill-opacity="0.28"/>
+        <rect x="160" y="188" width="38" height="30" fill="var(--accent)" fill-opacity="0.44"/>
+        <rect x="200" y="188" width="38" height="30" fill="var(--accent)" fill-opacity="0.20"/>
+        <rect x="240" y="188" width="38" height="30" fill="var(--accent)" fill-opacity="0.38"/>
+        <rect x="280" y="188" width="38" height="30" fill="var(--accent)" fill-opacity="0.26"/>
+
+        <!-- etiquetas de fila -->
+        <text x="114" y="79" text-anchor="end" font-family="Public Sans, sans-serif" font-size="11" fill="#464a50">Sueño</text>
+        <text x="114" y="111" text-anchor="end" font-family="Public Sans, sans-serif" font-size="11" fill="#464a50">Emocional</text>
+        <text x="114" y="143" text-anchor="end" font-family="Public Sans, sans-serif" font-size="11" fill="#464a50">Físico</text>
+        <text x="114" y="175" text-anchor="end" font-family="Public Sans, sans-serif" font-size="11" fill="#464a50">Social</text>
+        <text x="114" y="207" text-anchor="end" font-family="Public Sans, sans-serif" font-size="11" fill="#464a50">Ambiental</text>
+
+        <!-- etiquetas de columna -->
+        <text x="139" y="238" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="10.5" fill="#787d85" transform="rotate(-40 139 238)">Académico</text>
+        <text x="179" y="238" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="10.5" fill="#787d85" transform="rotate(-40 179 238)">Sueño</text>
+        <text x="219" y="238" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="10.5" fill="#787d85" transform="rotate(-40 219 238)">Emocional</text>
+        <text x="259" y="238" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="10.5" fill="#787d85" transform="rotate(-40 259 238)">Físico</text>
+        <text x="299" y="238" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="10.5" fill="#787d85" transform="rotate(-40 299 238)">Social</text>
+
+        <!-- nota de conteo -->
+        <text x="340" y="80" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--accent)">15</text>
+        <text x="340" y="96" font-family="Public Sans, sans-serif" font-size="10.5" fill="#787d85">valores</text>
+        <text x="340" y="110" font-family="Public Sans, sans-serif" font-size="10.5" fill="#787d85">únicos</text>
+
+        <!-- escala -->
+        <text x="24" y="272" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.2" fill="#787d85">CORRELACIÓN</text>
+        <rect x="24" y="278" width="20" height="10" fill="var(--accent)" fill-opacity="0.15"/>
+        <rect x="44" y="278" width="20" height="10" fill="var(--accent)" fill-opacity="0.35"/>
+        <rect x="64" y="278" width="20" height="10" fill="var(--accent)" fill-opacity="0.55"/>
+        <rect x="84" y="278" width="20" height="10" fill="var(--accent)" fill-opacity="0.75"/>
+        <rect x="104" y="278" width="20" height="10" fill="var(--accent)" fill-opacity="0.95"/>
+        <text x="130" y="287" font-family="Public Sans, sans-serif" font-size="10.5" fill="#787d85">baja → alta</text>
+      </svg>
+      <figcaption><strong>Quince relaciones escondidas en una matriz de seis.</strong> Con seis dimensiones la matriz tiene quince correlaciones únicas, porque es simétrica y la diagonal vale uno: n(n−1)/2. Valores ilustrativos. Elaboración propia.</figcaption>
+    </figure>
+
+    <div class="caveat">
+      <p><strong>El instrumento no predice.</strong> Diagnostica y recomienda. La matriz de acoplamiento, que es la que diría qué eje mueve a cuál, es asimétrica: con cinco dimensiones serían veinticinco coeficientes, y la regla práctica pide unas diez observaciones por parámetro.</p>
+      <p>Con una sola medición no se estima nada, y por eso aquí se presenta como forma de pensar y no como modelo validado.</p>
+    </div>
+
+    <h4>Tres estrategias y qué pasó con cada una</h4>
+
+    <p><strong>La primera fue cambiar la técnica.</strong> Reconocer no es lo mismo que recuperar: reconoces una cara en la calle y no podrías dibujarla de memoria. Por eso subrayar es ordenar el cuarto y decir que ya estudiaste, y por eso si estudiar se siente cómodo, probablemente no estás estudiando. Dejé de releer apuntes y empecé a escribir el tema con mis propias palabras, cerrando antes el material. Ese trabajo era de Arquitectura de Sistemas Mínimos, y saqué ochenta y ocho.</p>
+
+    <p><strong>La segunda fue el sueño.</strong> La memoria se consolida durante el sueño y no durante el estudio, así que desvelarse para estudiar implica pagar el costo del esfuerzo sin obtener el producto. Dormir después de estudiar es parte del estudio. Desvelarse para estudiar es escribir el archivo y apagar sin guardar.</p>
+
+    <p><strong>La tercera fue medir la carga, y fue lo más difícil del semestre.</strong> Incluso con poquito tiempo, bien distribuido y aplicado, da más resultado. Era mejor dar de baja las que no convinieran, porque no te metes al elevador lleno aunque lleves prisa. Desde entonces la regla es explícita: se pausa cuando la carga académica lo exige.</p>
+
+    <p>Lo más fácil, en cambio, fue algo que creí complicado: un desacuerdo con una profesora, que resolví llegando puntual en lugar de discutirlo.</p>
+
+    <h4>Los casos: dónde se rompe el salto entre lo medido y lo afirmado</h4>
+
+    <p>Todo el argumento descansa en distinguir lo que un estudio midió de lo que después se afirmó con él. Estos cinco casos son los que usé, con el dato concreto y lo que cada uno prueba.</p>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Caso</th><th scope="col">El dato</th><th scope="col">Lo que prueba</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Luz azul y sueño</th>
+            <td>Revisión de 73 estudios con 113,370 participantes: el retraso atribuible a la luz de pantallas es de unos 2.7 minutos. El modo nocturno existe desde 2016</td>
+            <td>Ningún estudio mintió: falló el salto de lo medido a lo afirmado</td>
+          </tr>
+          <tr>
+            <th scope="row">Ratnayake et al. (2018)</th>
+            <td>Experimento en cultivos celulares, sin ojos, sin personas y sin pantallas. La Academia Americana de Oftalmología lo desmintió públicamente y el autor emitió una aclaración</td>
+            <td>La corrección nunca alcanza al titular</td>
+          </tr>
+          <tr>
+            <th scope="row">Hormigas y tráfico</th>
+            <td>170 experimentos con 35 colonias y puentes de 5, 10 y 20 mm: el flujo se mantiene plano hasta ocupación 0.8, mientras el de coches y peatones se desploma pasando 0.4</td>
+            <td>Regular la entrada, no la velocidad de adentro</td>
+          </tr>
+          <tr>
+            <th scope="row">Anternet</th>
+            <td>Las hormigas deciden cuántas salen según cuántas regresan con comida, con la misma lógica de control de congestión que usa TCP</td>
+            <td>Ajustar según el resultado, no según el esfuerzo</td>
+          </tr>
+          <tr>
+            <th scope="row">Raup (1966)</th>
+            <td>Tres parámetros —expansión de la espira, distancia al eje y traslación— generan el espacio de todas las conchas posibles. Lo que existe ocupa una fracción pequeña</td>
+            <td>Lo que funciona es el residuo de lo que no falló</td>
+          </tr>
+        </tbody>
+      </table>
+      <caption><strong>Lo que cada estudio midió, y lo que autoriza concluir.</strong> Los cinco casos del videopodcast, con el dato medido y la conclusión que autoriza.</caption>
+    </div>
+
+    <h4>Las hormigas: el mecanismo no es el que parece</h4>
+
+    <p>Lo interesante del estudio de las hormigas no es que no se atasquen, sino <strong>por qué</strong> no se atascan. No es que avancen mejor adentro del puente: es que no entran a un puente saturado. La densidad nunca superó unas 18 hormigas por centímetro cuadrado, y cada contacto entre dos cuesta alrededor de 0.24 segundos. Tampoco forman carriles, que es lo que suele suponerse.</p>
+
+    <figure>
+      <svg viewBox="0 0 440 300" role="img" aria-labelledby="t7c d7c" xmlns="http://www.w3.org/2000/svg">
+        <title id="t7c">Flujo contra ocupación en hormigas y en tráfico humano</title>
+        <desc id="d7c">Dos curvas. La de las hormigas sube y se mantiene plana hasta ocupación 0.8. La del tráfico de coches y peatones sube hasta cerca de 0.4 y después se desploma.</desc>
+        <rect x="0" y="0" width="440" height="300" fill="#ffffff"/>
+
+        <!-- ejes -->
+        <line x1="60" y1="240" x2="410" y2="240" stroke="#787d85" stroke-width="1.2"/>
+        <line x1="60" y1="240" x2="60" y2="40" stroke="#787d85" stroke-width="1.2"/>
+
+        <!-- marcas x -->
+        <line x1="60" y1="240" x2="60" y2="245" stroke="#787d85" stroke-width="1"/>
+        <line x1="130" y1="240" x2="130" y2="245" stroke="#787d85" stroke-width="1"/>
+        <line x1="200" y1="240" x2="200" y2="245" stroke="#787d85" stroke-width="1"/>
+        <line x1="270" y1="240" x2="270" y2="245" stroke="#787d85" stroke-width="1"/>
+        <line x1="340" y1="240" x2="340" y2="245" stroke="#787d85" stroke-width="1"/>
+        <line x1="410" y1="240" x2="410" y2="245" stroke="#787d85" stroke-width="1"/>
+        <text x="60" y="260" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#787d85">0</text>
+        <text x="130" y="260" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#787d85">0.2</text>
+        <text x="200" y="260" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#787d85">0.4</text>
+        <text x="270" y="260" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#787d85">0.6</text>
+        <text x="340" y="260" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#787d85">0.8</text>
+        <text x="410" y="260" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#787d85">1.0</text>
+        <text x="235" y="282" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50">Ocupación del puente</text>
+
+        <!-- eje y -->
+        <text x="30" y="145" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" fill="#464a50" transform="rotate(-90 30 145)">Flujo</text>
+
+        <!-- curva hormigas: plana hasta 0.8 -->
+        <path d="M60,240 L130,160 L200,110 L270,88 L340,84 L410,110"
+              fill="none" stroke="#2d6a62" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- curva tráfico: colapsa tras 0.4 -->
+        <path d="M60,240 L130,170 L200,128 L270,178 L340,218 L410,236"
+              fill="none" stroke="#b4551f" stroke-width="2.5" stroke-dasharray="6 4" stroke-linejoin="round"/>
+
+        <!-- marcador 0.4 -->
+        <line x1="200" y1="128" x2="200" y2="240" stroke="#b4551f" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+        <!-- marcador 0.8 -->
+        <line x1="340" y1="84" x2="340" y2="138" stroke="#2d6a62" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+        <line x1="340" y1="166" x2="340" y2="240" stroke="#2d6a62" stroke-width="1" stroke-dasharray="2 3" opacity="0.6"/>
+
+        <!-- etiquetas directas -->
+        <text x="286" y="74" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#2d6a62">Hormigas</text>
+        <text x="404" y="150" text-anchor="end" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#b4551f">Coches y peatones</text>
+
+        <text x="196" y="36" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="#b4551f">colapsa en 0.4</text>
+        <text x="344" y="36" font-family="IBM Plex Mono, monospace" font-size="10" fill="#2d6a62">plano hasta 0.8</text>
+      </svg>
+      <figcaption><strong>Donde el humano colapsa y la hormiga no.</strong> El flujo de las hormigas se mantiene donde el tránsito humano se derrumba. Forma basada en Poissonnier et al. (2019), <em>eLife</em> 8:e48945. Elaboración propia.</figcaption>
+    </figure>
+
+    <div class="pull">
+      <p>La frase que une los dos casos de hormigas: <strong>ninguno de los dos evita el colapso trabajando más rápido por dentro. Los dos regulan la entrada según lo que les regresa.</strong></p>
+    </div>
+
+    <div class="caveat">
+      <p><strong>Nota de rigor.</strong> Un estudio de hormigas describe hormigas. El traslado a un estudiante es analogía, no evidencia, y conviene decirlo en voz alta antes de usarlo.</p>
+    </div>
+
+    <h4>Raup: el espacio de lo posible está casi vacío</h4>
+
+    <p>Muchos piensan que la naturaleza es sabia, cuando en realidad lo que hace es encontrar la estabilidad en un eje específico y adoptarla cuando se presente algo que lo permita. Raup describió todas las conchas posibles con tres parámetros, y el cubo que generan está casi vacío: no porque la naturaleza eligiera no ir ahí, sino porque esas formas no se sostienen.</p>
+
+    <figure>
+      <svg viewBox="0 0 440 300" role="img" aria-labelledby="t7d d7d" xmlns="http://www.w3.org/2000/svg">
+        <title id="t7d">Morfoespacio de Raup</title>
+        <desc id="d7d">Cubo en perspectiva con tres ejes: expansión de la espira, distancia al eje y traslación. Una nube gris marca lo geométricamente posible y tres grupos verdes marcan lo que existe en la naturaleza, que ocupa una fracción pequeña del volumen.</desc>
+        <rect x="0" y="0" width="440" height="300" fill="#ffffff"/>
+
+        <!-- cubo en perspectiva -->
+        <g stroke="#e2e3e0" stroke-width="1.4" fill="none">
+          <polygon points="100,230 290,230 290,80 100,80"/>
+          <polygon points="160,196 350,196 350,46 160,46"/>
+          <line x1="100" y1="230" x2="160" y2="196"/>
+          <line x1="290" y1="230" x2="350" y2="196"/>
+          <line x1="290" y1="80" x2="350" y2="46"/>
+          <line x1="100" y1="80" x2="160" y2="46"/>
+        </g>
+
+        <!-- nube gris: lo posible -->
+        <g fill="#c9ccd0">
+          <circle cx="132" cy="206" r="2.4"/><circle cx="168" cy="188" r="2.4"/><circle cx="205" cy="212" r="2.4"/>
+          <circle cx="243" cy="170" r="2.4"/><circle cx="276" cy="201" r="2.4"/><circle cx="148" cy="152" r="2.4"/>
+          <circle cx="188" cy="131" r="2.4"/><circle cx="228" cy="146" r="2.4"/><circle cx="265" cy="120" r="2.4"/>
+          <circle cx="306" cy="160" r="2.4"/><circle cx="122" cy="118" r="2.4"/><circle cx="172" cy="96" r="2.4"/>
+          <circle cx="214" cy="74" r="2.4"/><circle cx="256" cy="92" r="2.4"/><circle cx="298" cy="108" r="2.4"/>
+          <circle cx="328" cy="78" r="2.4"/><circle cx="196" cy="166" r="2.4"/><circle cx="252" cy="222" r="2.4"/>
+          <circle cx="318" cy="128" r="2.4"/><circle cx="144" cy="178" r="2.4"/><circle cx="280" cy="64" r="2.4"/>
+          <circle cx="232" cy="106" r="2.4"/><circle cx="178" cy="218" r="2.4"/><circle cx="310" cy="192" r="2.4"/>
+          <circle cx="118" cy="162" r="2.4"/><circle cx="340" cy="112" r="2.4"/><circle cx="212" cy="190" r="2.4"/>
+        </g>
+
+        <!-- grupos verdes: lo que existe -->
+        <g fill="var(--accent)">
+          <circle cx="151" cy="199" r="3.6"/><circle cx="158" cy="206" r="3.6"/><circle cx="145" cy="209" r="3.6"/>
+          <circle cx="153" cy="214" r="3.6"/><circle cx="162" cy="198" r="3.6"/>
+          <circle cx="236" cy="138" r="3.6"/><circle cx="243" cy="144" r="3.6"/><circle cx="231" cy="147" r="3.6"/>
+          <circle cx="240" cy="152" r="3.6"/>
+          <circle cx="292" cy="96" r="3.6"/><circle cx="299" cy="102" r="3.6"/><circle cx="287" cy="105" r="3.6"/>
+        </g>
+
+        <!-- etiquetas de ejes -->
+        <text x="195" y="252" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="600" fill="#464a50">W · expansión de la espira</text>
+        <text x="88" y="155" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="600" fill="#464a50" transform="rotate(-90 88 155)">D · distancia al eje</text>
+        <text x="432" y="38" text-anchor="end" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="600" fill="#464a50">T · traslación</text>
+
+        <!-- leyenda -->
+        <circle cx="30" cy="276" r="2.4" fill="#c9ccd0"/>
+        <text x="40" y="280" font-family="Public Sans, sans-serif" font-size="11" fill="#787d85">Geométricamente posible</text>
+        <circle cx="220" cy="276" r="3.6" fill="var(--accent)"/>
+        <text x="231" y="280" font-family="Public Sans, sans-serif" font-size="11" fill="#787d85">Existe en la naturaleza</text>
+      </svg>
+      <figcaption><strong>El vacío que no es casualidad.</strong> El morfoespacio está casi vacío porque esas formas no se sostienen, no porque nadie las haya intentado. Esquema basado en Raup (1966). Elaboración propia.</figcaption>
+    </figure>
+
+    <h4>Cómo se usa esto</h4>
+
+    <p>La clave es encontrar a qué ejes les falta más y enlistar acciones clave, o bien usar creatividad para encontrar aquella que pueda abordarlos mejor. A lo largo de las mediciones verás qué tantos cambios hubo, con cambios en crudo, porque <strong>una foto no es una película</strong>: con una sola medición no sabes si subes o bajas. Y mide cada eje por separado, nunca con un promedio general.</p>
+
+    <p>Tus estrategias no tienen por qué ser rígidas. Ahí tienes un modelo que te sirve para medir y comparar, sin necesidad de seguir constantemente instrucciones de mejora de los demás, pues tú las encuentras con esta herramienta multidimensional.</p>
+
+    <p>Cierro el semestre con tres materias que arrastraba resueltas: Modelación Matemática Intermedia, Experimentación en Física Estadística y Arquitectura de Sistemas Mínimos. Y de qué sirve ir a estudiar a una universidad para algo. Tienes que entender para qué vas a sentarte, no a calentar las aulas.</p>
+
+    <div class="pull">
+      <p>Eso es lo que me llevo de las materias de mejoramiento académico. <strong>Las estrategias que funcionan no son las que elegiste bien, son las que sobrevivieron a tus condiciones.</strong> Por eso medir le gana a planear. Y cuando tienes dudas de algo, no dejarte caer en la inseguridad: la forma de romperlo es sabiendo diferenciar entre sesgos.</p>
+    </div>
+
+    <div class="caveat">
+      <p><strong>Declaración de uso de IA.</strong> La abstracción, las definiciones y el contenido son propios. Se usó IA para resúmenes de las fuentes consultadas, para la redacción de las figuras retóricas sobre ideas ya planteadas por mí, para la generación de las gráficas y para el montaje del video.</p>
+    </div>
+
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li>Bryan, G., Karlan, D., &amp; Nelson, S. (2010). Commitment devices. <em>Annual Review of Economics, 2</em>, 671–698. <a href="https://doi.org/10.1146/annurev.economics.102308.124324">https://doi.org/10.1146/annurev.economics.102308.124324</a></li>
+        <li>Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., &amp; Willingham, D. T. (2013). Improving students' learning with effective learning techniques. <em>Psychological Science in the Public Interest, 14</em>(1), 4–58. <a href="https://doi.org/10.1177/1529100612453266">https://doi.org/10.1177/1529100612453266</a></li>
+        <li>Grüning, D. J., Riedel, F., &amp; Lorenz-Spreen, P. (2023). Directing smartphone use through the self-nudge app one sec. <em>Proceedings of the National Academy of Sciences, 120</em>(8). <a href="https://doi.org/10.1073/pnas.2213114120">https://doi.org/10.1073/pnas.2213114120</a></li>
+        <li>Poissonnier, L.-A., Motsch, S., Gautrais, J., Buhl, J., &amp; Dussutour, A. (2019). Experimental investigation of ant traffic under crowded conditions. <em>eLife, 8</em>, e48945. <a href="https://doi.org/10.7554/eLife.48945">https://doi.org/10.7554/eLife.48945</a></li>
+        <li>Prabhakar, B., Dektar, K. N., &amp; Gordon, D. M. (2012). The regulation of ant colony foraging activity without spatial information. <em>PLoS Computational Biology, 8</em>(8), e1002670. <a href="https://doi.org/10.1371/journal.pcbi.1002670">https://doi.org/10.1371/journal.pcbi.1002670</a></li>
+        <li>Ratnayake, K., Payton, J. L., Lakmal, O. H., &amp; Karunarathne, A. (2018). Blue light excited retinal intercepts cellular signaling. <em>Scientific Reports, 8</em>, 10207. <a href="https://doi.org/10.1038/s41598-018-28254-8">https://doi.org/10.1038/s41598-018-28254-8</a></li>
+        <li>Raup, D. M. (1966). Geometric analysis of shell coiling: General problems. <em>Journal of Paleontology, 40</em>(5), 1178–1190.</li>
+        <li>Simons, D. J., Boot, W. R., Charness, N., Gathercole, S. E., Chabris, C. F., Hambrick, D. Z., &amp; Stine-Morrow, E. A. L. (2016). Do "brain-training" programs work? <em>Psychological Science in the Public Interest, 17</em>(3), 103–186. <a href="https://doi.org/10.1177/1529100616661983">https://doi.org/10.1177/1529100616661983</a></li>
+      </ol>
+    </div>
+  </article>
+
+  <!-- ════════════════════════════════════════════════════════
+       APORTACIÓN 6 · AUTOCUIDADO
+       ════════════════════════════════════════════════════════ -->
+  <article class="entry" id="a6">
+    <div class="entry-head">
+      <p class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2v-7.1"/><path d="M12 14.1c0-3.3 2.7-6 6-6 0 3.3-2.7 6-6 6z"/><path d="M12 16.2c-3 0-5.5-2.4-5.5-5.4 3 0 5.5 2.4 5.5 5.4z"/></svg><span>Aportación 6 · Estrategias de autocuidado</span></p>
+      <h3>Regar la planta que ya está verde</h3>
+      <p class="standfirst">El modo de falla más común no es estar mal en todo, sino invertir donde ya eras bueno y leer esa competencia como salud general.</p>
+      <p class="byline">19 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>El autocuidado personal es el conjunto de acciones deliberadas que una persona realiza por sí misma, de forma sostenida y dentro de su rutina, para mantener, recuperar y desarrollar su bienestar en varias dimensiones de su vida.</p>
+
+    <h4>Qué incluye el autocuidado personal</h4>
+
+    <p>Incluye aquellas acciones deliberadas que una persona realiza por sí misma, de forma sostenida y dentro de su rutina, con el fin de mantener, recuperar y desarrollar su bienestar en varias dimensiones de su vida: física, emocional, social, intelectual, ocupacional y ambiental, entre otras. Abarca tanto prevenir el deterioro como reponerse de él. Puesto que su finalidad es el florecimiento de la persona y no el cumplimiento de una exigencia externa, las capacidades que de ahí se derivan deben entenderse como consecuencia y no como criterio.</p>
+
+    <p>Ahora bien, el que se plantee por dimensiones no es un detalle de clasificación, sino que responde a un problema concreto. <strong>El modo de falla más común no es estar mal en todo, sino compensar</strong>: la persona invierte en la dimensión donde ya es competente, obtiene resultados visibles ahí y en consecuencia interpreta esa competencia como salud general. De ahí que separar las dimensiones sirva precisamente para que esa sustitución se note.</p>
+
+    <figure>
+<svg viewBox="0 0 760 500" role="img" aria-label="Seis condiciones de crecimiento de una planta, cada una asociada a una dimensión del autocuidado. Solo una se repone.">
+  <rect width="760" height="500" fill="none"/>
+
+  <!-- la que sí se repone -->
+  <g>
+    <g transform="translate(336,26)" stroke="var(--mark)" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 10.5h13.5v9a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/>
+      <path d="M16.5 13.5h5.5l6 -5.5"/><path d="M6.5 10.5V7.8a3.2 3.2 0 0 1 6.5 0v2.7"/>
+    </g>
+    <text x="380" y="80" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="12" letter-spacing="1.4" fill="var(--mark)" text-anchor="middle">FÍSICA &middot; agua</text>
+    <text x="380" y="98" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-2)" text-anchor="middle">la única que estás reponiendo</text>
+    <path d="M380 112 V 196" stroke="var(--mark)" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M366 132 v 10 M394 150 v 10 M366 170 v 10 M394 188 v 10" stroke="var(--mark)" stroke-width="2.4" stroke-linecap="round" opacity=".5"/>
+  </g>
+
+  <!-- las cinco que no -->
+  
+    <g opacity=".85">
+      <g transform="translate(40,137)" stroke="var(--ink-3)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="4.1"/><path d="M9 .8v2.3M9 14.9v2.3M.8 9h2.3M14.9 9h2.3M3.2 3.2l1.6 1.6M13.2 13.2l1.6 1.6M14.8 3.2l-1.6 1.6M4.8 13.2l-1.6 1.6"/></g>
+      <text x="72" y="146" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.3" fill="var(--ink-2)" text-anchor="start">EMOCIONAL</text>
+      <text x="72" y="163" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-3)" text-anchor="start">luz: lo que da energía</text>
+      <text x="72" y="180" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" letter-spacing="1.1" fill="var(--ink-3)" text-anchor="start">SIN REPONER</text>
+    </g>
+  
+    <g opacity=".85">
+      <g transform="translate(40,245)" stroke="var(--ink-3)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M1.4 12.2h15.2M1.4 15.4h15.2"/><path d="M6 12.2c0-2.6 1.3-4.6 3-6.2M12 12.2c0-2.2-1-3.9-2.3-5.2"/></g>
+      <text x="72" y="254" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.3" fill="var(--ink-2)" text-anchor="start">INTELECTUAL</text>
+      <text x="72" y="271" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-3)" text-anchor="start">suelo: de dónde saca sustancia</text>
+      <text x="72" y="288" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" letter-spacing="1.1" fill="var(--ink-3)" text-anchor="start">SIN REPONER</text>
+    </g>
+  
+    <g opacity=".85">
+      <g transform="translate(40,353)" stroke="var(--ink-3)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M1.2 5.5h9.6a2.6 2.6 0 1 0-2.6-2.6"/><path d="M1.2 10.3h12.4a2.6 2.6 0 1 1-2.6 2.6"/><path d="M1.2 15h7.4"/></g>
+      <text x="72" y="362" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.3" fill="var(--ink-2)" text-anchor="start">SOCIAL</text>
+      <text x="72" y="379" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-3)" text-anchor="start">aire: lo que entra y sale</text>
+      <text x="72" y="396" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" letter-spacing="1.1" fill="var(--ink-3)" text-anchor="start">SIN REPONER</text>
+    </g>
+  
+    <g opacity=".85">
+      <g transform="translate(540,183)" stroke="var(--ink-3)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.6V2.2h4.4M16 11.4v4.4h-4.4"/><path d="M2.2 2.4l5.4 5.4M15.8 15.6l-5.4-5.4"/></g>
+      <text x="572" y="192" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.3" fill="var(--ink-2)" text-anchor="start">OCUPACIONAL</text>
+      <text x="572" y="209" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-3)" text-anchor="start">espacio: hacia dónde crece</text>
+      <text x="572" y="226" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" letter-spacing="1.1" fill="var(--ink-3)" text-anchor="start">SIN REPONER</text>
+    </g>
+  
+    <g opacity=".85">
+      <g transform="translate(540,317)" stroke="var(--ink-3)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4.6 13.4a3.6 3.6 0 0 1 .5-7.1 4.8 4.8 0 0 1 9.1 1.3 3 3 0 0 1-.6 5.8z"/><path d="M6.4 16.6l-.9 1.8M10 16.6l-.9 1.8M13.6 16.6l-.9 1.8"/></g>
+      <text x="572" y="326" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.3" fill="var(--ink-2)" text-anchor="start">AMBIENTAL</text>
+      <text x="572" y="343" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-3)" text-anchor="start">clima: lo que la rodea</text>
+      <text x="572" y="360" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" letter-spacing="1.1" fill="var(--ink-3)" text-anchor="start">SIN REPONER</text>
+    </g>
+
+  <path d="M190 150 H 300" stroke="var(--ink-3)" stroke-width="1.6" stroke-dasharray="3 6" opacity=".5"/>
+  <path d="M215 258 H 300" stroke="var(--ink-3)" stroke-width="1.6" stroke-dasharray="3 6" opacity=".5"/>
+  <path d="M205 366 H 300" stroke="var(--ink-3)" stroke-width="1.6" stroke-dasharray="3 6" opacity=".5"/>
+  <path d="M530 196 H 455" stroke="var(--ink-3)" stroke-width="1.6" stroke-dasharray="3 6" opacity=".5"/>
+  <path d="M530 330 H 455" stroke="var(--ink-3)" stroke-width="1.6" stroke-dasharray="3 6" opacity=".5"/>
+
+  <!-- la planta -->
+  <g>
+    <path d="M380 372 V 250" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M380 262 C 380 230 404 212 430 210 C 430 240 408 260 380 262 Z" fill="var(--accent)" opacity=".92"/>
+    <path d="M380 300 C 380 276 358 258 332 258 C 332 284 354 300 380 300 Z" fill="var(--accent)" opacity=".55"/>
+    <path d="M380 340 C 380 322 400 310 420 309 C 420 330 403 341 380 340 Z" fill="var(--accent)" opacity=".38"/>
+    <!-- maceta -->
+    <path d="M330 372 H 430 L 420 432 H 340 Z" fill="none" stroke="var(--ink-2)" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M322 372 H 438" stroke="var(--ink-2)" stroke-width="2.6" stroke-linecap="round"/>
+    <!-- encharcamiento -->
+    <ellipse cx="380" cy="444" rx="86" ry="9" fill="var(--mark)" opacity=".2"/>
+    <ellipse cx="380" cy="444" rx="52" ry="5.5" fill="var(--mark)" opacity=".28"/>
+  </g>
+
+  <text x="380" y="478" font-family="Public Sans, system-ui, sans-serif" font-size="13" fill="var(--ink-2)" text-anchor="middle">La planta no crece más porque le des más de lo único que ya le sobra.</text>
+</svg>
+<figcaption><strong>Las seis condiciones de crecimiento.</strong> Analogía entre lo que una planta necesita para crecer y las seis dimensiones del autocuidado: la dimensión que ya se domina se sigue reponiendo y las otras cinco se quedan sin entrada. Es una analogía ilustrativa, no una clasificación tomada de la literatura. Elaboración propia.</figcaption>
+</figure>
+
+<figure>
+      <svg viewBox="0 0 760 420" role="img" aria-labelledby="t1a6 d1a6" xmlns="http://www.w3.org/2000/svg">
+        <title id="t1a6">El modo de falla del autocuidado: compensar</title>
+        <desc id="d1a6">Esquema de seis dimensiones del autocuidado. Cinco de ellas aparecen con barras cortas y una, la dimensión en la que la persona ya es competente, con una barra larga. Una línea marca el nivel de esa única dimensión larga y lo rotula como lo que se lee por error como salud general, mientras que el nivel real del conjunto queda muy por debajo. Separar las dimensiones es lo que permite que esa sustitución se note.</desc>
+
+        <rect x="0" y="0" width="760" height="420" fill="#ffffff"/>
+
+        <text x="24" y="34" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="1.4" fill="#5c6166">DIMENSIONES DEL AUTOCUIDADO</text>
+
+        <g font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b" text-anchor="end">
+          <text x="168" y="84">Física</text>
+          <text x="168" y="130">Emocional</text>
+          <text x="168" y="176">Social</text>
+          <text x="168" y="222">Intelectual</text>
+          <text x="168" y="268">Ocupacional</text>
+          <text x="168" y="314">Ambiental</text>
+        </g>
+
+        <g>
+          <rect x="182" y="68" width="96" height="22" rx="3" fill="#c9ccc9"/>
+          <rect x="182" y="114" width="74" height="22" rx="3" fill="#c9ccc9"/>
+          <rect x="182" y="160" width="110" height="22" rx="3" fill="#c9ccc9"/>
+          <rect x="182" y="206" width="470" height="22" rx="3" fill="#2d6a62"/>
+          <rect x="182" y="252" width="128" height="22" rx="3" fill="#c9ccc9"/>
+          <rect x="182" y="298" width="68" height="22" rx="3" fill="#c9ccc9"/>
+        </g>
+
+        <text x="664" y="222" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="700" fill="#2d6a62">ya competente</text>
+
+        <line x1="652" y1="56" x2="652" y2="336" stroke="#b4551f" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="652" y="48" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#b4551f">se lee como salud general</text>
+
+        <line x1="340" y1="56" x2="340" y2="336" stroke="#5c6166" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="340" y="48" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" fill="#5c6166">nivel real del conjunto</text>
+        <text x="24" y="386" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50">La distancia entre las dos líneas es la sustitución. Separar las dimensiones es lo que la hace visible.</text>
+      </svg>
+      <figcaption><strong>Regar la planta que ya está verde.</strong> El modo de falla más común del autocuidado: invertir en la dimensión donde ya se es competente y leer esa competencia como salud general. Esquema ilustrativo, no datos medidos. Elaboración propia.</figcaption>
+    </figure>
+
+    <h4>Cómo me puedo cuidar emocionalmente</h4>
+
+    <p>Entre las prácticas que ya sostengo están los bosquejos diarios, la actividad física y conversar con alguien de confianza. Sin embargo, conviene precisar por qué cada una funciona, ya que de eso depende cómo aplicarlas.</p>
+
+    <p>En el caso de los bosquejos, lo determinante no es dibujar sino que sean pequeños y terminables, puesto que una tarea completada produce una señal de avance que un proyecto largo no entrega durante semanas. Respecto a la actividad física, la mayor ganancia se obtiene al pasar de cero a poco, por lo que la constancia importa más que la intensidad. Y en cuanto a conversar, es la práctica con mayor respaldo, aunque el efecto proviene de articular la experiencia en lenguaje y no de la descarga emocional; por esta razón, desahogarse sin ordenar puede incluso resultar contraproducente.</p>
+
+    <p>No obstante, al revisar esa lista se advierte que casi todas producen algo, de modo que faltan prácticas de otra naturaleza: nombrar lo que se siente, descansar sin obtener un producto, poner límites y dormir, esta última la cual, pese a no parecer emocional, resulta la de mayor palanca.</p>
+
+    <h4>Por qué es importante atender mis emociones</h4>
+
+    <p>Dado que la regulación emocional y el control ejecutivo comparten circuito prefrontal, no se trata de dos sistemas distintos que compiten por el tiempo disponible, sino del mismo sistema. Por lo tanto, <strong>una emoción sin gestionar consume exactamente el recurso que se necesita para concentrarse</strong>, y en consecuencia desatenderla no ahorra capacidad de estudio: la cuesta.</p>
+
+    <p>A esto se suma que lo no atendido no desaparece, sino que cambia de canal y se expresa como tensión, alteraciones del sueño, irritabilidad o postergación, es decir, en terrenos donde ya no puede manejarse directamente. Además, las emociones constituyen información sobre el entorno y sobre las propias necesidades, por lo que ignorarlas equivale a descartar un dato. Finalmente, nombrarlas funciona de manera medible, ya que el etiquetado afectivo reduce la activación de la amígdala; de ahí que poner en palabras lo que se siente sea una intervención y no un preámbulo.</p>
+
+    <h4>Por qué es importante una adecuada higiene del sueño</h4>
+
+    <p>La razón de mayor peso en el terreno académico es que la memoria se consolida durante el sueño y no durante el estudio. Por consiguiente, desvelarse para estudiar implica pagar el costo del esfuerzo sin obtener el producto, y de ahí que dormir después de estudiar deba entenderse como parte del estudio.</p>
+
+    <p>A lo anterior se añade que, en privación de sueño, la amígdala reacciona con mayor intensidad mientras el control prefrontal se debilita; por esta razón, la irritabilidad tras un desvelo responde a un circuito y no al carácter.</p>
+
+    <p>Ahora bien, se habla de higiene y no simplemente de dormir más porque <strong>el sueño no se fuerza</strong>: intentarlo eleva la activación, que es precisamente lo contrario del estado requerido. Puesto que sobre el acto no se puede actuar directamente, se trabaja sobre las condiciones que lo favorecen, es decir, regularidad de horario, exposición a luz matutina, temperatura y separación entre la cama y el trabajo.</p>
+
+    <h4>Cómo me saboteo por mis malos hábitos</h4>
+
+    <p>Lo útil aquí es nombrar un mecanismo y no un vicio, ya que de un mecanismo se desprende una acción correctiva mientras que de un vicio no. Los patrones más frecuentes son los siguientes:</p>
+
+    <ul>
+      <li>Sustituir lo difícil por lo productivo pero no urgente, con lo cual se trabaja mucho y en lo que no correspondía</li>
+      <li>Alargar la noche debido a que es el único tiempo que se percibe como propio</li>
+      <li>Postergar el inicio hasta contar con una versión buena, de manera que el perfeccionismo opera como evitación</li>
+      <li>Medir la jornada por horas invertidas en lugar de por avance real</li>
+    </ul>
+
+    <h4>Qué he hecho como estrategia</h4>
+
+    <p>Mi estrategia ha consistido en proteger un espacio de trabajo propio, aunque sujeto a una regla explícita: <strong>se pausa cuando la carga académica lo exige</strong>. Así ocurrió cuando coincidieron varias entregas y detuve el proyecto del mod, estableciendo de antemano el criterio para retomarlo.</p>
+
+    <p>El vínculo con el rendimiento académico radica en que ambas cosas no compiten como adversarios por el mismo recurso. Por el contrario, el proyecto repone lo que las materias desgastan y sostiene el sentido del conjunto; por lo tanto, mantenerlo es lo que permite volver a las asignaturas con disposición, mientras que empujar ambos frentes simultáneamente conduce a rendir mal en los dos.</p>
+  </article>
+
+  <!-- ════════════════════════════════════════════════════════
+       APORTACIÓN 5 · RESEÑA DE APLICACIONES
+       ════════════════════════════════════════════════════════ -->
+  <article class="entry" id="a5">
+    <div class="entry-head">
+      <p class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.4" y="10.4" width="15.2" height="10.2" rx="2.3"/><path d="M8 10.4V7.7a4 4 0 0 1 8 0v2.7"/></svg><span>Aportación 5 · Reseña</span></p>
+      <h3>Fricción o bloqueo</h3>
+      <p class="standfirst">one sec y Cold Turkey resuelven el mismo problema desde supuestos opuestos sobre qué tanto puedes confiar en ti mismo.</p>
+      <p class="byline">15 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>Toda aplicación de autocontrol contesta una pregunta antes de hacer cualquier otra cosa: <strong>¿el problema es que actúas sin pensar, o que piensas y te convences?</strong> Si es lo primero, basta con interrumpir el gesto automático. Si es lo segundo, ninguna pausa va a alcanzar, porque la vas a atravesar con un argumento.</p>
+
+    <p>Busqué dos aplicaciones que representaran cada respuesta. No son dos categorías excluyentes ni dos tipos de persona: son dos mecanismos distintos, y cuál conviene depende de cuál de los dos problemas tengas.</p>
+
+    <figure>
+      <img src="infografia-autocontrol.png" alt="Infografía comparativa de one sec y Cold Turkey: mecanismo, evidencia, costos y veredicto de cada una.">
+      <figcaption><strong>Pausa contra candado, lado a lado.</strong> Elaboración propia a partir de la documentación oficial de cada producto y del artículo de Grüning et al. (2023).</figcaption>
+    </figure>
+
+    <h4>one sec: interrumpir el gesto</h4>
+
+    <p>Cuando abres una aplicación que tú elegiste marcar, one sec intercepta la apertura y te hace respirar unos segundos antes de dejarte pasar. Al terminar, pregunta si todavía quieres entrar. <strong>Nunca bloquea</strong>: siempre puedes continuar.</p>
+
+    <p>Lo interesante es el supuesto detrás. No pelea contra el deseo ni te quita la opción: interrumpe el automatismo y devuelve la decisión a la parte deliberativa. Parte de que muchas aperturas de aplicación no son decisiones sino reflejos, y que si te devuelven un segundo, decides distinto.</p>
+
+    <p>Está disponible en iOS, iPadOS, Android y como extensión de navegador en escritorio. Tiene versión gratuita con funciones limitadas.</p>
+
+    <h4>Cold Turkey: decidir el límite antes</h4>
+
+    <p>Bloquea sitios y programas por horario o por bloques de trabajo. En su modo más estricto bloquea la computadora entera hasta que termine el periodo que fijaste.</p>
+
+    <p>Lo que lo define es que está <strong>diseñado para ser difícil de desactivar</strong>, y eso no es un defecto de usabilidad: es la tesis del producto. Funciona como un dispositivo de compromiso: tu yo de ahora le quita opciones a tu yo de dentro de una hora, porque asume que ese no va a ser confiable. Es el mismo principio que estudian Bryan, Karlan y Nelson (2010) en economía del comportamiento: atarse las manos por adelantado supera a la fuerza de voluntad en el momento.</p>
+
+    <p>Solo funciona en Windows y macOS. No cubre el celular, que para muchos es justamente donde está el problema.</p>
+
+    <h4>La diferencia que importa</h4>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th scope="col">Enfoque comparado</th><th scope="col">one sec · pausa</th><th scope="col">Cold Turkey · bloqueo</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Qué supone de ti</th><td>Que decidirías bien si te dieran un segundo</td><td>Que vas a encontrar cómo convencerte</td></tr>
+          <tr><th scope="row">Decisión y autonomía</th><td>Durante la pausa puedes reconsiderar y elegir continuar o salir</td><td>Las restricciones se acuerdan antes; el candado limita los cambios</td></tr>
+          <tr><th scope="row">Qué te cuesta</th><td>Nada: conservas la decisión en todo momento</td><td>Autonomía, a cambio de una garantía</td></tr>
+          <tr><th scope="row">Cómo falla</th><td>Te acostumbras y la pausa deja de registrarse</td><td>Lo desinstalas, o te cierra el acceso que sí necesitabas</td></tr>
+          <tr><th scope="row">Dónde vive</th><td>Celular y navegador de escritorio</td><td>Windows y macOS; no cubre el celular</td></tr>
+        </tbody>
+      </table>
+      <caption><strong>La diferencia que importa.</strong> Se comparan modos concretos de cada herramienta, no dos categorías excluyentes ni rasgos de personalidad.</caption>
+    </div>
+
+    <h4>Qué sabemos y qué no</h4>
+
+    <p>one sec promociona una reducción del 57 % y esa cifra sí está documentada, pero importa mucho qué mide exactamente.</p>
+
+    <div class="stat">
+      <span class="big">−57 %</span>
+      <span class="lab"><b>aperturas reales de las aplicaciones seleccionadas</b>, no tiempo total de pantalla. Son dos métricas distintas y la diferencia no es menor (Grüning et al., 2023).</span>
+    </div>
+
+    <p>El estudio de campo del que sale ese número fue exploratorio: participantes autoseleccionados, sin grupo de control. Empezaron 719 personas y el análisis principal se hizo con las 280 que completaron el seguimiento, lo cual es una pérdida considerable. Y conviene saberlo: <strong>uno de los autores es el creador de la aplicación.</strong></p>
+
+    <p>El mismo trabajo incluye un experimento aleatorizado aparte, con unos 500 participantes, que separó los componentes de la intervención. Ahí el efecto mayor vino de ofrecer explícitamente la opción de desistir; el retraso también ayudó, pero el mensaje de reflexión por sí solo no fue efectivo. Eso es más informativo que la cifra grande, porque dice qué parte del mecanismo hace el trabajo.</p>
+
+    <div class="caveat">
+      <p><strong>Cold Turkey no tiene estudios propios.</strong> Lo que existe es el marco conceptual de los dispositivos de compromiso, que está bien estudiado, pero eso valida el principio y no esta implementación en particular. La documentación del producto describe funciones; no aporta un ensayo de eficacia.</p>
+    </div>
+
+    <h4>Veredicto</h4>
+
+    <div class="pull">
+      <p><strong>Empieza por la fricción.</strong> Es reversible, no te quita nada y te da información útil: si la pausa basta, tu problema era automatismo. Si la atraviesas sin pensarlo, tu problema es otro y ahí sí vale escalar al bloqueo. Equivocarse hacia arriba cuesta más que hacia abajo.</p>
+    </div>
+
+    <p>Empieza con una configuración breve y revisable, observa qué te ayuda y ajusta el modo a tu contexto. Ninguna de las dos elimina la necesidad de hábitos, de descanso ni de tener un propósito para el tiempo que recuperas. Esta valoración es mi opinión a partir de lo que encontré, no una recomendación clínica.</p>
+
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li>Bryan, G., Karlan, D., &amp; Nelson, S. (2010). Commitment devices. <em>Annual Review of Economics, 2</em>, 671–698. <a href="https://doi.org/10.1146/annurev.economics.102308.124324">https://doi.org/10.1146/annurev.economics.102308.124324</a></li>
+        <li>Cold Turkey Software. (s. f.). <em>Features</em>. Recuperado el 15 de octubre de 2026, de <a href="https://getcoldturkey.com/features/">https://getcoldturkey.com/features/</a></li>
+        <li>Grüning, D. J., Riedel, F., &amp; Lorenz-Spreen, P. (2023). Directing smartphone use through the self-nudge app one sec. <em>Proceedings of the National Academy of Sciences, 120</em>(8). <a href="https://doi.org/10.1073/pnas.2213114120">https://doi.org/10.1073/pnas.2213114120</a></li>
+        <li>one sec. (s. f.). <em>Cut your screen time in half</em>. Recuperado el 15 de octubre de 2026, de <a href="https://one-sec.app/">https://one-sec.app/</a></li>
+        <li>one sec. (s. f.). <em>Research</em>. Recuperado el 15 de octubre de 2026, de <a href="https://one-sec.app/research/">https://one-sec.app/research/</a></li>
+      </ol>
+    </div>
+  </article>
+
+  <!-- ════════════════════════════════════════════════════════
+       APORTACIÓN 4 · TOOLKIT
+       ════════════════════════════════════════════════════════ -->
+  <article class="entry" id="a4">
+    <div class="entry-head">
+      <p class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 8.2h7a5.5 5.5 0 0 1 5.4 4.5l.7 3.8a2.3 2.3 0 0 1-4.2 1.8l-1.5-2.1H8.1l-1.5 2.1a2.3 2.3 0 0 1-4.2-1.8l.7-3.8a5.5 5.5 0 0 1 5.4-4.5z"/><path d="M7.1 11.9v3.1M5.5 13.4h3.1"/><circle cx="16.2" cy="12.5" r=".95"/><circle cx="18.3" cy="14.4" r=".95"/></svg><span>Aportación 4 · Toolkit</span></p>
+      <h3>Caja de herramientas del cerebro</h3>
+      <p class="standfirst">Ejercicios, apps, páginas, juegos y proyectos para sostener la atención y cuidar la memoria a largo plazo.</p>
+      <p class="byline">15 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>Armé esta caja de herramientas con cinco compartimentos: ejercicios para hacer a diario, aplicaciones, páginas para medir y practicar, juegos, y uno que casi nunca aparece en listas de este tipo pero que creo que es el más importante.</p>
+
+    <figure>
+      <img src="toolkit-atencion.png" alt="Infografía en forma de caja de herramientas con cinco compartimentos: ejercicios diarios, apps, páginas web, juegos, proyectos, y un panel de datos sobre sueño, ejercicio, repaso espaciado y multitarea.">
+      <figcaption><strong>Caja de herramientas de atención, concentración y memoria.</strong> Elaboración propia.</figcaption>
+    </figure>
+
+<figure>
+<svg viewBox="0 0 760 420" role="img" aria-label="Un control de videojuego dentro de un límite punteado: la mejora se queda dentro del juego entrenado y las flechas hacia otras tareas no cruzan.">
+  <rect width="760" height="420" fill="none"/>
+
+  <!-- el limite -->
+  <rect x="236" y="84" width="288" height="196" rx="16" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.8" stroke-dasharray="7 6"/>
+  <text x="380" y="110" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="1.4" fill="var(--accent)" text-anchor="middle">LO QUE SÍ MEJORA</text>
+
+  <!-- el control -->
+  <g transform="translate(380,196) scale(5.6) translate(-12,-12)"
+     fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8.5 8.2h7a5.5 5.5 0 0 1 5.4 4.5l.7 3.8a2.3 2.3 0 0 1-4.2 1.8l-1.5-2.1H8.1l-1.5 2.1a2.3 2.3 0 0 1-4.2-1.8l.7-3.8a5.5 5.5 0 0 1 5.4-4.5z"/>
+    <path d="M7.1 11.9v3.1M5.5 13.4h3.1"/>
+    <circle cx="16.2" cy="12.5" r=".95"/><circle cx="18.3" cy="14.4" r=".95"/>
+  </g>
+  <text x="380" y="262" font-family="Public Sans, system-ui, sans-serif" font-size="13" fill="var(--ink-2)" text-anchor="middle">el juego que entrenaste</text>
+
+  <!-- flechas que no cruzan -->
+  <g stroke="var(--mark)" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <path d="M236 150 H 176"/><path d="M236 214 H 176"/>
+    <path d="M524 150 H 584"/><path d="M524 214 H 584"/>
+  </g>
+  <g stroke="var(--mark)" stroke-width="2.6" stroke-linecap="round" opacity=".9">
+    <path d="M168 142 l -14 16 M154 142 l 14 16"/>
+    <path d="M168 206 l -14 16 M154 206 l 14 16"/>
+    <path d="M592 142 l 14 16 M606 142 l -14 16"/>
+    <path d="M592 206 l 14 16 M606 206 l -14 16"/>
+  </g>
+
+  
+    <g>
+      <circle cx="76" cy="150" r="27" fill="none" stroke="var(--ink-3)" stroke-width="1.6" opacity=".55"/>
+      <circle cx="76" cy="150" r="15" fill="none" stroke="var(--ink-3)" stroke-width="1.6" opacity=".4"/>
+      <circle cx="76" cy="150" r="4" fill="var(--ink-3)" opacity=".4"/>
+      <text x="76" y="198" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-2)" text-anchor="middle">atención en clase</text>
+    </g>
+  
+    <g>
+      <circle cx="76" cy="252" r="27" fill="none" stroke="var(--ink-3)" stroke-width="1.6" opacity=".55"/>
+      <circle cx="76" cy="252" r="15" fill="none" stroke="var(--ink-3)" stroke-width="1.6" opacity=".4"/>
+      <circle cx="76" cy="252" r="4" fill="var(--ink-3)" opacity=".4"/>
+      <text x="76" y="300" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-2)" text-anchor="middle">memoria de estudio</text>
+    </g>
+  
+    <g>
+      <circle cx="684" cy="150" r="27" fill="none" stroke="var(--ink-3)" stroke-width="1.6" opacity=".55"/>
+      <circle cx="684" cy="150" r="15" fill="none" stroke="var(--ink-3)" stroke-width="1.6" opacity=".4"/>
+      <circle cx="684" cy="150" r="4" fill="var(--ink-3)" opacity=".4"/>
+      <text x="684" y="198" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-2)" text-anchor="middle">lectura</text>
+    </g>
+  
+    <g>
+      <circle cx="684" cy="252" r="27" fill="none" stroke="var(--ink-3)" stroke-width="1.6" opacity=".55"/>
+      <circle cx="684" cy="252" r="15" fill="none" stroke="var(--ink-3)" stroke-width="1.6" opacity=".4"/>
+      <circle cx="684" cy="252" r="4" fill="var(--ink-3)" opacity=".4"/>
+      <text x="684" y="300" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-2)" text-anchor="middle">resolver problemas</text>
+    </g>
+
+  <text x="380" y="340" font-family="Public Sans, system-ui, sans-serif" font-size="13.5" fill="var(--ink-2)" text-anchor="middle">Te vuelves mejor en el juego. La mejora se queda ahí.</text>
+  <text x="380" y="366" font-family="Public Sans, system-ui, sans-serif" font-size="12.5" fill="var(--ink-3)" text-anchor="middle">Por eso el criterio del taller: ¿la actividad deja algo que exista fuera de ella?</text>
+</svg>
+<figcaption><strong>Por qué el entrenamiento cerebral no se transfiere.</strong> Las mejoras que producen los juegos de entrenamiento se concentran en la tarea practicada y la evidencia de beneficios fuera de ella es escasa. Esquema ilustrativo a partir de Simons et al. (2016). Elaboración propia.</figcaption>
+</figure>
+
+    <h4>Por qué agregué el compartimento de proyectos</h4>
+
+    <p>Mientras buscaba me topé con algo que cambió lo que tenía sentido recomendar: <strong>el efecto de los juegos de entrenamiento cerebral no se transfiere.</strong> Mejoras en el juego que practicas y esa mejora casi no aparece en otras tareas. Simons et al. (2016) revisaron la literatura completa de programas comerciales y encontraron evidencia escasa de beneficios fuera de lo entrenado; el Dual N-Back, el caso más famoso, tuvo resultados iniciales prometedores y después fallos de replicación.</p>
+
+    <p>Eso no los vuelve inútiles. Un juego de estrategia por turnos exige atención sostenida en lugar de fragmentarla, que es bastante mejor que el desplazamiento infinito en redes. Pero no te vuelve mejor en otra cosa, y conviene saberlo antes de invertirle horas creyendo que sí.</p>
+
+    <div class="pull">
+      <p>Lo que sí construye capacidad es aprender algo difícil de verdad. La prueba que separa una cosa de la otra: <strong>¿la actividad deja algo que exista fuera de ella?</strong> Un archivo, una técnica, un problema que ahora sabes resolver. Si la respuesta es no, es entretenimiento, y está bien que lo sea mientras no lo confundas con entrenamiento.</p>
+    </div>
+
+    <p>Por eso el quinto compartimento es el taller. Aprender Blender o un motor de videojuegos obliga a sostener varios sistemas a la vez y a corregir con retroalimentación inmediata, y lo que construyes sigue ahí cuando cierras el programa. Los libros de cálculo aplicado funcionan mejor que los de teoría pura porque obligan a resolver, y ahí la inteligencia artificial tiene un uso legítimo si le pides <strong>ejercicios</strong> y los trabajas tú, en lugar de pedirle respuestas.</p>
+
+    <p>El panel de datos recoge lo que más efecto tiene y menos se parece a una herramienta: dormir, moverse, espaciar el repaso y hacer una cosa a la vez. Nada de eso se descarga, y sospecho que por eso existe el mercado de aplicaciones que prometen lo mismo.</p>
+
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li>Erickson, K. I., Voss, M. W., Prakash, R. S., Basak, C., Szabo, A., Chaddock, L., … Kramer, A. F. (2011). Exercise training increases size of hippocampus and improves memory. <em>Proceedings of the National Academy of Sciences, 108</em>(7), 3017–3022. <a href="https://doi.org/10.1073/pnas.1015950108">https://doi.org/10.1073/pnas.1015950108</a></li>
+        <li>Simons, D. J., Boot, W. R., Charness, N., Gathercole, S. E., Chabris, C. F., Hambrick, D. Z., &amp; Stine-Morrow, E. A. L. (2016). Do "brain-training" programs work? <em>Psychological Science in the Public Interest, 17</em>(3), 103–186. <a href="https://doi.org/10.1177/1529100616661983">https://doi.org/10.1177/1529100616661983</a></li>
+      </ol>
+    </div>
+  </article>
+
+  <!-- ════════════════════════════════════════════════════════
+       APORTACIÓN 3 · SUGERENCIAS PARA APRENDER MEJOR
+       ════════════════════════════════════════════════════════ -->
+  <article class="entry" id="a3">
+    <div class="entry-head">
+      <p class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 5.3c2.9-1.1 5.9-1.1 8.8 0v13.9c-2.9-1.1-5.9-1.1-8.8 0z"/><path d="M20.8 5.3c-2.9-1.1-5.9-1.1-8.8 0v13.9c2.9-1.1 5.9-1.1 8.8 0z"/></svg><span>Aportación 3 · Esquema</span></p>
+      <h3>Lo que se siente fácil</h3>
+      <p class="standfirst">Las dos técnicas de estudio que más usa todo el mundo son las dos que menos funcionan, y hay una razón para que se sientan bien.</p>
+      <p class="byline">24 de octubre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>Cuando busqué sugerencias para aprender mejor esperaba una lista de consejos sueltos. Lo que encontré fue mejor: una revisión que <strong>evaluó diez técnicas de estudio con la evidencia disponible y las ordenó por utilidad</strong>. Dunlosky y sus colegas (2013) las clasificaron en tres niveles, y el resultado tiene una incomodidad que vale la pena mirar de frente.</p>
+
+    <p>Subrayar y releer, que es lo que hace casi todo el mundo, quedaron en el nivel más bajo.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 520" role="img" aria-labelledby="t3 d3" xmlns="http://www.w3.org/2000/svg">
+        <title id="t3">Esquema de sugerencias para aprender mejor, ordenadas por nivel de evidencia</title>
+        <desc id="d3">Tres bloques. Utilidad alta: práctica de recuperación y práctica distribuida. Utilidad moderada: práctica intercalada, autoexplicación e interrogación elaborativa. Utilidad baja: releer, subrayar y resumir. Cada técnica con su explicación y un ejemplo concreto.</desc>
+
+        <rect x="0" y="0" width="760" height="520" fill="#ffffff"/>
+
+        <!-- Alta -->
+        <rect x="24" y="24" width="712" height="150" rx="4" fill="#eaf1ef" stroke="#2d6a62" stroke-width="1.5"/>
+        <text x="40" y="48" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#2d6a62">UTILIDAD ALTA</text>
+
+        <text x="40" y="76" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Práctica de recuperación</text>
+        <text x="40" y="96" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Sacar la información de la memoria en vez de volver a leerla.</text>
+        <text x="40" y="114" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: cierra el cuaderno, escribe lo que recuerdes del tema y luego compara.</text>
+
+        <text x="40" y="140" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Práctica distribuida</text>
+        <text x="40" y="160" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Repartir el estudio en el tiempo en lugar de concentrarlo.</text>
+        <text x="420" y="160" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: cuatro sesiones de 30 min en la semana.</text>
+
+        <!-- Moderada -->
+        <rect x="24" y="190" width="712" height="186" rx="4" fill="#f6f6f4" stroke="#9a9a9a" stroke-width="1.5"/>
+        <text x="40" y="214" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#5c6166">UTILIDAD MODERADA</text>
+
+        <text x="40" y="242" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Práctica intercalada</text>
+        <text x="40" y="262" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Mezclar tipos de problema en vez de agrupar los iguales.</text>
+        <text x="40" y="280" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: en cálculo, alternar derivadas, integrales y optimización.</text>
+
+        <text x="40" y="308" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Autoexplicación</text>
+        <text x="40" y="328" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Decir en voz alta por qué cada paso es el que sigue.</text>
+        <text x="40" y="346" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: al resolver, justificar cada línea antes de escribirla.</text>
+
+        <text x="40" y="368" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Interrogación elaborativa</text>
+        <text x="260" y="368" font-family="Public Sans, sans-serif" font-size="12.5" fill="#2d6a62">Ejemplo: preguntarse "¿por qué es verdad esto?" en cada dato.</text>
+
+        <!-- Baja -->
+        <rect x="24" y="392" width="712" height="104" rx="4" fill="#f8ede6" stroke="#b4551f" stroke-width="1.5"/>
+        <text x="40" y="416" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#b4551f">UTILIDAD BAJA · Y LAS MÁS USADAS</text>
+
+        <text x="40" y="444" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#16181b">Releer · Subrayar · Resumir</text>
+        <text x="40" y="464" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">Dan sensación de dominio porque el texto se vuelve familiar,</text>
+        <text x="40" y="482" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">pero reconocer no es lo mismo que recuperar.</text>
+      </svg>
+      <figcaption><strong>Las diez técnicas, ordenadas por lo que las sostiene.</strong> Elaboración propia a partir de Dunlosky et al. (2013).</figcaption>
+    </figure>
+
+    <h4>Por qué lo que no funciona se siente tan bien</h4>
+
+    <p>Esta es la parte que me pareció más útil de entender. Cuando relees un capítulo por tercera vez, el texto te resulta cada vez más familiar, y el cerebro interpreta esa fluidez como señal de que ya lo sabes. Pero <strong>reconocer no es lo mismo que recuperar</strong>. En el examen nadie te muestra el texto: te pide que lo saques de la memoria, que es exactamente la operación que no practicaste.</p>
+
+    <div class="pull">
+      <p>De ahí sale la regla que resume todo el esquema: <strong>si estudiar se siente cómodo, probablemente no estás estudiando.</strong> Las técnicas que funcionan se sienten más difíciles mientras las haces, y esa dificultad es justamente el trabajo.</p>
+    </div>
+
+    <h4>Lo que cambié yo</h4>
+
+    <p>Dejé de releer apuntes y empecé a escribir el tema con mis propias palabras, cerrando antes el material. Lo noté con un trabajo sobre la organización interna de una memoria RAM: después de redactarlo pude explicar de dónde salía cada dato del encapsulado sin volver a consultarlo, cosa que no me pasaba cuando solo leía.</p>
+
+    <p>Es práctica de recuperación disfrazada de tarea, y funciona por la misma razón.</p>
+
+    <h4>Cómo empezar sin rehacer todo</h4>
+
+    <p>Las dos de utilidad alta no piden material nuevo ni más horas, solo cambiar el orden de lo que ya haces. En lugar de leer el tema otra vez, cierra el cuaderno y escribe lo que recuerdes; lo que falte es exactamente lo que hay que repasar. Y en lugar de dejar el estudio para la víspera, parte el mismo tiempo total en sesiones separadas.</p>
+
+    <p>Las de utilidad moderada valen la pena cuando ya tienes esas dos. Y las de utilidad baja no hay que abandonarlas del todo: subrayar sirve para marcar qué releer después, siempre que no se confunda con haber estudiado.</p>
+
+    <div class="caveat">
+      <p><strong>Una precisión sobre la clasificación.</strong> "Utilidad baja" no significa que no sirvan nunca, sino que la evidencia de que mejoren el aprendizaje en distintas materias, tipos de estudiante y formatos de examen es débil. Dunlosky et al. evaluaron cada técnica en esas cuatro dimensiones, no solo en si funciona alguna vez.</p>
+    </div>
+
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li>Dunlosky, J., Rawson, K. A., Marsh, E. J., Nathan, M. J., &amp; Willingham, D. T. (2013). Improving students' learning with effective learning techniques: Promising directions from cognitive and educational psychology. <em>Psychological Science in the Public Interest, 14</em>(1), 4–58. <a href="https://doi.org/10.1177/1529100612453266">https://doi.org/10.1177/1529100612453266</a></li>
+      </ol>
+    </div>
+  </article>
+
+  <!-- ════════════════════════════════════════════════════════
+       APORTACIÓN 2 · HUECO POR LLENAR
+       ════════════════════════════════════════════════════════ -->
+  <article class="entry" id="a2">
+    <div class="entry-head">
+      <p class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.3 12a8.3 8.3 0 1 1-2.7-6.1"/><path d="M20.3 4.2V9h-4.8"/></svg><span>Aportación 2 · Hábitos</span></p>
+      <h3>Diez hábitos de personas altamente exitosas</h3>
+      <p class="standfirst">Casi ninguno es una preferencia personal: todos son la respuesta a un problema concreto que esa persona tuvo, y por eso los sostiene.</p>
+      <p class="byline">2 de septiembre de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>Buscando hábitos de personas exitosas aparece siempre la misma lista de rutinas matutinas, pero al revisar de dónde salen esos hábitos aparece algo más interesante: <strong>casi ninguno es una preferencia personal.</strong> Todos son la respuesta a un problema concreto que esa persona tuvo, y por eso los sostiene.</p>
+
+    <p>Reuní diez hábitos de cinco personas de campos distintos, con lo que cada una tuvo que vencer para adoptarlos.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 600" role="img" aria-labelledby="t1a2 d1a2" xmlns="http://www.w3.org/2000/svg">
+        <title id="t1a2">Los diez hábitos separados en atención y proceso, con lo que cada uno tuvo que vencer</title>
+        <desc id="d1a2">Dos grupos. Hábitos de atención, de Gates, Nadella y Winfrey: las semanas de reflexión, leer anotando y terminar lo que se empieza, aprenderlo todo en vez de saberlo todo, agradecer antes de cualquier pantalla, meditar dos veces al día y leer de forma transversal. Hábitos de proceso, de Bergensten y Miyamoto: producir en game jams y guardar lo que sobrevive, moverse o cambiar de lugar al atorarse, voltear la mesa y sacar ideas de aficiones fuera del trabajo. Cada hábito viene con el obstáculo concreto que esa persona tuvo que vencer para adoptarlo.</desc>
+
+        <rect x="0" y="0" width="760" height="600" fill="#ffffff"/>
+
+        <!-- GRUPO 1: ATENCIÓN -->
+        <rect x="24" y="30" width="712" height="302" rx="4" fill="#eaf1ef" stroke="#2d6a62" stroke-width="1.5"/>
+        <text x="44" y="56" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#2d6a62">ATENCIÓN</text>
+        <text x="140" y="56" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">qué mirar, cuánto tiempo y con qué disposición entrar al día</text>
+
+        <g font-family="Public Sans, sans-serif">
+          <!-- Gates 1 -->
+          <text x="44" y="86" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">GATES · 1</text>
+          <text x="44" y="104" font-size="13" font-weight="700" fill="#16181b">Las semanas de reflexión</text>
+          <text x="44" y="122" font-size="11.5" fill="#b4551f">Venció: la idea de que un director debe</text>
+          <text x="44" y="137" font-size="11.5" fill="#b4551f">estar siempre disponible</text>
+          <!-- Gates 2 -->
+          <text x="396" y="86" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">GATES · 2</text>
+          <text x="396" y="104" font-size="13" font-weight="700" fill="#16181b">Leer anotando y terminar</text>
+          <text x="396" y="122" font-size="11.5" fill="#b4551f">Venció: el impulso de saltar al siguiente</text>
+          <text x="396" y="137" font-size="11.5" fill="#b4551f">libro apenas el actual se pone difícil</text>
+
+          <!-- Nadella 3 -->
+          <text x="44" y="172" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">NADELLA · 3</text>
+          <text x="44" y="190" font-size="13" font-weight="700" fill="#16181b">Aprenderlo todo, no saberlo todo</text>
+          <text x="44" y="208" font-size="11.5" fill="#b4551f">Venció: una cultura interna donde admitir</text>
+          <text x="44" y="223" font-size="11.5" fill="#b4551f">ignorancia se leía como debilidad</text>
+          <!-- Nadella 4 -->
+          <text x="396" y="172" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">NADELLA · 4</text>
+          <text x="396" y="190" font-size="13" font-weight="700" fill="#16181b">Agradecer antes de cualquier pantalla</text>
+          <text x="396" y="208" font-size="11.5" fill="#b4551f">Venció: empezar el día reaccionando a la</text>
+          <text x="396" y="223" font-size="11.5" fill="#b4551f">bandeja de entrada</text>
+
+          <!-- Winfrey 5 -->
+          <text x="44" y="258" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">WINFREY · 5</text>
+          <text x="44" y="276" font-size="13" font-weight="700" fill="#16181b">Meditar dos veces al día</text>
+          <text x="44" y="294" font-size="11.5" fill="#b4551f">Venció: creer que detenerse veinte</text>
+          <text x="44" y="309" font-size="11.5" fill="#b4551f">minutos es tiempo perdido</text>
+          <!-- Winfrey 6 -->
+          <text x="396" y="258" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">WINFREY · 6</text>
+          <text x="396" y="276" font-size="13" font-weight="700" fill="#16181b">Leer de forma transversal</text>
+          <text x="396" y="294" font-size="11.5" fill="#b4551f">Venció: un entorno de pobreza severa sin</text>
+          <text x="396" y="309" font-size="11.5" fill="#b4551f">acceso a ese material</text>
+        </g>
+
+        <!-- GRUPO 2: PROCESO -->
+        <rect x="24" y="348" width="712" height="226" rx="4" fill="#f8ede6" stroke="#b4551f" stroke-width="1.5"/>
+        <text x="44" y="374" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#b4551f">PROCESO</text>
+        <text x="136" y="374" font-family="Public Sans, sans-serif" font-size="12.5" fill="#464a50">qué hacer con el trabajo propio cuando no está funcionando</text>
+
+        <g font-family="Public Sans, sans-serif">
+          <!-- Bergensten 7 -->
+          <text x="44" y="404" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">BERGENSTEN · 7</text>
+          <text x="44" y="422" font-size="13" font-weight="700" fill="#16181b">Game jams y guardar lo que sobrevive</text>
+          <text x="44" y="440" font-size="11.5" fill="#2d6a62">Venció: la resistencia a soltar un trabajo</text>
+          <text x="44" y="455" font-size="11.5" fill="#2d6a62">que no funcionó</text>
+          <!-- Bergensten 8 -->
+          <text x="396" y="404" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">BERGENSTEN · 8</text>
+          <text x="396" y="422" font-size="13" font-weight="700" fill="#16181b">Moverse o cambiar de lugar al atorarse</text>
+          <text x="396" y="440" font-size="11.5" fill="#2d6a62">Venció: creer que rendirse un rato</text>
+          <text x="396" y="455" font-size="11.5" fill="#2d6a62">equivale a rendirse</text>
+
+          <!-- Miyamoto 9 -->
+          <text x="44" y="490" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">MIYAMOTO · 9</text>
+          <text x="44" y="508" font-size="13" font-weight="700" fill="#16181b">Voltear la mesa</text>
+          <text x="44" y="526" font-size="11.5" fill="#2d6a62">Venció: la falacia del costo hundido y la</text>
+          <text x="44" y="541" font-size="11.5" fill="#2d6a62">presión de calendario del estudio</text>
+          <!-- Miyamoto 10 -->
+          <text x="396" y="490" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1.1" fill="#5c6166">MIYAMOTO · 10</text>
+          <text x="396" y="508" font-size="13" font-weight="700" fill="#16181b">Ideas de aficiones fuera del trabajo</text>
+          <text x="396" y="526" font-size="11.5" fill="#2d6a62">Venció: creer que la creatividad sale de</text>
+          <text x="396" y="541" font-size="11.5" fill="#2d6a62">acumular horas frente a la pantalla</text>
+        </g>
+      </svg>
+      <figcaption><strong>Atención o proceso, y lo que cada uno tuvo que vencer.</strong> Los diez hábitos separados en esos dos grupos, con el obstáculo que cada uno tuvo que vencer. Elaboración propia.</figcaption>
+    </figure>
+
+    <h4>Bill Gates, cofundador de Microsoft</h4>
+
+    <p><strong>Hábito 1. Las semanas de reflexión.</strong> Dos veces al año Gates se aísla una semana completa en una cabaña, sin agenda ni reuniones, únicamente con libros, artículos y propuestas que fue acumulando durante meses. Lo promueve porque considera que las decisiones de rumbo no salen entre juntas, sino de bloques largos de lectura sin interrupción, ya que el trabajo diario consume justamente la atención que se necesita para pensar a años de distancia. Para adoptarlo tuvo que romper con la idea de que un director debe estar siempre disponible, puesto que desaparecer una semana entera mientras la empresa competía en su etapa más agresiva era exactamente lo contrario de lo que dictaba el sentido común corporativo.</p>
+
+    <p><strong>Hábito 2. Leer anotando y terminar lo que se empieza.</strong> Gates lee alrededor de cincuenta libros al año, escribe notas en los márgenes y se impone la regla de terminar todo libro que abre. Lo recomienda porque anotar lo obliga a discutir con el autor en lugar de consumir el texto de forma pasiva, de modo que la diferencia no está en cuántos libros leyó sino en cuántos puede usar después. La regla de terminar existe precisamente porque tuvo que vencer el impulso contrario, que es saltar al siguiente libro apenas el actual se pone difícil.</p>
+
+    <h4>Satya Nadella, director general de Microsoft</h4>
+
+    <p><strong>Hábito 3. Mentalidad de aprenderlo todo en lugar de saberlo todo.</strong> Nadella adoptó de manera explícita la idea de mentalidad de crecimiento de la psicóloga Carol Dweck y la volvió el eje de la cultura de la empresa, de forma que se valora más a quien aprende que a quien ya sabe. Lo promueve porque una organización donde nadie admite ignorancia no puede cambiar de dirección, y bajo esa mentalidad Microsoft terminó adoptando tecnología que antes trataba como enemiga, incluido Linux, además de reorientar el negocio hacia la nube. Lo que tuvo que cambiar no fue un hábito personal sino una cultura interna de competencia entre equipos donde decir que no sabes algo se leía como debilidad.</p>
+
+    <p><strong>Hábito 4. Preguntarse qué agradece antes de cualquier pantalla.</strong> Lo primero que hace Nadella al despertar es preguntarse por qué está agradecido, antes de revisar correo o noticias, y después dedica media hora a correr sin importar en qué zona horaria esté ni a qué hora se durmió. Lo recomienda porque dice que el ejercicio lo aterriza y le da la capacidad de orientarse para el día, es decir que lo usa para decidir desde dónde entra a trabajar en lugar de que la primera notificación se lo decida. No es una idea propia sino un hábito que tomó de Michael Gervais, psicólogo del rendimiento que ha trabajado con empleados de Microsoft y con los Seattle Seahawks, así que tuvo que vencer la costumbre de empezar el día reaccionando a la bandeja de entrada.</p>
+
+    <h4>Oprah Winfrey, productora y empresaria de medios</h4>
+
+    <p><strong>Hábito 5. Meditar dos veces al día.</strong> Winfrey practica meditación trascendental veinte minutos por la mañana y veinte por la tarde, y llegó a implementarla también para el personal de su productora. Sostiene que baja la reactividad y permite decidir desde la calma, lo cual importa en un trabajo de exposición permanente donde cada respuesta es pública. Tuvo que vencer el agotamiento de décadas frente a cámara y también la creencia, muy común cuando la agenda está saturada, de que detenerse veinte minutos es tiempo perdido.</p>
+
+    <p><strong>Hábito 6. Leer de forma constante y transversal.</strong> Lee de manera continua y deliberadamente variada, incluyendo géneros y perspectivas que no coinciden con la suya, hábito que además convirtió en club de lectura público. Lo promueve porque leer fuera de su propio mundo es lo que le permite conectar con audiencias de cualquier origen, de manera que la lectura funciona para ella como herramienta de trabajo y no solo como recreación. Lo que tuvo que vencer está en su origen, ya que creció en pobreza severa y con acceso muy limitado a la educación, así que el hábito nació como forma de salir de un entorno que no ofrecía ese material.</p>
+
+    <h4>Jens Bergensten, director creativo de Mojang y líder de Minecraft</h4>
+
+    <p><strong>Hábito 7. Producir en game jams y guardar lo que sobrevive.</strong> Antes de trabajar en Minecraft, Bergensten y su equipo descubrían juegos nuevos asistiendo a game jams, donde con un tema aleatorio y un límite de treinta y dos o cuarenta y ocho horas tenían que producir algo jugable. Él mismo describe que de ahí salía basura o salía algo interesante, y lo interesante iba a parar a una pila que revisaban después, cuando de verdad tocaba arrancar un proyecto de lanzamiento. Lo promueve porque el límite de tiempo obliga a llegar a algo que se pueda probar en lugar de quedarse planeando, y porque nada de lo bueno se desperdicia aunque el proyecto en sí se abandone. Lo que tuvo que vencer es la resistencia natural a soltar un trabajo que no funcionó, dado que el método solo sirve si aceptas que la mayoría de los intentos van a la basura.</p>
+
+    <p><strong>Hábito 8. Moverse o cambiar de lugar cuando se atora.</strong> Cuando se queda atascado resolviendo un problema, Bergensten dice que hace lo clásico, que es salir a caminar o andar en bici para tener flujo sanguíneo, y que si el bloqueo es más profundo entonces cambia de lugar de trabajo por completo. De hecho antes viajaban a Berlín porque ahí hay cibercafés abiertos las veinticuatro horas, y se encerraban a construir algo. Lo recomienda porque forzarse frente al monitor no produce la solución, mientras que el cambio de entorno sí, de modo que trata el estancamiento como una señal para moverse y no para insistir. Tuvo que vencer el hábito contrario, que es quedarse horas frustrado creyendo que rendirse un rato equivale a rendirse.</p>
+
+    <h4>Shigeru Miyamoto, diseñador de videojuegos en Nintendo</h4>
+
+    <p><strong>Hábito 9. Voltear la mesa.</strong> Miyamoto es conocido por estar dispuesto a rehacer un diseño desde cero aunque el proyecto lleve meses de avance, si al probarlo no resulta divertido, práctica que dentro de Nintendo se conoce como voltear la mesa. Lo promueve porque el jugador nunca va a saber cuánto costó algo y solo va a notar si funciona, así que proteger el trabajo ya invertido perjudica el resultado. Lo que tuvo que vencer es doble, ya que se trata de la falacia del costo hundido y además de la presión de calendario de un estudio comercial, donde tirar meses de trabajo es caro y políticamente incómodo.</p>
+
+    <p><strong>Hábito 10. Sacar las ideas de aficiones fuera del trabajo.</strong> En lugar de buscar ideas frente al escritorio, Miyamoto diseña a partir de su vida cotidiana, y los ejemplos son directos, puesto que Zelda nació de explorar cuevas y campos cuando era niño, Pikmin de trabajar en su jardín y Nintendogs de convivir con su perro. Lo recomienda porque un diseñador con intereses fuera de su propio medio produce cosas que no se parecen a lo que ya existe, mientras que quien solo consume videojuegos termina haciendo variaciones de videojuegos. Tuvo que vencer la creencia, bastante extendida en la industria, de que la creatividad se produce acumulando horas frente a la pantalla.</p>
+
+    <h4>Conclusión</h4>
+
+    <p>Los diez hábitos se separan en dos grupos. Gates, Nadella y Winfrey trabajan sobre la atención, es decir qué mirar, durante cuánto tiempo y con qué disposición entrar al día. Bergensten y Miyamoto trabajan sobre el proceso, o sea qué hacer con el trabajo propio cuando no está funcionando.</p>
+
+    <div class="pull">
+      <p>Lo que tienen en común es que <strong>ninguno describe el éxito como un momento</strong>, ya que todos lo describen como algo que se sostiene o se corrige a lo largo del tiempo, y que en los cinco casos el hábito nació de un problema real y no de una preferencia.</p>
+    </div>
+
+    <h4>Cuáles implementé yo</h4>
+
+    <p>Tres de los diez ya estaban en mi forma de trabajar antes de investigarlos. Lo que me aportó la investigación no fue adoptarlos, sino entender por qué funcionan, y en un caso corregir cómo los estaba aplicando.</p>
+
+    <p><strong>Hábito 7, producir contra reloj y guardar lo que sobrevive: parcialmente, y con una corrección.</strong> La lógica de Bergensten es que el límite de tiempo obliga a llegar a algo que se pueda probar en lugar de quedarse planeando. Yo trabajo así solo en casos extremos, y ahí es donde ese método rinde: en el borde. Pero lo que hace potente al método que estoy estructurando en mis proyectos es justamente lo contrario de la <em>jam</em>: que se puede llegar al borde con casi la misma eficacia desde dentro de lo que ya tienes implementado, sin necesidad del reloj. Medir antes de tocar nada y conservar solo lo que aguanta la medición produce el mismo efecto de descartar, sin la presión de treinta y dos horas.</p>
+
+    <p><strong>Hábito 9, voltear la mesa: sí, y es el más difícil de los tres.</strong> Rehacer algo desde cero cuando al probarlo no funciona, con trabajo ya invertido encima. Lo que hay que vencer no es pereza: es la falacia del costo hundido, y eso no se resuelve una vez, se vuelve a presentar en cada proyecto.</p>
+
+    <p><strong>Hábito 2, en su variante de escribir con mis propias palabras: sí.</strong> Es lo mismo que documenté en la aportación 3, cuando dejé de releer apuntes y empecé a escribir el tema cerrando antes el material. El caso concreto fue un trabajo sobre la organización interna de una memoria RAM: después de redactarlo pude explicar de dónde salía cada dato del encapsulado sin volver a consultarlo.</p>
+
+    <p><strong>Y uno que no está en la lista, pero funciona por la misma lógica del hábito 3.</strong> Usar herramientas de entrenamiento y construcción, con un criterio claro de dónde sí y dónde no. <strong>En lo académico no conviene</strong>, porque ahí lo que se está pidiendo es reflexionar y construir uno mismo hasta cierto grado, y saltarse eso vacía el ejercicio. Donde sí rinde es en entornos interactivos de desarrollo, como trabajar en game dev dentro del editor: ahí tener un agente me sirve para formular preguntas y discusiones clave, no para producir el trabajo. En esos entornos cada decisión abre otras tres, y lo que de verdad cuesta no es responder, es darse cuenta de qué hay que preguntar. Con el tiempo eso desarrolla un pensamiento crítico que permite identificar patrones de desarrollo en el propio entorno, que es la misma idea de Nadella de aprenderlo todo en lugar de saberlo todo.</p>
+
+    <p><strong>Los que no adopté.</strong> El hábito 4 de Nadella, agradecer antes de cualquier pantalla, y el 5 de Winfrey, meditar dos veces al día. <!-- AGREGA AQUÍ POR QUÉ, en una o dos líneas. Discrepar está permitido y suma. --></p>
+
+    <!-- FALTA, Y ES LO QUE PIDE LA RÚBRICA: cuáles implementaste tú, cómo te
+         fue con cada uno, cuáles resultaron fáciles de aplicar y en qué te
+         impactaron. Discrepar está permitido. Escríbelo aquí, antes de las
+         referencias, con un <h4> y tus párrafos. -->
+
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li><em>Bill Gates took solo "think weeks" in a cabin in the woods. Why it's a great strategy.</em> (2019, 26 de julio). CNBC Make It. <a href="https://www.cnbc.com/2019/07/26/bill-gates-took-solo-think-weeks-in-a-cabin-in-the-woods.html">https://www.cnbc.com/2019/07/26/bill-gates-took-solo-think-weeks-in-a-cabin-in-the-woods.html</a></li>
+        <li><em>Celebs who do transcendental meditation: Oprah, Ray Dalio, Lady Gaga.</em> (2020, 6 de enero). CNBC Make It. <a href="https://www.cnbc.com/2020/01/06/celebs-who-do-transcendental-meditation-oprah-ray-dalio-lady-gaga.html">https://www.cnbc.com/2020/01/06/celebs-who-do-transcendental-meditation-oprah-ray-dalio-lady-gaga.html</a></li>
+        <li>Guth, R. A. (2005, 28 de marzo). In secret hideaway, Bill Gates ponders Microsoft's future. <em>The Wall Street Journal</em>.</li>
+        <li>Lumb, D. (2015, 11 de mayo). Jens Bergensten. <em>Fast Company</em>. <a href="https://www.fastcompany.com/3043905/jens-bergensten">https://www.fastcompany.com/3043905/jens-bergensten</a></li>
+        <li><em>Microsoft CEO Satya Nadella's morning rituals.</em> (2019, 11 de diciembre). CNBC Make It. <a href="https://www.cnbc.com/2019/12/11/microsoft-ceo-satya-nadellas-morning-rituals.html">https://www.cnbc.com/2019/12/11/microsoft-ceo-satya-nadellas-morning-rituals.html</a></li>
+        <li>Nadella, S. (2017). <em>Hit refresh: The quest to rediscover Microsoft's soul and imagine a better future for everyone</em>. HarperBusiness.</li>
+        <li>Nintendo. (s.f.). <em>Iwata asks: Nintendo DSi</em>. <a href="https://iwataasks.nintendo.com/interviews/ds/dsi/0/1/">https://iwataasks.nintendo.com/interviews/ds/dsi/0/1/</a></li>
+        <li>Paumgarten, N. (2010, 20 de diciembre). Master of play. <em>The New Yorker</em>.</li>
+      </ol>
+    </div>
+  </article>
+
+  <!-- ════════════════════════════════════════════════════════
+       APORTACIÓN 1 · HUECO POR LLENAR
+       ════════════════════════════════════════════════════════ -->
+  <article class="entry" id="a1">
+    <div class="entry-head">
+      <p class="kicker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M12 6.9v5.4l3.4 2"/></svg><span>Aportación 1 · Infografía</span></p>
+      <h3>Administración del tiempo: nivel up</h3>
+      <p class="standfirst">Los descansos programados funcionan, pero la proporción exacta de trabajo y descanso no tiene fórmula universal. Tres técnicas, lo que sostiene cada una y lo que no.</p>
+      <p class="byline">19 de agosto de 2026 · Diego Eduardo Rodríguez Macías</p>
+    </div>
+
+    <p>La administración del tiempo no consiste en llenar cada minuto de actividad, sino en decidir con criterio qué misión merece tu energía. En la vida académica, esto determina si una carga pesada de materias se sostiene con calma o termina quemando toda tu barra de vida.</p>
+
+    <p>La evidencia científica confirma que los descansos programados, a diferencia de dejar que el cansancio te sorprenda, reducen la fatiga y mejoran la concentración de forma consistente (Biwer et al., 2023). Sin embargo, la proporción exacta de trabajo y descanso no tiene una fórmula mágica universal: varía según el tipo de tarea y la persona, por lo que vale la pena conocer distintas técnicas y elegir la que mejor se adapte a cada momento.</p>
+
+    <div class="stat">
+      <p><strong>20 a 45 minutos</strong> es el rango en que la atención puede mantenerse óptima antes de fatigarse, según investigación psicológica cognitiva. Es la base real de técnicas como Pomodoro, aunque la proporción exacta de descanso siga siendo flexible.</p>
+    </div>
+
+    <h4>Tablero de misiones: la matriz de Eisenhower</h4>
+
+    <p>La matriz de Eisenhower organiza las tareas según dos ejes, urgencia e importancia, permitiendo decidir con claridad qué atender primero. Llené los cuatro cuadrantes con lo que de verdad ocupa mi semestre.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 410" role="img" aria-labelledby="t1a1 d1a1" xmlns="http://www.w3.org/2000/svg">
+        <title id="t1a1">Matriz de Eisenhower aplicada a mi carga académica</title>
+        <desc id="d1a1">Cuatro cuadrantes cruzando urgencia e importancia. Misión principal, hacer ahora: tareas con fecha límite próxima, preparación de exámenes cercanos, situaciones problema en curso, trámites académicos con plazo. Misión secundaria, planear: repaso constante de temas históricamente difíciles, proyectos personales a mediano plazo, cuidado de la salud, comunicación oportuna con la familia. Misión diaria, resolver rápido: coordinar tareas de equipo, correos administrativos breves, trámites simples y logística, compras o pagos pendientes. Distracción, minimizar: redes sociales sin propósito claro, investigación sin fin inmediato, distracciones durante bloques de estudio, comparar opciones sin decidir.</desc>
+
+        <rect x="0" y="0" width="760" height="410" fill="#ffffff"/>
+
+        <text x="196" y="26" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#5c6166">URGENTE</text>
+        <text x="548" y="26" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#5c6166">NO URGENTE</text>
+        <text x="18" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#5c6166" transform="rotate(-90 18 120)">IMPORTANTE</text>
+        <text x="18" y="300" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#5c6166" transform="rotate(-90 18 300)">NO IMPORTANTE</text>
+
+        <!-- Urgente + Importante -->
+        <rect x="36" y="38" width="320" height="164" rx="4" fill="#eaf1ef" stroke="#2d6a62" stroke-width="1.5"/>
+        <text x="54" y="64" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#2d6a62">Misión principal · Hacer ahora</text>
+        <text x="54" y="98" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Tareas con fecha límite próxima</text>
+        <text x="54" y="124" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Preparación de exámenes cercanos</text>
+        <text x="54" y="150" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Situaciones problema en curso</text>
+        <text x="54" y="176" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Trámites académicos con plazo</text>
+
+        <!-- No urgente + Importante -->
+        <rect x="388" y="38" width="320" height="164" rx="4" fill="#eaf1ef" stroke="#2d6a62" stroke-width="1.5"/>
+        <text x="406" y="64" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#2d6a62">Misión secundaria · Planear</text>
+        <text x="406" y="98" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Repaso de temas históricamente difíciles</text>
+        <text x="406" y="124" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Proyectos personales a mediano plazo</text>
+        <text x="406" y="150" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Cuidado de la salud</text>
+        <text x="406" y="176" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Comunicación oportuna con la familia</text>
+
+        <!-- Urgente + No importante -->
+        <rect x="36" y="218" width="320" height="164" rx="4" fill="#f6f6f4" stroke="#9a9a9a" stroke-width="1.5"/>
+        <text x="54" y="244" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#5c6166">Misión diaria · Resolver rápido</text>
+        <text x="54" y="278" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Coordinar tareas de equipo</text>
+        <text x="54" y="304" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Correos administrativos breves</text>
+        <text x="54" y="330" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Trámites simples y logística</text>
+        <text x="54" y="356" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Compras o pagos pendientes</text>
+
+        <!-- No urgente + No importante -->
+        <rect x="388" y="218" width="320" height="164" rx="4" fill="#f8ede6" stroke="#b4551f" stroke-width="1.5"/>
+        <text x="406" y="244" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#b4551f">Distracción · Minimizar</text>
+        <text x="406" y="278" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Redes sociales sin propósito claro</text>
+        <text x="406" y="304" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Investigación sin fin inmediato</text>
+        <text x="406" y="330" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Distracciones durante bloques de estudio</text>
+        <text x="406" y="356" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b">Comparar opciones sin decidir</text>
+      </svg>
+      <figcaption><strong>Mi semestre repartido en cuatro cuadrantes.</strong> Elaboración propia.</figcaption>
+    </figure>
+
+    <h4>Power-ups: técnicas de enfoque con evidencia real</h4>
+
+    <p>Contrario a la creencia popular, el intervalo específico de 25 minutos del Pomodoro <strong>no proviene de investigación científica formal</strong>. Fue una elección personal de su creador, Francesco Cirillo, basada en un temporizador de cocina, no en los ciclos ultradianos de Kleitman ni en investigación controlada de atención (Daybook, 2026).</p>
+
+    <p>El principio general de tomar descansos sistemáticos sí está respaldado: un estudio con 87 estudiantes universitarios encontró que quienes tomaban descansos sistemáticos, ya fuera en bloques de 24/6 o de 12/3 minutos, reportaron mayor concentración y motivación, y percibieron las tareas como menos difíciles, comparado con quienes decidían por sí mismos cuándo descansar (Biwer et al., 2023).</p>
+
+    <div class="caveat">
+      <p>El mismo estudio encontró que las pausas tipo Pomodoro generaron un <strong>aumento más rápido de fatiga</strong> que los descansos autorregulados. No es una técnica sin costos.</p>
+    </div>
+
+    <figure>
+      <svg viewBox="0 0 760 430" role="img" aria-labelledby="t2a1 d2a1" xmlns="http://www.w3.org/2000/svg">
+        <title id="t2a1">Las tres técnicas contra el rango de atención sostenida</title>
+        <desc id="d2a1">Eje de tiempo lineal de cero a 110 minutos con la banda de 20 a 45 minutos marcada como rango de atención óptima. Pomodoro trabaja 25 minutos y descansa 5, y su bloque de trabajo termina dentro de la banda. Los ciclos ultradianos trabajan 90 minutos y descansan 20, excediendo la banda por mucho. El time blocking no define proporción: asigna la jornada completa, traslados y descansos incluidos, a bloques fijos del calendario.</desc>
+
+        <rect x="0" y="0" width="760" height="430" fill="#ffffff"/>
+
+        <!-- banda del rango de atención: 20 a 45 min -->
+        <rect x="160" y="66" width="150" height="192" fill="#eaf1ef"/>
+        <line x1="160" y1="66" x2="160" y2="258" stroke="#2d6a62" stroke-width="1" stroke-dasharray="3 3"/>
+        <line x1="310" y1="66" x2="310" y2="258" stroke="#2d6a62" stroke-width="1" stroke-dasharray="3 3"/>
+        <text x="235" y="36" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="13" font-weight="700" fill="#2d6a62">20–45 min</text>
+        <text x="235" y="54" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" letter-spacing="1.2" fill="#2d6a62">ATENCIÓN ÓPTIMA</text>
+
+        <!-- Pomodoro: 25 trabajo + 5 descanso -->
+        <text x="40" y="94" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#16181b">Pomodoro</text>
+        <rect x="40" y="104" width="150" height="26" rx="3" fill="#2d6a62"/>
+        <rect x="192" y="104" width="28" height="26" rx="3" fill="#b4551f"/>
+        <text x="115" y="122" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">25 trabajo</text>
+        <text x="232" y="122" font-family="Public Sans, sans-serif" font-size="11.5" fill="#b4551f">5 descanso</text>
+
+        <!-- Ciclos ultradianos: 90 trabajo + 20 descanso -->
+        <text x="40" y="166" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#16181b">Ciclos ultradianos</text>
+        <rect x="40" y="176" width="540" height="26" rx="3" fill="#2d6a62"/>
+        <rect x="582" y="176" width="118" height="26" rx="3" fill="#b4551f"/>
+        <text x="310" y="194" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">90 trabajo</text>
+        <text x="641" y="194" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">20 descanso</text>
+
+        <!-- Time blocking: jornada completa en bloques -->
+        <text x="40" y="238" font-family="Public Sans, sans-serif" font-size="14" font-weight="700" fill="#16181b">Time blocking</text>
+        <g>
+          <rect x="40" y="246" width="96" height="14" rx="2" fill="#2d6a62"/>
+          <rect x="140" y="246" width="34" height="14" rx="2" fill="#b4551f"/>
+          <rect x="178" y="246" width="130" height="14" rx="2" fill="#2d6a62"/>
+          <rect x="312" y="246" width="48" height="14" rx="2" fill="#b4551f"/>
+          <rect x="364" y="246" width="78" height="14" rx="2" fill="#2d6a62"/>
+          <rect x="446" y="246" width="60" height="14" rx="2" fill="#b4551f"/>
+          <rect x="510" y="246" width="190" height="14" rx="2" fill="#2d6a62"/>
+        </g>
+
+        <!-- eje lineal: 6 px por minuto, origen en x=40 -->
+        <line x1="40" y1="282" x2="700" y2="282" stroke="#9a9a9a" stroke-width="1"/>
+        <g stroke="#9a9a9a" stroke-width="1">
+          <line x1="40" y1="282" x2="40" y2="287"/>
+          <line x1="160" y1="282" x2="160" y2="287"/>
+          <line x1="190" y1="282" x2="190" y2="287"/>
+          <line x1="310" y1="282" x2="310" y2="287"/>
+          <line x1="400" y1="282" x2="400" y2="287"/>
+          <line x1="580" y1="282" x2="580" y2="287"/>
+          <line x1="700" y1="282" x2="700" y2="287"/>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5c6166" text-anchor="middle">
+          <text x="40" y="302">0</text>
+          <text x="160" y="302">20</text>
+          <text x="190" y="302">25</text>
+          <text x="310" y="302">45</text>
+          <text x="400" y="302">60</text>
+          <text x="580" y="302">90</text>
+          <text x="700" y="302">110</text>
+        </g>
+        <text x="370" y="324" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50">Minutos de un ciclo</text>
+
+        <!-- notas -->
+        <text x="40" y="364" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50"><tspan font-weight="700" fill="#16181b">Pomodoro: </tspan>el 25 cae dentro del rango, pero el número es arbitrario, salió de un temporizador de cocina.</text>
+        <text x="40" y="388" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50"><tspan font-weight="700" fill="#16181b">Ultradianos: </tspan>exceden el rango a propósito, para tareas complejas ya dominadas donde cortar cada 25 rompe el flujo.</text>
+        <text x="40" y="412" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50"><tspan font-weight="700" fill="#16181b">Time blocking: </tspan>no define proporción, asigna la jornada completa incluidos traslados y descansos.</text>
+      </svg>
+      <figcaption><strong>Dónde cae cada técnica respecto al rango de atención sostenida.</strong> Elaboración propia a partir de Biwer et al. (2023), Daybook (2026) y Brainflow (2026).</figcaption>
+    </figure>
+
+    <p>Los <strong>ciclos ultradianos</strong> de 90 minutos de trabajo y 20 de descanso están alineados más de cerca con el rango natural de atención sostenida, extendido en bloques más largos de trabajo profundo. Son útiles para tareas complejas ya dominadas, donde interrumpir cada 25 minutos puede romper el estado de flujo (Brainflow, 2026).</p>
+
+    <p>El <strong>time blocking</strong> asigna cada actividad del día, incluyendo traslados y descansos, a un bloque fijo en el calendario. No depende de una proporción fija de trabajo y descanso, sino de planeación anticipada de la jornada completa.</p>
+
+    <h4>Y una advertencia sobre las tres</h4>
+
+    <p>Elegir bien la técnica importa menos de lo que parece, porque el insumo que todas administran, las horas, apenas predice el resultado. Un metaanálisis de 49 estudios y 77 muestras independientes, con casi veinte mil participantes, encontró una correlación de <strong>0.12</strong> entre tiempo de estudio y rendimiento académico, y de <strong>0.09</strong> en el grupo de 18 a 21 años. Los autores dan dos razones: la restricción de rango, porque los universitarios ya son un grupo filtrado por calificaciones y eso aplana cualquier correlación, y que tiempo de estudio no es lo mismo que tiempo de estudio con concentración.</p>
+
+    <figure>
+      <svg viewBox="0 0 760 400" role="img" aria-labelledby="tcorr dcorr" xmlns="http://www.w3.org/2000/svg">
+        <title id="tcorr">Qué tan fuerte es una correlación de 0.12</title>
+        <desc id="dcorr">Dos nubes de puntos simuladas con la misma cantidad de observaciones. A la izquierda, una correlación de 0.12, que es la que el metaanálisis encontro entre tiempo de estudio y rendimiento academico: la nube es prácticamente redonda y la recta de ajuste casi horizontal. A la derecha, una correlación de 0.60 para comparar, donde la nube se alarga claramente en diagonal.</desc>
+
+        <rect x="0" y="0" width="760" height="400" fill="#ffffff"/>
+
+        <text x="60" y="44" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#2d6a62">r = 0.12</text>
+        <text x="130" y="44" font-family="Public Sans, sans-serif" font-size="13" fill="#464a50">lo que midió el metaanálisis</text>
+        <text x="420" y="44" font-family="Public Sans, sans-serif" font-size="15" font-weight="700" fill="#5c6166">r = 0.60</text>
+        <text x="490" y="44" font-family="Public Sans, sans-serif" font-size="13" fill="#464a50">lo que uno imagina al oír "sí hay relación"</text>
+
+        <rect x="60" y="80" width="290" height="230" fill="none" stroke="#dcdcd8" stroke-width="1"/>
+        <rect x="420" y="80" width="290" height="230" fill="none" stroke="#dcdcd8" stroke-width="1"/>
+        <circle cx="204.5" cy="218.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="283.2" cy="163.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="275.2" cy="155.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="172.2" cy="185.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.8" cy="184.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="171.2" cy="195.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.3" cy="215.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="199.1" cy="204.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="246.8" cy="216.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="92.8" cy="187.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="295.5" cy="189.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.8" cy="171.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="242.9" cy="254.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="194.4" cy="157.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="180.0" cy="233.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="230.0" cy="228.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="251.4" cy="202.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.5" cy="223.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="193.4" cy="184.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="243.2" cy="220.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="150.8" cy="249.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="112.5" cy="241.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.9" cy="136.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="162.7" cy="198.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="88.4" cy="257.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="154.1" cy="200.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="174.7" cy="269.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="131.6" cy="121.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="113.8" cy="272.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="204.7" cy="175.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="255.8" cy="168.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="188.6" cy="263.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.3" cy="186.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.3" cy="150.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="245.1" cy="173.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.7" cy="186.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.8" cy="152.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="264.4" cy="185.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.2" cy="182.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="154.2" cy="206.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="223.1" cy="167.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.2" cy="238.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.7" cy="156.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="126.2" cy="225.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="163.2" cy="249.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="152.7" cy="184.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="99.5" cy="128.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="210.0" cy="153.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="233.8" cy="218.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.6" cy="168.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="284.8" cy="211.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="251.3" cy="199.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="239.7" cy="190.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="226.3" cy="299.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="259.2" cy="184.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="123.4" cy="249.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.9" cy="226.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.3" cy="261.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="97.5" cy="273.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="223.1" cy="238.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="187.6" cy="161.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="248.9" cy="118.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="176.4" cy="200.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="201.4" cy="148.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="222.8" cy="207.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="150.4" cy="287.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.0" cy="187.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.2" cy="177.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="231.7" cy="214.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="171.5" cy="185.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.0" cy="166.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="238.4" cy="233.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="191.9" cy="264.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="240.0" cy="204.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="277.3" cy="201.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="308.8" cy="205.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="109.0" cy="159.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="254.9" cy="115.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="230.1" cy="214.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="196.9" cy="166.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="142.7" cy="159.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="277.1" cy="159.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="127.5" cy="155.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.1" cy="212.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="279.8" cy="158.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="107.5" cy="112.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="184.5" cy="162.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="124.7" cy="230.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.0" cy="168.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="292.4" cy="134.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="322.6" cy="172.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="96.9" cy="230.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="168.3" cy="130.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="244.3" cy="250.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="296.3" cy="167.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="227.5" cy="196.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.2" cy="254.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="220.1" cy="141.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="201.5" cy="181.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="190.4" cy="250.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.9" cy="173.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.5" cy="215.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="220.8" cy="281.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="197.0" cy="228.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="189.3" cy="186.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="126.2" cy="174.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="173.6" cy="191.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="274.1" cy="190.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="191.2" cy="176.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="117.0" cy="212.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.7" cy="138.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.0" cy="188.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="327.7" cy="175.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="206.2" cy="172.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="175.1" cy="246.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="116.5" cy="235.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.1" cy="122.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="350.0" cy="171.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.7" cy="213.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="164.0" cy="184.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="237.9" cy="216.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.2" cy="188.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="186.4" cy="228.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="181.7" cy="186.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="213.9" cy="267.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="267.5" cy="132.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="203.8" cy="220.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="257.0" cy="264.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="177.5" cy="209.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="221.9" cy="212.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="75.5" cy="199.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="116.4" cy="254.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="249.7" cy="175.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="167.4" cy="80.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.9" cy="252.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.7" cy="179.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="281.0" cy="205.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="250.7" cy="185.1" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="262.9" cy="274.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="195.8" cy="249.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="161.0" cy="179.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="159.0" cy="202.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="173.5" cy="125.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="135.4" cy="233.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="170.0" cy="191.7" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="197.0" cy="80.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="217.4" cy="230.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="182.4" cy="239.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="88.2" cy="206.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="198.2" cy="199.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="215.9" cy="158.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="266.9" cy="186.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="236.8" cy="228.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="164.3" cy="190.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="159.5" cy="81.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="321.9" cy="131.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="247.4" cy="310.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="311.2" cy="195.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="328.9" cy="227.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="153.9" cy="172.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="225.4" cy="203.4" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="229.7" cy="108.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="235.7" cy="152.9" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="234.7" cy="154.8" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="214.5" cy="188.0" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="212.8" cy="198.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="113.2" cy="188.2" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="192.7" cy="139.6" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="158.1" cy="176.3" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><circle cx="210.0" cy="212.5" r="2.6" fill="#2d6a62" fill-opacity="0.5"/><line x1="60.0" y1="208.8" x2="350.0" y2="181.2" stroke="#b4551f" stroke-width="2.2"/>
+        <circle cx="637.8" cy="122.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="576.1" cy="197.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="560.7" cy="199.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="520.0" cy="200.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="532.8" cy="211.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="528.8" cy="185.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="420.0" cy="310.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="623.1" cy="116.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.4" cy="203.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="552.9" cy="205.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="624.7" cy="210.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.1" cy="161.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="586.3" cy="140.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="424.0" cy="228.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="551.8" cy="172.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="595.4" cy="231.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="656.9" cy="174.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="670.0" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="646.4" cy="184.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="498.9" cy="189.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="439.8" cy="250.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.6" cy="178.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="566.7" cy="176.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="620.0" cy="198.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="557.9" cy="227.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="577.6" cy="217.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="479.6" cy="219.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.6" cy="169.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="539.7" cy="187.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.1" cy="147.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="591.3" cy="226.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="558.4" cy="216.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="583.2" cy="179.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="564.3" cy="239.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="608.4" cy="190.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="593.7" cy="145.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="533.9" cy="172.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.6" cy="174.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="664.5" cy="142.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.3" cy="203.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.7" cy="129.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="587.5" cy="195.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="532.9" cy="198.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.4" cy="170.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="572.0" cy="202.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="579.7" cy="207.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="600.1" cy="176.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="492.9" cy="209.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.2" cy="194.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.7" cy="191.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="656.4" cy="129.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="430.5" cy="310.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.1" cy="210.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="534.3" cy="203.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="589.7" cy="212.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="537.0" cy="253.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.9" cy="224.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="654.3" cy="179.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.3" cy="189.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="589.8" cy="215.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="586.4" cy="175.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.3" cy="158.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="596.1" cy="183.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="553.2" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="518.8" cy="207.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.9" cy="232.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="552.1" cy="208.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="608.1" cy="205.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.7" cy="169.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="534.9" cy="247.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="648.1" cy="107.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.5" cy="146.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="637.5" cy="225.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="599.7" cy="149.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="558.8" cy="144.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="541.2" cy="232.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="549.2" cy="168.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="619.1" cy="227.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="571.5" cy="182.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="480.6" cy="292.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="562.9" cy="178.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="484.4" cy="294.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="574.6" cy="277.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="496.5" cy="214.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="493.0" cy="152.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="571.9" cy="210.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="560.6" cy="168.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="470.3" cy="237.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="607.8" cy="183.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="688.4" cy="111.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="480.6" cy="180.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="668.9" cy="183.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="525.9" cy="194.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="536.9" cy="196.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.9" cy="246.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="482.7" cy="180.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="639.2" cy="90.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="593.2" cy="211.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.3" cy="156.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="549.3" cy="199.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="478.6" cy="242.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="545.3" cy="153.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="618.5" cy="159.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="467.3" cy="231.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="540.2" cy="155.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="573.5" cy="146.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="624.9" cy="133.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="642.0" cy="202.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="539.0" cy="259.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.9" cy="177.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="590.8" cy="212.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="544.4" cy="199.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="547.4" cy="238.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="626.7" cy="169.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="661.4" cy="188.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="580.3" cy="131.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.1" cy="233.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="597.7" cy="181.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="457.5" cy="254.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="564.1" cy="153.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="504.6" cy="271.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="701.3" cy="126.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.2" cy="180.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="573.2" cy="171.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="554.0" cy="183.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="421.7" cy="281.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="605.7" cy="165.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="658.0" cy="159.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="523.5" cy="198.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="604.1" cy="177.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.3" cy="195.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="476.8" cy="238.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="618.5" cy="154.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="642.3" cy="80.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="578.1" cy="203.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="561.5" cy="185.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="610.0" cy="121.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="477.2" cy="307.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="570.4" cy="249.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="625.2" cy="203.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="494.3" cy="233.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="621.7" cy="83.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="541.3" cy="192.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="446.5" cy="212.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="559.1" cy="204.2" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="509.7" cy="304.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="583.3" cy="262.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="498.3" cy="192.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="625.0" cy="157.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="523.0" cy="258.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.4" cy="145.9" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="531.2" cy="262.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="546.7" cy="164.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="633.1" cy="110.8" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="577.4" cy="213.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="542.6" cy="242.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="493.7" cy="201.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="631.2" cy="197.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="606.9" cy="143.7" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="546.5" cy="243.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="579.0" cy="159.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="506.4" cy="220.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="507.2" cy="237.3" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="518.0" cy="247.5" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="585.3" cy="175.6" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="582.0" cy="249.1" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="522.6" cy="224.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="607.2" cy="186.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="609.8" cy="148.4" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><circle cx="575.0" cy="231.0" r="2.6" fill="#9aa3a0" fill-opacity="0.5"/><line x1="420.0" y1="264.0" x2="710.0" y2="126.0" stroke="#b4551f" stroke-width="2.2"/>
+
+        <text x="205" y="332" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50">Horas de estudio</text>
+        <text x="565" y="332" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50">Horas de estudio</text>
+        <text x="44" y="195" text-anchor="middle" font-family="Public Sans, sans-serif" font-size="12" fill="#464a50" transform="rotate(-90 44 195)">Rendimiento</text>
+
+        <text x="60" y="366" font-family="Public Sans, sans-serif" font-size="12.5" fill="#16181b"><tspan font-weight="700">49 estudios, 77 muestras, N = 19,219.</tspan> r = 0.12, IC 95% de 0.08 a 0.16. En el grupo de 18 a 21 años, r = 0.09.</text>
+        <text x="60" y="388" font-family="Public Sans, sans-serif" font-size="12.5" fill="#b4551f" font-weight="700">El tiempo de estudio explica alrededor del 1.4% del rendimiento. Menos del 1% entre los 18 y los 21.</text>
+      </svg>
+      <figcaption><strong>Así se ve una correlación de 0.12.</strong> Las dos nubes tienen el mismo número de puntos y están simuladas para ilustrar la magnitud; no son los datos del metaanálisis. Elaboración propia a partir del metaanálisis de tiempo de estudio y rendimiento académico (IAFOR, 2015).</figcaption>
+    </figure>
+
+    <h4>Barra de vida: hábitos de salud</h4>
+
+    <p>Cuando la logística no permite comer bien antes de salir de madrugada, la estrategia cambia de forma realista: una cena nutritiva la noche anterior aporta las reservas de energía necesarias para el periodo de ayuno matutino, ya que el desayuno normalmente cubre entre 20% y 25% de las necesidades energéticas diarias, y su omisión afecta directamente la atención y el rendimiento académico en las primeras horas de clase (Barrón et al., 2020). Para la mañana, opciones portátiles como pan con mantequilla y mermelada natural de jengibre y naranja, o un licuado de frutas con jengibre, aportan energía sostenida sin picos de glucosa; el jengibre en particular tiene propiedades termogénicas que activan el metabolismo, además de efectos antiinflamatorios y antioxidantes (Infobae, 2025).</p>
+
+    <p>Al menos 30 minutos de sol al día, para regulación del ritmo circadiano.</p>
+
+    <p>Y el descanso tiene que ser genuino, no solo pasivo. Recostarse sin dormir realmente, en poca luz y sin estimulación, durante periodos prolongados puede generar más fatiga en vez de aliviarla, ya que reduce la exposición a la luz de la que depende el ritmo circadiano y retrasa la acumulación natural de presión de sueño (The Well by Northwell, 2026). Las actividades activas de corta duración, incluidos videojuegos casuales de baja presión como puzzle o simulación en sesiones de 15 a 30 minutos, muestran reducciones consistentes de cortisol después de momentos de estrés agudo, siempre que se eviten mecánicas de retención artificial como eventos por tiempo limitado (Guul Games, 2026; GameLuster, 2026).</p>
+
+    <div class="caveat">
+      <p><strong>La música y las técnicas de enfoque no son universales.</strong> La efectividad de la música de fondo depende de la personalidad: las personas extrovertidas suelen beneficiarse de la estimulación externa, mientras que las introvertidas pueden ver su desempeño perjudicado en tareas complejas, debido a diferencias reales en el nivel de activación cortical basal de cada tipo (Küssner, 2017; Harvard Business Review, 2022). El mismo principio aplica a técnicas como mindfulness: no son universalmente efectivas, dependen de la persona, no de si la técnica está correctamente ejecutada.</p>
+    </div>
+
+    <h4>Aplicación personal</h4>
+
+    <p>Mi principal reto de administración del tiempo no es la gestión del trabajo en sí, sino la logística de traslado: dependo de que me lleven, lo que me obliga a salir con mucha anticipación algunos días, y mi horario semanal alterna entre salidas muy tempranas y entradas más tardías. Este cambio de ritmo, más que la carga académica en sí, es lo que más afecta mi energía.</p>
+
+    <p>Aun así, este tipo de ajuste suele ser temporal y adaptable. Lo verdaderamente importante es que los espacios de descanso sean factibles según las actividades reales del día, no genéricos, y que los descansos activos, como partidas cortas y limitadas de un videojuego, se disfruten sin distraerse del trabajo pendiente que sigue después.</p>
+
+    <div class="pull">
+      <p>Administrar el tiempo no es hacer más, es jugar bien la partida que tienes.</p>
+    </div>
+
+    <!-- URLs: las ligas de estas referencias se perdieron en el archivo original,
+         donde el texto del hipervínculo reemplazó a la dirección. Pégalas aquí
+         dentro de <a href="..."> cuando las recuperes. -->
+    <div class="refs">
+      <h5>Referencias</h5>
+      <ol>
+        <li>Barrón, G. F., et al. (2020). Hábito y calidad del desayuno: su efecto en el rendimiento académico de estudiantes de técnico de nivel superior en enfermería. <em>SciELO México</em>.</li>
+        <li>Biwer, F., Wiradhany, W., Oude Egbrink, M. G. A., &amp; de Bruin, A. B. H. (2023). Understanding effort regulation: Comparing 'Pomodoro' breaks and self-regulated breaks. <em>British Journal of Educational Psychology, 93</em>(S2), 353–367.</li>
+        <li>Brainflow. (2026). <em>Pomodoro study technique complete guide for 2026</em>.</li>
+        <li>Daybook. (2026). <em>Pomodoro technique research: What science actually says</em>.</li>
+        <li>GameLuster. (2026). <em>Can video games lower cortisol? 2026 research</em>.</li>
+        <li>Guul Games. (2026). <em>The relaxation effect: How games reduce stress</em>.</li>
+        <li>Harvard Business Review. (2022). <em>Does music help you focus?</em></li>
+        <li>Infobae. (2025, 3 de abril). <em>Prepara este licuado de manzana y jengibre para desayunar por las mañanas y activar tu cuerpo desde temprano</em>.</li>
+        <li>Küssner, M. B. (2017). Eysenck's theory of personality and the role of background music in cognitive task performance: A mini-review of conflicting findings and a new perspective. <em>Frontiers in Psychology, 8</em>, 1991.</li>
+        <li>LifeAt. (2024). <em>The science behind the Pomodoro timer method: Why it works for deep focus</em>.</li>
+        <li>The Well by Northwell. (2026). <em>Laying in bed all day and still feeling tired? Here's why</em>.</li>
+      </ol>
+    </div>
+  </article>
+
+  <footer>
+    Bitácora del curso WA1055.602 · Tecnológico de Monterrey<br>
+    Diego Eduardo Rodríguez Macías · A01572394
+  </footer>
+
+</div>
+
+</body>
+</html>
